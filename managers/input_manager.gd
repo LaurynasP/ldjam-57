@@ -8,8 +8,12 @@ enum InputAction { MOVE, DASH, INTERACT }
 var available_devices: Array[int] = []
 
 func _ready() -> void:
+	process_mode = ProcessMode.PROCESS_MODE_ALWAYS
 	Input.joy_connection_changed.connect(_on_joy_connection_changed)
 	update_available_devices()
+
+	
+	
 	
 func _on_joy_connection_changed(_id: int, _connected: bool):
 	update_available_devices()
@@ -48,3 +52,8 @@ func is_cancel_just_pressed(device_id: int) -> bool:
 		return Input.is_action_just_pressed("keyboard_cancel")
 	else:
 		return Input.is_joy_button_pressed(device_id, JOY_BUTTON_A)
+		
+
+func _unhandled_input(event):
+	if event.is_action_pressed("menu"):
+		GameManager.toggle_pause()

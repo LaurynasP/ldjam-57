@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc2wi0oxkv8o"]
+
+[ext_resource type="Script" uid="uid://bj12uiiio5xx4" path="res://features/menu/menu.gd" id="1_dtrxf"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dtrxf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 299.0
+offset_right = 641.0
+offset_bottom = 328.0
+text = "Game Paused"

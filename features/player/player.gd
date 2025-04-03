@@ -11,6 +11,8 @@ var is_dashing := false
 var dash_timer := 0.0
 var dash_cooldown_timer := 0.0
 
+var dash_sound_effect: AudioStream = preload("res://assets/sound/sound_effects/dash.mp3")
+
 func _physics_process(delta):
 	var dir = InputManager.get_input_vector(device_id)
 	var move_speed = dash_speed if is_dashing else speed
@@ -22,6 +24,7 @@ func _physics_process(delta):
 	else:
 		dash_cooldown_timer -= delta
 		if dash_cooldown_timer <= 0.0 and InputManager.is_dash_just_pressed(device_id):
+			SoundManager.play_sfx(dash_sound_effect)
 			is_dashing = true
 			dash_timer = dash_time
 			dash_cooldown_timer = dash_cooldown
