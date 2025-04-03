@@ -1,5 +1,5 @@
-extends Control
-class_name Options
+extends SubMenu
+class_name OptionsMenu
 
 @onready var master_volume_slider =%MasterVolumeSlider
 @onready var music_volume_slider: HSlider = %MusicVolumeSlider
@@ -7,6 +7,8 @@ class_name Options
 
 @onready var res_dropdown = %ResolutionsDropdown
 @onready var display_mode_dropdown = %DisplayModeDropdown
+
+
 
 var resolutions = [
 	Vector2i(1280, 720),
@@ -17,8 +19,16 @@ var resolutions = [
 ]
 
 func _ready():
+	super._ready()
 	_init_audio_options()
 	_init_video_options()
+	
+func _unhandled_input(event: InputEvent):
+	if event.is_action_pressed("ui_cancel"):
+		print("yeet")
+		get_viewport().set_input_as_handled()
+	
+	
 	
 func _init_video_options():
 	for res in resolutions:

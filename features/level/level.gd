@@ -7,4 +7,4 @@ func _enter_tree():
 	add_child(gameplay.instantiate())
 
 func _ready():
-	GameManager.current_gameplay.pause_game_toggle()
+	pass

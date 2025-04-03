@@ -17,7 +17,7 @@ func _on_joy_connection_changed(_id: int, _connected: bool):
 	update_available_devices()
 	
 func _unhandled_input(event):
-	if event.is_action_pressed("menu"):
+	if event.is_action_pressed("ui_cancel"):
 		GameManager.toggle_pause()
 
 

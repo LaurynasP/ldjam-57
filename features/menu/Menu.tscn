@@ -1,18 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc2wi0oxkv8o"]
+[gd_scene load_steps=8 format=3 uid="uid://cc2wi0oxkv8o"]
 
 [ext_resource type="Script" uid="uid://bj12uiiio5xx4" path="res://features/menu/menu.gd" id="1_dtrxf"]
-[ext_resource type="PackedScene" uid="uid://cjx2qgni8b738" path="res://features/menu/options/Options.tscn" id="2_2f5cj"]
+[ext_resource type="PackedScene" uid="uid://cjx2qgni8b738" path="res://features/menu/options_menu/OptionsMenu.tscn" id="2_2f5cj"]
+[ext_resource type="Texture2D" uid="uid://bcb7xqdortunp" path="res://assets/images/background/main_menu.png" id="2_jmfxk"]
+[ext_resource type="PackedScene" uid="uid://d1kqdp1cgx4nu" path="res://features/menu/main_menu/MainMenu.tscn" id="3_smq08"]
+[ext_resource type="PackedScene" uid="uid://n73bp8x5og60" path="res://features/menu/general/MenuPanel.tscn" id="4_k1ij2"]
+[ext_resource type="PackedScene" uid="uid://bnp6e4lr24lq6" path="res://features/menu/play_menu/PlayMenu.tscn" id="5_ogybj"]
+[ext_resource type="PackedScene" uid="uid://b0d5c4pildqpp" path="res://features/menu/controls_menu/ControlsMenu.tscn" id="6_k1ij2"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1152.0
-offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dtrxf")
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jmfxk")
+expand_mode = 3
 
 [node name="Background" type="ColorRect" parent="."]
 visible = false
@@ -21,17 +34,45 @@ offset_right = 1152.0
 offset_bottom = 647.0
 color = Color(0.223103, 0.223103, 0.223103, 1)
 
-[node name="MenuButton" type="MenuButton" parent="."]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 217.0
-offset_right = 221.0
-offset_bottom = 282.0
-text = "Start"
-
-[node name="Options" parent="." instance=ExtResource("2_2f5cj")]
+[node name="MainMenu" parent="." instance=ExtResource("3_smq08")]
+unique_name_in_owner = true
 layout_mode = 1
-offset_left = 36.0
-offset_top = 34.0
-offset_right = 36.0
-offset_bottom = 34.0
+anchor_left = 0.025
+anchor_top = 0.722
+anchor_right = 0.245
+anchor_bottom = 0.95
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 0
+
+[node name="SubMenus" parent="." instance=ExtResource("4_k1ij2")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.2
+anchor_right = 0.8
+anchor_bottom = 0.8
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayMenu" parent="SubMenus" instance=ExtResource("5_ogybj")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="OptionsMenu" parent="SubMenus" instance=ExtResource("2_2f5cj")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="ControlsMenu" parent="SubMenus" instance=ExtResource("6_k1ij2")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2

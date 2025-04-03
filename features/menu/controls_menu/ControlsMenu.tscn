@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0d5c4pildqpp"]
+
+[ext_resource type="Script" uid="uid://dhm3bj6istc0a" path="res://features/menu/controls_menu/controls_menu.gd" id="1_05885"]
+[ext_resource type="PackedScene" uid="uid://n73bp8x5og60" path="res://features/menu/general/MenuPanel.tscn" id="2_g5byw"]
+
+[node name="ControlsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_05885")
+
+[node name="MenuPanel" parent="." instance=ExtResource("2_g5byw")]
+layout_mode = 0
+
+[node name="Button" type="Button" parent="MenuPanel"]
+layout_mode = 2
+text = "Controls"

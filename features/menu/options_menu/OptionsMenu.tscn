@@ -1,0 +1,119 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjx2qgni8b738"]
+
+[ext_resource type="Script" uid="uid://dfff2ic70undn" path="res://features/menu/options_menu/options_menu.gd" id="1_bx6by"]
+[ext_resource type="PackedScene" uid="uid://n73bp8x5og60" path="res://features/menu/general/MenuPanel.tscn" id="2_1guc4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hph4l"]
+font_size = 30
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bx6by")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionsContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="VideoOptionsPanel" parent="VBoxContainer/OptionsContainer" instance=ExtResource("2_1guc4")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VideoOptions" type="VBoxContainer" parent="VBoxContainer/OptionsContainer/VideoOptionsPanel"]
+layout_mode = 2
+
+[node name="VideoLabel" type="Label" parent="VBoxContainer/OptionsContainer/VideoOptionsPanel/VideoOptions"]
+layout_mode = 2
+text = "Video"
+label_settings = SubResource("LabelSettings_hph4l")
+
+[node name="DisplayModeOption" type="VBoxContainer" parent="VBoxContainer/OptionsContainer/VideoOptionsPanel/VideoOptions"]
+layout_mode = 2
+
+[node name="DisplayModeLabel" type="Label" parent="VBoxContainer/OptionsContainer/VideoOptionsPanel/VideoOptions/DisplayModeOption"]
+layout_mode = 2
+text = "Display Mode"
+
+[node name="DisplayModeDropdown" type="OptionButton" parent="VBoxContainer/OptionsContainer/VideoOptionsPanel/VideoOptions/DisplayModeOption"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_right = NodePath("../../../../AudioOptionsPanel/AudioOptions/MasterVolumeOptions/MasterVolumeSlider")
+focus_neighbor_bottom = NodePath("../../ResolutionOption/ResolutionsDropdown")
+
+[node name="ResolutionOption" type="VBoxContainer" parent="VBoxContainer/OptionsContainer/VideoOptionsPanel/VideoOptions"]
+layout_mode = 2
+
+[node name="ResolutionLabel" type="Label" parent="VBoxContainer/OptionsContainer/VideoOptionsPanel/VideoOptions/ResolutionOption"]
+layout_mode = 2
+text = "Resolution"
+
+[node name="ResolutionsDropdown" type="OptionButton" parent="VBoxContainer/OptionsContainer/VideoOptionsPanel/VideoOptions/ResolutionOption"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_top = NodePath("../../DisplayModeOption/DisplayModeDropdown")
+focus_neighbor_right = NodePath("../../../../AudioOptionsPanel/AudioOptions/MasterVolumeOptions/MasterVolumeSlider")
+
+[node name="AudioOptionsPanel" parent="VBoxContainer/OptionsContainer" instance=ExtResource("2_1guc4")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AudioOptions" type="VBoxContainer" parent="VBoxContainer/OptionsContainer/AudioOptionsPanel"]
+layout_mode = 2
+
+[node name="MusicLabel" type="Label" parent="VBoxContainer/OptionsContainer/AudioOptionsPanel/AudioOptions"]
+layout_mode = 2
+text = "Audio"
+label_settings = SubResource("LabelSettings_hph4l")
+
+[node name="MasterVolumeOptions" type="VBoxContainer" parent="VBoxContainer/OptionsContainer/AudioOptionsPanel/AudioOptions"]
+layout_mode = 2
+
+[node name="MasterVolumeLabel" type="Label" parent="VBoxContainer/OptionsContainer/AudioOptionsPanel/AudioOptions/MasterVolumeOptions"]
+layout_mode = 2
+text = "Master"
+
+[node name="MasterVolumeSlider" type="HSlider" parent="VBoxContainer/OptionsContainer/AudioOptionsPanel/AudioOptions/MasterVolumeOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath("../../../../VideoOptionsPanel/VideoOptions/DisplayModeOption/DisplayModeDropdown")
+focus_neighbor_bottom = NodePath("../../MusicOptions/MusicVolumeSlider")
+
+[node name="MusicOptions" type="VBoxContainer" parent="VBoxContainer/OptionsContainer/AudioOptionsPanel/AudioOptions"]
+layout_mode = 2
+
+[node name="MusicVolumeLabel" type="Label" parent="VBoxContainer/OptionsContainer/AudioOptionsPanel/AudioOptions/MusicOptions"]
+layout_mode = 2
+text = "Music"
+
+[node name="MusicVolumeSlider" type="HSlider" parent="VBoxContainer/OptionsContainer/AudioOptionsPanel/AudioOptions/MusicOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath("../../../../VideoOptionsPanel/VideoOptions/DisplayModeOption/DisplayModeDropdown")
+focus_neighbor_top = NodePath("../../MasterVolumeOptions/MasterVolumeSlider")
+focus_neighbor_bottom = NodePath("../../SFXVolumeOptions/SFXVolumeSlider")
+
+[node name="SFXVolumeOptions" type="VBoxContainer" parent="VBoxContainer/OptionsContainer/AudioOptionsPanel/AudioOptions"]
+layout_mode = 2
+
+[node name="SFXVolumeLabel" type="Label" parent="VBoxContainer/OptionsContainer/AudioOptionsPanel/AudioOptions/SFXVolumeOptions"]
+layout_mode = 2
+text = "Sound Effects"
+
+[node name="SFXVolumeSlider" type="HSlider" parent="VBoxContainer/OptionsContainer/AudioOptionsPanel/AudioOptions/SFXVolumeOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath("../../../../VideoOptionsPanel/VideoOptions/DisplayModeOption/DisplayModeDropdown")
+focus_neighbor_top = NodePath("../../MusicOptions/MusicVolumeSlider")
