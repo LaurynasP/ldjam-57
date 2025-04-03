@@ -13,10 +13,13 @@ func _ready() -> void:
 	update_available_devices()
 
 	
-	
-	
 func _on_joy_connection_changed(_id: int, _connected: bool):
 	update_available_devices()
+	
+func _unhandled_input(event):
+	if event.is_action_pressed("menu"):
+		GameManager.toggle_pause()
+
 
 func update_available_devices():
 	available_devices.clear()
@@ -53,7 +56,3 @@ func is_cancel_just_pressed(device_id: int) -> bool:
 	else:
 		return Input.is_joy_button_pressed(device_id, JOY_BUTTON_A)
 		
-
-func _unhandled_input(event):
-	if event.is_action_pressed("menu"):
-		GameManager.toggle_pause()
