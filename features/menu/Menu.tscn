@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cc2wi0oxkv8o"]
+[gd_scene load_steps=3 format=3 uid="uid://cc2wi0oxkv8o"]
 
 [ext_resource type="Script" uid="uid://bj12uiiio5xx4" path="res://features/menu/menu.gd" id="1_dtrxf"]
+[ext_resource type="PackedScene" uid="uid://cjx2qgni8b738" path="res://features/menu/options/Options.tscn" id="2_2f5cj"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -13,10 +14,24 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dtrxf")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Background" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 527.0
-offset_top = 299.0
-offset_right = 641.0
-offset_bottom = 328.0
-text = "Game Paused"
+offset_right = 1152.0
+offset_bottom = 647.0
+color = Color(0.223103, 0.223103, 0.223103, 1)
+
+[node name="MenuButton" type="MenuButton" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 217.0
+offset_right = 221.0
+offset_bottom = 282.0
+text = "Start"
+
+[node name="Options" parent="." instance=ExtResource("2_2f5cj")]
+layout_mode = 1
+offset_left = 36.0
+offset_top = 34.0
+offset_right = 36.0
+offset_bottom = 34.0

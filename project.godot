@@ -26,6 +26,15 @@ SoundManager="*res://managers/sound_manager.gd"
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://features/": "green",
+"res://managers/": "purple",
+"res://scenes/": "blue"
+}
+
 [input]
 
 keyboard_up={
