@@ -33,7 +33,7 @@ func _physics_process(delta):
 	velocity.z = dir.y * move_speed
 	move_and_slide()
 
-	if InputManager.is_dash_just_pressed(device_id):
+	if InputManager.is_interact_just_pressed(device_id):
 		interact()
 
 func interact():
