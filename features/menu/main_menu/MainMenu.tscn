@@ -5,24 +5,23 @@
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
-anchor_right = 0.255
-anchor_bottom = 0.274
-offset_right = 0.399963
-offset_bottom = 0.0799866
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_tx1m4")
 
 [node name="MainMenu" parent="." instance=ExtResource("1_cbr1y")]
 layout_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu"]
-layout_mode = 2
 
 [node name="PlayButton" type="Button" parent="MainMenu/VBoxContainer"]
 unique_name_in_owner = true

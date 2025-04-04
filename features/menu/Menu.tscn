@@ -37,42 +37,38 @@ color = Color(0.223103, 0.223103, 0.223103, 1)
 [node name="MainMenu" parent="." instance=ExtResource("3_smq08")]
 unique_name_in_owner = true
 layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.025
 anchor_top = 0.722
-anchor_right = 0.245
-anchor_bottom = 0.95
-offset_right = 0.0
-offset_bottom = 0.0
+anchor_right = 0.246
+anchor_bottom = 0.96
+offset_top = 0.23999
+offset_right = -0.320007
+offset_bottom = 0.199951
 grow_horizontal = 1
 grow_vertical = 0
 
 [node name="SubMenus" parent="." instance=ExtResource("4_k1ij2")]
 unique_name_in_owner = true
 visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.35
-anchor_top = 0.2
-anchor_right = 0.8
-anchor_bottom = 0.8
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
+anchors_preset = 0
+anchor_left = 0.333
+anchor_top = 0.109
+anchor_right = 0.975
+anchor_bottom = 0.954
+offset_left = 0.640015
+offset_top = 0.279991
+offset_bottom = -0.320068
 
 [node name="PlayMenu" parent="SubMenus" instance=ExtResource("5_ogybj")]
 unique_name_in_owner = true
-visible = false
-layout_mode = 2
+layout_mode = 1
 
 [node name="OptionsMenu" parent="SubMenus" instance=ExtResource("2_2f5cj")]
 unique_name_in_owner = true
-visible = false
-layout_mode = 2
+layout_mode = 1
 
 [node name="ControlsMenu" parent="SubMenus" instance=ExtResource("6_k1ij2")]
 unique_name_in_owner = true
-visible = false
-layout_mode = 2
+layout_mode = 1

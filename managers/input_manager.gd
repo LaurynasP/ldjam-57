@@ -6,25 +6,24 @@ const KEYBOARD_ID = -1
 enum InputAction { MOVE, DASH, INTERACT }
 
 var available_devices: Array[int] = []
+var _joy_button_states: Dictionary = {}
+
 
 func _ready() -> void:
 	process_mode = ProcessMode.PROCESS_MODE_ALWAYS
-	Input.joy_connection_changed.connect(_on_joy_connection_changed)
-	update_available_devices()
-
 	
-func _on_joy_connection_changed(_id: int, _connected: bool):
-	update_available_devices()
+	available_devices.append(KEYBOARD_ID)
+	Input.joy_connection_changed.connect(_on_joy_connection_changed)
+
+func _process(delta: float) -> void:
+	_track_joy_buttons()
+	
+
 	
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		GameManager.toggle_pause()
 
-
-func update_available_devices():
-	available_devices.clear()
-	available_devices.append(KEYBOARD_ID) # always include keyboard
-	available_devices += Input.get_connected_joypads()
 
 func get_input_vector(device_id: int) -> Vector2:
 	if device_id == -1:
@@ -42,17 +41,52 @@ func is_dash_just_pressed(device_id: int) -> bool:
 	if device_id == KEYBOARD_ID:
 		return Input.is_action_just_pressed("keyboard_dash")
 	else:
-		return Input.is_joy_button_pressed(device_id, JOY_BUTTON_X)
+		return _is_joy_button_just_pressed(device_id, JOY_BUTTON_X)
 
 func is_interact_just_pressed(device_id: int) -> bool:
 	if device_id == KEYBOARD_ID:
 		return Input.is_action_just_pressed("keyboard_interact")
 	else:
-		return Input.is_joy_button_pressed(device_id, JOY_BUTTON_A)
+		return _is_joy_button_just_pressed(device_id, JOY_BUTTON_A)
 		
 func is_cancel_just_pressed(device_id: int) -> bool:
 	if device_id == KEYBOARD_ID:
 		return Input.is_action_just_pressed("keyboard_cancel")
 	else:
-		return Input.is_joy_button_pressed(device_id, JOY_BUTTON_A)
+		return _is_joy_button_just_pressed(device_id, JOY_BUTTON_A)
+		
+func is_join_just_pressed(device_id: int) -> bool:
+	if device_id == KEYBOARD_ID:
+		return Input.is_action_just_pressed("keyboard_join")
+	else:
+		return _is_joy_button_just_pressed(device_id, JOY_BUTTON_Y)
+		
+func _track_joy_buttons():
+	for device_id in InputManager.available_devices:
+		if not _joy_button_states.has(device_id):
+			_joy_button_states[device_id] = {}
+
+		for button in range(JOY_BUTTON_MAX):
+			var is_pressed = Input.is_joy_button_pressed(device_id, button)
+			_joy_button_states[device_id][button] = is_pressed
+
+func _is_joy_button_just_pressed(device_id: int, button: int) -> bool:
+	var was_pressed = _joy_button_states.get(device_id, {}).get(button, false)
+	var is_pressed = Input.is_joy_button_pressed(device_id, button)
+	return is_pressed and not was_pressed
+
+
+	
+func _on_joy_connection_changed(_device_id: int, _connected: bool):
+	if _connected:
+		if not _joy_button_states.has((_device_id)):
+			_joy_button_states[_device_id] = {}
+		if not available_devices.has(_device_id):
+			available_devices.append(_device_id)
+	else:
+		if _joy_button_states.has(_device_id):
+			_joy_button_states.erase(_device_id)
+		if available_devices.has(_device_id):
+			available_devices.erase(_device_id)
+		
 		

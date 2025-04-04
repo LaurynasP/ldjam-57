@@ -6,7 +6,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_hph4l"]
 font_size = 30
 
-[node name="Options" type="Control"]
+[node name="OptionsMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,14 +26,20 @@ grow_vertical = 2
 [node name="OptionsContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/separation = 30
 
 [node name="VideoOptionsPanel" parent="VBoxContainer/OptionsContainer" instance=ExtResource("2_1guc4")]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="VideoOptions" type="VBoxContainer" parent="VBoxContainer/OptionsContainer/VideoOptionsPanel"]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VideoLabel" type="Label" parent="VBoxContainer/OptionsContainer/VideoOptionsPanel/VideoOptions"]
 layout_mode = 2
@@ -71,7 +77,14 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="AudioOptions" type="VBoxContainer" parent="VBoxContainer/OptionsContainer/AudioOptionsPanel"]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="MusicLabel" type="Label" parent="VBoxContainer/OptionsContainer/AudioOptionsPanel/AudioOptions"]
 layout_mode = 2

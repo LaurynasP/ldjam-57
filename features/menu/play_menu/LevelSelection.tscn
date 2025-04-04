@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://cow7stqauiefe"]
+
+[ext_resource type="PackedScene" uid="uid://n73bp8x5og60" path="res://features/menu/general/MenuPanel.tscn" id="1_dgtgq"]
+
+[node name="LevelSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelPanel" parent="." instance=ExtResource("1_dgtgq")]
+layout_mode = 1
+size_flags_horizontal = 3
+
+[node name="LevelContainer" type="VBoxContainer" parent="LevelPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="LevelPanel/LevelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Select Level"
+horizontal_alignment = 1

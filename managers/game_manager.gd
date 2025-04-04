@@ -32,6 +32,15 @@ func remove_player_device(device_id: int):
 	if current_level == null and device_id in selected_player_devices:
 		selected_player_devices.erase(device_id)
 		
+func toggle_player_device(device_id: int):
+	print(device_id)
+	print(device_id in selected_player_devices)
+	if device_id in selected_player_devices:
+		remove_player_device(device_id)
+	else:
+		add_player_device(device_id)
+		
+	print(selected_player_devices)
 
 func quit_game():
 	get_tree().quit()

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf7jqwv3ufvrx"]
+
+[ext_resource type="Texture2D" uid="uid://dhpvfxdqwtfes" path="res://assets/images/icons/keyboard.png" id="1_bn03v"]
+
+[sub_resource type="Theme" id="Theme_2sekg"]
+
+[node name="TextureRect" type="TextureRect"]
+theme = SubResource("Theme_2sekg")
+texture = ExtResource("1_bn03v")
+stretch_mode = 3
