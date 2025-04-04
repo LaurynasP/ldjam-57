@@ -30,7 +30,6 @@ func game_pause_changed_handler(paused: bool):
 	visible = paused
 
 func _on_play_button_pressed():
-	print(GameManager.current_level)
 	if GameManager.current_level != null:
 		GameManager.toggle_pause()
 	else:

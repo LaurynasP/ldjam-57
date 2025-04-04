@@ -30,7 +30,6 @@ func stop_all_music():
 	_music_players.clear()
 
 func play_sfx(stream: AudioStream):
-	print("playing sound")
 	var player := AudioStreamPlayer.new()
 	player.stream = stream
 	#player.volume_db = linear_to_db(sfx_volume)

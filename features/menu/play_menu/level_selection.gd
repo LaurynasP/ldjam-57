@@ -25,4 +25,3 @@ func _ready():
 
 func _on_level_selected(index: int) -> void:
 	selected_level = level_selector.get_item_text(index)
-	print(selected_level)
