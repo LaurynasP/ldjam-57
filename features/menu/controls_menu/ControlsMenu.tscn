@@ -12,14 +12,33 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_05885")
 
-[node name="MenuPanel" parent="." instance=ExtResource("2_g5byw")]
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Button" type="Button" parent="MenuPanel"]
+[node name="MenuPanel" parent="HSplitContainer" instance=ExtResource("2_g5byw")]
 layout_mode = 2
-text = "Controls"
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HSplitContainer/MenuPanel"]
+layout_mode = 2
+offset_right = 954.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 30
+text = "Keyboard"
+horizontal_alignment = 1
+
+[node name="MenuPanel2" parent="HSplitContainer" instance=ExtResource("2_g5byw")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HSplitContainer/MenuPanel2"]
+offset_right = 954.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 30
+text = "Controller"
+horizontal_alignment = 1
