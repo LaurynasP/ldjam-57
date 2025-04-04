@@ -12,6 +12,7 @@ class_name Menu
 
 
 func _ready():
+	game_pause_changed_handler(get_tree().paused)
 	main_menu.play_button.grab_focus()
 	process_mode = ProcessMode.PROCESS_MODE_WHEN_PAUSED
 	
@@ -19,7 +20,6 @@ func _ready():
 	main_menu.settings_button.pressed.connect(_on_settings_button_pressed)
 	main_menu.controls_button.pressed.connect(_on_controls_button_pressed)
 	main_menu.quit_button.pressed.connect(_on_quit_button_pressed)
-	
 	
 	GameManager.game_pause_changed.connect(game_pause_changed_handler)
 
@@ -30,6 +30,7 @@ func game_pause_changed_handler(paused: bool):
 	visible = paused
 
 func _on_play_button_pressed():
+	print(GameManager.current_level)
 	if GameManager.current_level != null:
 		GameManager.toggle_pause()
 	else:

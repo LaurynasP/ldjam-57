@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://hag7k21uqn13"]
-
-[ext_resource type="Script" uid="uid://jcyuj2h3gtq6" path="res://features/level/level.gd" id="1_axc1c"]
-
-[node name="Laurynas" type="Node3D"]
-script = ExtResource("1_axc1c")

@@ -7,6 +7,10 @@ class_name MainMenu
 @onready var quit_button:Button = %QuitButton
 
 func _ready() -> void:
-	pass
+	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+	
+func _process(delta: float) -> void:
+	play_button.text = "Play" if GameManager.current_level == null else "Continue"
+	
 	
 	

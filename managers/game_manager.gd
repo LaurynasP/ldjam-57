@@ -9,18 +9,32 @@ var selected_player_devices: Array[int] = [-1]
 signal game_pause_changed(paused: bool)
 
 func _ready() -> void:
-	DisplayServer.window_set_size(Vector2i(1920, 1080))
-	get_tree().paused = true
+	if not current_level:
+		pause()
 	self.add_child(menu)
 	
 func toggle_pause():
+	unpause() if get_tree().paused else pause()
 	
+func pause():
+	get_tree().paused = true
+	emit_signal("game_pause_changed", true)
+	
+func unpause():
 	if get_tree().paused and current_level == null:
 		return
-
-
-	get_tree().paused = not get_tree().paused
-	emit_signal("game_pause_changed", get_tree().paused)
+	get_tree().paused = false
+	emit_signal("game_pause_changed", false)
+	
+func set_level(level: Level):
+	current_level = level
+	unpause()
+	
+func load_level(level_path: String):
+	var level = load(level_path).instantiate()
+	get_tree().root.add_child(level)
+	set_level(level)
+	
 	
 
 
@@ -44,3 +58,7 @@ func toggle_player_device(device_id: int):
 
 func quit_game():
 	get_tree().quit()
+	
+func _get_level_instance() -> Level:
+	var levels = get_tree().get_nodes_in_group("level")
+	return levels[0] if levels.size() > 0 else null
