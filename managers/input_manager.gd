@@ -53,7 +53,7 @@ func is_cancel_just_pressed(device_id: int) -> bool:
 	if device_id == KEYBOARD_ID:
 		return Input.is_action_just_pressed("keyboard_cancel")
 	else:
-		return _is_joy_button_just_pressed(device_id, JOY_BUTTON_A)
+		return _is_joy_button_just_pressed(device_id, JOY_BUTTON_B)
 		
 func is_join_just_pressed(device_id: int) -> bool:
 	if device_id == KEYBOARD_ID:

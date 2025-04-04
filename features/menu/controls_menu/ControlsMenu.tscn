@@ -37,6 +37,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="HSplitContainer/MenuPanel2"]
+layout_mode = 0
 offset_right = 954.0
 offset_bottom = 42.0
 theme_override_font_sizes/font_size = 30
