@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="ldjam-57"
-run/main_scene="uid://cu73xjjw087ti"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -20,6 +19,7 @@ config/icon="res://icon.svg"
 GameManager="*res://managers/game_manager.gd"
 InputManager="*res://managers/input_manager.gd"
 SoundManager="*res://managers/sound_manager.gd"
+LoadingManager="*res://managers/loading_manager/loading_manager.gd"
 
 [display]
 

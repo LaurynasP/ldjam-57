@@ -4,14 +4,15 @@ var current_gameplay: Gameplay
 var current_level: Level
 var selected_player_devices: Array[int] = [-1]
 
-@onready var menu: Menu = load("res://features/menu/Menu.tscn").instantiate()
+#@onready var menu: Menu = load("res://features/menu/Menu.tscn").instantiate()
 
 signal game_pause_changed(paused: bool)
 
 func _ready() -> void:
-	if not current_level:
-		pause()
-	self.add_child(menu)
+	#if not current_level:
+		#pause()
+	#self.add_child(menu)
+	pass
 	
 func toggle_pause():
 	unpause() if get_tree().paused else pause()
@@ -30,13 +31,8 @@ func set_level(level: Level):
 	current_level = level
 	unpause()
 	
-func load_level(level_path: String):
-	var level = load(level_path).instantiate()
-	get_tree().root.add_child(level)
-	set_level(level)
-	
-	
-
+func load_level(level: LevelConfiguration):
+	LoadingManager._load_level(level)
 
 func add_player_device(device_id: int):
 	if current_level == null and device_id not in selected_player_devices:

@@ -9,10 +9,9 @@ class_name Menu
 @onready var options_menu: OptionsMenu = %OptionsMenu
 @onready var controls_menu: ControlsMenu = %ControlsMenu
 
-
-
 func _ready():
-	game_pause_changed_handler(get_tree().paused)
+	GameManager.pause()
+
 	main_menu.play_button.grab_focus()
 	process_mode = ProcessMode.PROCESS_MODE_WHEN_PAUSED
 	
@@ -22,7 +21,6 @@ func _ready():
 	main_menu.quit_button.pressed.connect(_on_quit_button_pressed)
 	
 	GameManager.game_pause_changed.connect(game_pause_changed_handler)
-
 
 func game_pause_changed_handler(paused: bool):
 	submenus_container.visible = false
@@ -36,6 +34,7 @@ func _on_play_button_pressed():
 		play_menu.open()
 	
 func _on_settings_button_pressed():
+	print('www')
 	options_menu.open()
 	
 func _on_controls_button_pressed():

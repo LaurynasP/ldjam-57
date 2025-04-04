@@ -1,27 +1,24 @@
 extends Control
 class_name LevelSelection
 
-var selected_level: String
+var selected_level: LevelConfiguration
 
 @onready var level_selector: OptionButton = %LevelSelector
 
-var levels = {
-	"Laurynas": "res://features/level/debug_levels/Laurynas.tscn",
-	"Vilmantas": "res://features/level/debug_levels/Vilmantas.tscn",
-	"Level 1": "res://features/level/levels/Level1.tscn"
-}
+var configuration: LevelsConfiguration = load("res://configurations/all_levels.tres")
 
 func _ready():
-	for level_name in levels.keys():
-		level_selector.add_item(level_name)
-
-	
-	level_selector.select(0)
-	selected_level = level_selector.get_item_text(0)
+	_prepare_ui()
 	
 	level_selector.item_selected.connect(_on_level_selected)
 
-	
-
 func _on_level_selected(index: int) -> void:
-	selected_level = level_selector.get_item_text(index)
+	selected_level = configuration.levels[index]
+
+func _prepare_ui():
+	for level in configuration.levels:
+		level_selector.add_item(level.name)
+		
+	level_selector.select(0)
+	selected_level = configuration.levels[0]
+	
