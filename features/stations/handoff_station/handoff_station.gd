@@ -20,33 +20,11 @@ func _process(delta: float) -> void:
 func _update_debug_label():
 	label.text = ''
 	label.text += 'Inventory: ' + str(inventory.map(func(item: Item): return item.display_name))
+	
 	if current_order != null:
 		label.text += '\n'
 		label.text += 'Order: '+ str(current_order.items.map(func(item: Item): return item.display_name))
 
-#func find_by_name(arr, name):
-	#for i in arr.size():
-		#if arr[i].display_name == name:
-			#return i
-	#return -1
-	#
-#func _handle_order():
-	#var inventory_duplicate = inventory.duplicate()
-#
-	#for order_item in current_order.items:
-#
-		#var item_index = find_by_name(inventory_duplicate, order_item.display_name)
-		#print(item_index)
-	#
-		##print(order_item.display_name, item_found)
-		#if item_index == -1:
-			#return
-		#else:
-			#inventory_duplicate.remove_at(item_index)
-			#
-			#
-			#
-	#_complete_order()
 	
 func _handle_order():
 	var inventory_duplicate = inventory.duplicate()
