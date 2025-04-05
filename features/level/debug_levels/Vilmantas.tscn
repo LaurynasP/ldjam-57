@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://crwoxhfx787al"]
+[gd_scene load_steps=16 format=3 uid="uid://crwoxhfx787al"]
 
 [ext_resource type="Script" uid="uid://d3fg3nwvm5kku" path="res://features/level/debug_levels/vilmantas.gd" id="1_g1d7o"]
 [ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_mv3ks"]
@@ -12,6 +12,9 @@
 [ext_resource type="Resource" uid="uid://43th20nl26ww" path="res://configurations/recipes/steel_bar.tres" id="10_5elnx"]
 [ext_resource type="Script" uid="uid://cxl3efdwrpmjh" path="res://features/stations/processing_stations/anvil/anvil.gd" id="11_22oy1"]
 [ext_resource type="Resource" uid="uid://cprw5synye7uq" path="res://configurations/recipes/iron_sword.tres" id="12_x52xm"]
+[ext_resource type="Script" uid="uid://cqjaq18tt61cf" path="res://features/stations/resource_stations/resource_station.gd" id="13_i6aqx"]
+[ext_resource type="Resource" uid="uid://cgkhyu1216ah7" path="res://configurations/items/coal.tres" id="14_3hwcb"]
+[ext_resource type="Resource" uid="uid://y5q0e2iyet3d" path="res://configurations/items/iron_ore.tres" id="15_31q1i"]
 
 [node name="Vilmantas" type="Node3D"]
 script = ExtResource("1_g1d7o")
@@ -109,6 +112,280 @@ offset_left = 83.0
 offset_top = 52.0
 offset_right = 163.0
 offset_bottom = 92.0
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 87.0
+offset_top = 213.0
+offset_right = 167.0
+offset_bottom = 253.0
+
+[node name="coal_deposit" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0863, 0, -10.7395)
+use_collision = true
+script = ExtResource("13_i6aqx")
+resource = ExtResource("14_3hwcb")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="coal_deposit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.125, 1)
+size = Vector3(3.5, 0.25, 3.5)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.469836, 0.25, 0.409909)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D3" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00385952, 0.25, 0.445574)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D4" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0922346, 0.48814, 0.222798)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D5" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.467662, 0.223687, 0.150564)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D6" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.366956, 0, -0.930238, 0, 1, 0, 0.930238, 0, -0.366956, -0.677788, 0.25, 1.37208)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D7" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.366956, 0, -0.930238, 0, 1, 0, 0.930238, 0, -0.366956, -0.368068, 0.25, 1.91323)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D8" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.366956, 0, -0.930238, 0, 1, 0, 0.930238, 0, -0.366956, -0.241638, 0.25, 1.46332)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D9" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.366956, 0, -0.930238, 0, 1, 0, 0.930238, 0, -0.366956, -0.477427, 0.488141, 1.50625)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D10" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.366956, 0, -0.930238, 0, 1, 0, 0.930238, 0, -0.366956, -0.438364, 0.223688, 0.943066)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D11" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.900524, 0, -0.434807, 0, 1, 0, 0.434807, 0, -0.900524, 0.0745411, 0.25, 0.726623)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D12" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.900524, 0, -0.434807, 0, 1, 0, 0.434807, 0, -0.900524, -0.0648174, 0.25, 1.33437)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D13" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.900524, 0, -0.434807, 0, 1, 0, 0.434807, 0, -0.900524, 0.333207, 0.25, 1.08945)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D14" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.900524, 0, -0.434807, 0, 1, 0, 0.434807, 0, -0.900524, 0.130806, 0.488141, 0.961102)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D15" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.900524, 0, -0.434807, 0, 1, 0, 0.434807, 0, -0.900524, 0.541435, 0.223688, 0.573694)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D16" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.977714, 0, -0.209943, 0, 1, 0, 0.209943, 0, -0.977714, 0.859672, 0.25, 1.96966)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D17" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.977714, 0, -0.209943, 0, 1, 0, 0.209943, 0, -0.977714, 1.23298, 0.25, 1.47025)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D18" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.977714, 0, -0.209943, 0, 1, 0, 0.209943, 0, -0.977714, 0.769899, 0.25, 1.53321)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D19" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.977714, 0, -0.209943, 0, 1, 0, 0.209943, 0, -0.977714, 0.903075, 0.48814, 1.73246)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D20" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(-0.977714, 0, -0.209943, 0, 1, 0, 0.209943, 0, -0.977714, 0.370822, 0.223687, 1.92063)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D21" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(0.163481, 0, 0.986547, 0, 1, 0, -0.986547, 0, 0.163481, 1.23429, 0.25, 0.485861)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D22" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(0.163481, 0, 0.986547, 0, 1, 0, -0.986547, 0, 0.163481, 0.817866, 0.25, 0.021794)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D23" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(0.163481, 0, 0.986547, 0, 1, 0, -0.986547, 0, 0.163481, 0.788711, 0.25, 0.488223)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D24" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(0.163481, 0, 0.986547, 0, 1, 0, -0.986547, 0, 0.163481, 1.01023, 0.488141, 0.396746)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D25" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(0.163481, 0, 0.986547, 0, 1, 0, -0.986547, 0, 0.163481, 1.09028, 0.223688, 0.955579)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D26" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(0.78917, 0, 0.614175, 0, 1, 0, -0.614175, 0, 0.78917, 0.634242, 0.25, 1.27488)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D27" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(0.78917, 0, 0.614175, 0, 1, 0, -0.614175, 0, 0.78917, 0.642903, 0.25, 0.651424)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D28" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(0.78917, 0, 0.614175, 0, 1, 0, -0.614175, 0, 0.78917, 0.305167, 0.25, 0.974444)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D29" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(0.78917, 0, 0.614175, 0, 1, 0, -0.614175, 0, 0.78917, 0.530004, 0.488141, 1.05744)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D30" type="CSGSphere3D" parent="coal_deposit"]
+transform = Transform3D(0.78917, 0, 0.614175, 0, 1, 0, -0.614175, 0, 0.78917, 0.209859, 0.223688, 1.52242)
+material = ExtResource("6_g1d7o")
+
+[node name="iron_deposit" type="CSGCombiner3D" parent="."]
+transform = Transform3D(-2.58096e-08, 0.866025, 0.5, 1, 2.98023e-08, 0, -1.49012e-08, 0.5, -0.866025, -3.07945, 2.53233, -9.96532)
+use_collision = true
+script = ExtResource("13_i6aqx")
+resource = ExtResource("15_31q1i")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="iron_deposit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, -0.875, -0.625)
+size = Vector3(5, 2.25, 6.75)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03167, 0.25, -0.116024)
+radius = 0.778394
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D3" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00639, 0.25, -2.50896)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D4" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0922346, 0.48814, -2.49057)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D5" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.467662, 0.223687, 0.150564)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D6" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.366956, 0, -0.930238, 0, 1, 0, 0.930238, 0, -0.366956, 0.125609, 0.25, -1.11773)
+radius = 0.962756
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D7" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.366956, 0, -0.930238, 0, 1, 0, 0.930238, 0, -0.366956, -0.368068, 0.25, 1.91323)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D8" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.366956, 0, -0.930238, 0, 1, 0, 0.930238, 0, -0.366956, -0.241638, 0.25, 1.46332)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D9" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.366956, 0, -0.930238, 0, 1, 0, 0.930238, 0, -0.366956, -0.477427, 0.488141, 1.50625)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D10" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.366956, 0, -0.930238, 0, 1, 0, 0.930238, 0, -0.366956, -0.438364, 0.223688, 0.943066)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D11" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.900524, 0, -0.434807, 0, 1, 0, 0.434807, 0, -0.900524, 0.0745411, 0.25, 0.726623)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D12" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.900524, 0, -0.434807, 0, 1, 0, 0.434807, 0, -0.900524, -0.0648174, 0.25, 1.33437)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D13" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.900524, 0, -0.434807, 0, 1, 0, 0.434807, 0, -0.900524, 1.1887, 0.25, -1.66004)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D14" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.900524, 0, -0.434807, 0, 1, 0, 0.434807, 0, -0.900524, 1.16487, 0.488141, -1.10966)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D15" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.900524, 0, -0.434807, 0, 1, 0, 0.434807, 0, -0.900524, -1.10166, 0.223687, -0.292284)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D16" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.977714, 0, -0.209943, 0, 1, 0, 0.209943, 0, -0.977714, -1.35455, 0.25, 0.364251)
+radius = 0.645536
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D17" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.977714, 0, -0.209943, 0, 1, 0, 0.209943, 0, -0.977714, -1.36509, 0.25, -2.28338)
+radius = 0.701234
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D18" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.977714, 0, -0.209943, 0, 1, 0, 0.209943, 0, -0.977714, -1.42404, 0.249999, -1.31992)
+radius = 0.704844
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D19" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.977714, 0, -0.209943, 0, 1, 0, 0.209943, 0, -0.977714, 1.27735, 0.48814, 1.46081)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D20" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(-0.977714, 0, -0.209943, 0, 1, 0, 0.209943, 0, -0.977714, -1.54121, 0.223687, 1.27926)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D21" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(0.163481, 0, 0.986547, 0, 1, 0, -0.986547, 0, 0.163481, 0.650818, 0.25, 1.89801)
+radius = 0.784563
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D22" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(0.163481, 0, 0.986547, 0, 1, 0, -0.986547, 0, 0.163481, 0.817866, 0.25, 0.021794)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D23" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(0.163481, 0, 0.986547, 0, 1, 0, -0.986547, 0, 0.163481, 0.788711, 0.25, 0.488223)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D24" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(0.163481, 0, 0.986547, 0, 1, 0, -0.986547, 0, 0.163481, 1.01023, 0.488141, 0.396746)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D25" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(0.163481, 0, 0.986547, 0, 1, 0, -0.986547, 0, 0.163481, 1.09028, 0.223688, 0.955579)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D26" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(0.78917, 0, 0.614175, 0, 1, 0, -0.614175, 0, 0.78917, 0.634242, 0.25, 1.27488)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D27" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(0.78917, 0, 0.614175, 0, 1, 0, -0.614175, 0, 0.78917, 0.642903, 0.25, 0.651424)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D28" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(0.78917, 0, 0.614175, 0, 1, 0, -0.614175, 0, 0.78917, 0.305167, 0.25, 0.974444)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D29" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(0.78917, 0, 0.614175, 0, 1, 0, -0.614175, 0, 0.78917, 0.530004, 0.488141, 1.05744)
+material = ExtResource("6_g1d7o")
+
+[node name="CSGSphere3D30" type="CSGSphere3D" parent="iron_deposit"]
+transform = Transform3D(0.78917, 0, 0.614175, 0, 1, 0, -0.614175, 0, 0.78917, 0.209859, 0.223688, 1.52242)
+material = ExtResource("6_g1d7o")
 
 [editable path="PlayerSpawner"]
 [editable path="environment"]

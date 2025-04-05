@@ -1,10 +1,16 @@
 extends Level
 
 @onready var label = $Label
+@onready var label_2 = $Label2
 @onready var furnace_label = $Furnace/Label3D
 @onready var furnace = $Furnace as Furnace
 @onready var anvil: Anvil = $Anvil
 @onready var anvil_label = $Anvil/Label3D
+
+@onready var coal_deposit = $coal_deposit as ResourceStation
+@onready var iron_deposit = $iron_deposit as ResourceStation
+
+@export var inventory: Array[Item] = []
 
 func _ready() -> void:
 	label.text += 'Items Count: ' 
@@ -24,6 +30,9 @@ func _ready() -> void:
 	
 	on_furnace_resource_added(ItemManager.items.values()[0])
 	
+	
+func _process(delta: float) -> void:
+	pass
 	
 func on_furnace_resource_added(resource: Item):
 	_debug_furnace()
