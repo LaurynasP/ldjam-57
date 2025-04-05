@@ -13,6 +13,7 @@ var dash_cooldown_timer := 0.0
 
 var dash_sound_effect: AudioStream = preload("res://assets/sound/sound_effects/dash.mp3")
 @onready var interact_area: Area3D = $InteractArea
+@onready var label: Label3D = $Label3D
 
 
 var item:Item
@@ -27,6 +28,7 @@ func _physics_process(delta: float):
 	_handle_movement(delta)
 		
 func _process(delta: float) -> void:
+	debug()
 	_handle_input()
 
 func _handle_input():
@@ -93,3 +95,7 @@ func _add_remove_item_action():
 	else:
 		item = focused_station.remove_item()
 		
+		
+func debug():
+	label.text = 'Item: '
+	label.text = item.display_name if item != null else "No Item"

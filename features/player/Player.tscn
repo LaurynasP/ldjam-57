@@ -39,3 +39,8 @@ material = SubResource("StandardMaterial3D_yrnqm")
 [node name="InteractCollider" type="CollisionShape3D" parent="InteractArea"]
 physics_interpolation_mode = 2
 shape = SubResource("BoxShape3D_yrnqm")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 3, 0)
+text = "Label"
+font_size = 172

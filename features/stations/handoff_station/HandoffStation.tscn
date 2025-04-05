@@ -10,3 +10,5 @@ script = ExtResource("1_nfw1f")
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 3, 0)
 text = "Label"
 font_size = 172
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
