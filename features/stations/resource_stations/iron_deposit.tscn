@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6h21p1llru5h"]
+[gd_scene load_steps=4 format=3 uid="uid://b2piqq17j6g7x"]
 
 [ext_resource type="Script" uid="uid://cqjaq18tt61cf" path="res://features/stations/resource_stations/resource_station.gd" id="1_u8kve"]
 [ext_resource type="Resource" uid="uid://y5q0e2iyet3d" path="res://configurations/items/iron_ore.tres" id="2_ykk2p"]
@@ -7,7 +7,7 @@
 [node name="iron_deposit" type="Node3D"]
 
 [node name="iron_deposit" type="CSGCombiner3D" parent="."]
-transform = Transform3D(-2.58096e-08, 0.866025, 0.5, 1, 2.98023e-08, 0, -1.49012e-08, 0.5, -0.866025, -3.07945, 2.53233, -9.96532)
+transform = Transform3D(-2.58096e-08, 0.866025, 0.5, 1, 2.98023e-08, 0, -1.49012e-08, 0.5, -0.866025, 0, 2.532, 0)
 use_collision = true
 script = ExtResource("1_u8kve")
 resource = ExtResource("2_ykk2p")

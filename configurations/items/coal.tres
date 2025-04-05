@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://cgkhyu1216ah7"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cgkhyu1216ah7"]
 
 [ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_6ck7q"]
+[ext_resource type="Texture2D" uid="uid://q6d4plryh84u" path="res://assets/images/icons/keyboard_j.png" id="1_kkv82"]
 
 [resource]
 script = ExtResource("1_6ck7q")
 name = "coal"
 display_name = "Coal"
+icon = ExtResource("1_kkv82")
 metadata/_custom_type_script = "uid://ce12c8rt3nki4"

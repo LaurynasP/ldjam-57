@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://b0vqfs1by8fnb"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b0vqfs1by8fnb"]
 
+[ext_resource type="Texture2D" uid="uid://dhpvfxdqwtfes" path="res://assets/images/icons/keyboard.png" id="1_4atur"]
 [ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_vygp6"]
 
 [resource]
 script = ExtResource("1_vygp6")
 name = "steel_bar"
 display_name = "Steel Bar"
+icon = ExtResource("1_4atur")
 metadata/_custom_type_script = "uid://ce12c8rt3nki4"

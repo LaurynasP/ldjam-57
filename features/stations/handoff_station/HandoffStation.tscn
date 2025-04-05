@@ -1,14 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://b88kbpsdnbm2j"]
+[gd_scene load_steps=4 format=3 uid="uid://b88kbpsdnbm2j"]
 
 [ext_resource type="Script" uid="uid://cwob883btxcgh" path="res://features/stations/handoff_station/handoff_station.gd" id="1_nfw1f"]
+[ext_resource type="PackedScene" uid="uid://dynf5itxy42ka" path="res://features/stations/handoff_station/HandoffStationUI.tscn" id="2_kyyji"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_kyyji"]
+viewport_path = NodePath("Billboard/SubViewport")
 
 [node name="HandoffStation" type="CSGBox3D"]
 use_collision = true
 script = ExtResource("1_nfw1f")
 
 [node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 3, 0)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 4.24955, 0)
+visible = false
 text = "Label"
 font_size = 172
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+
+[node name="Billboard" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 3.0842, 0)
+billboard = 2
+texture = SubResource("ViewportTexture_kyyji")
+
+[node name="SubViewport" type="SubViewport" parent="Billboard"]
+transparent_bg = true
+
+[node name="HandoffStationUi" parent="Billboard/SubViewport" instance=ExtResource("2_kyyji")]
+unique_name_in_owner = true
