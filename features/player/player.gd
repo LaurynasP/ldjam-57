@@ -21,6 +21,7 @@ var stations_in_hit_area: Array[Station] = []
 var focused_station: Station
 
 func _ready():
+	GameManager.current_gameplay.players[device_id] = self
 	interact_area.body_entered.connect(_on_interact_area_entered)
 	interact_area.body_exited.connect(_on_interact_area_exited)
 
