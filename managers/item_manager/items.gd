@@ -1,7 +1,7 @@
 extends Resource
 class_name Items
 
-@export var items: Array[Item]
+@export var items: Array[Item] = []
 
 var rng = RandomNumberGenerator.new()
 
@@ -10,7 +10,7 @@ func get_random_items(count: int) -> Items:
 	if items.is_empty():
 		return random_items
 
-	while random_items.size() < count:
+	while random_items.items.size() < count:
 		random_items.items.append(get_random_item())
 	return random_items
 
@@ -29,7 +29,7 @@ func has_item(item: Item) -> bool:
 	return item in items
 	
 func has_all_items(_items: Items) -> bool:
-	return items.all(func(item): return item in _items)
+	return _items.items.all(func(item): return item in items)
 	
 func add_item(item: Item):
 	items.append(item)

@@ -9,6 +9,11 @@ var seconds_per_item:float = 30
 var order_list: Array[Order] = []
 
 func _ready() -> void:
+	var coal = load("res://configurations/items/coal.tres").duplicate()
+	var iron = load("res://configurations/items/iron_ore.tres").duplicate()
+	_available_order_items.add_item(coal);
+	_available_order_items.add_item(iron);
+	_available_order_items
 	pass
 	
 

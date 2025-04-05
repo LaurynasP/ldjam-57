@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://cgkhyu1216ah7" path="res://configurations/items/coal.tres" id="14_3hwcb"]
 [ext_resource type="Resource" uid="uid://y5q0e2iyet3d" path="res://configurations/items/iron_ore.tres" id="15_31q1i"]
 [ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="16_n3gf4"]
+[ext_resource type="PackedScene" uid="uid://b88kbpsdnbm2j" path="res://features/stations/handoff_station/HandoffStation.tscn" id="16_n3gf4"]
 
 [node name="Vilmantas" type="Node3D"]
 script = ExtResource("1_g1d7o")
@@ -91,7 +92,7 @@ script = ExtResource("11_22oy1")
 recipes = Array[ExtResource("8_183uq")]([ExtResource("12_x52xm")])
 
 [node name="Label3D" type="Label3D" parent="Anvil"]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.49427, 4.58712, -0.0941617)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.49622, 4.58712, -0.118896)
 text = "Avaialawdwadeewqr
 awdwadwadwad
 awdwadwad"
@@ -395,6 +396,9 @@ material = ExtResource("6_g1d7o")
 [node name="CSGSphere3D30" type="CSGSphere3D" parent="iron_deposit"]
 transform = Transform3D(0.78917, 0, 0.614175, 0, 1, 0, -0.614175, 0, 0.78917, 0.209859, 0.223688, 1.52242)
 material = ExtResource("6_g1d7o")
+
+[node name="HandoffStation" parent="." instance=ExtResource("16_n3gf4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.95032, 0.393202, -3.03596)
 
 [editable path="PlayerSpawner"]
 [editable path="environment"]
