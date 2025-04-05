@@ -2,4 +2,4 @@ extends ProcessingStation
 class_name Anvil
 
 func interact():
-	do_processing()
+	do_processing(10)

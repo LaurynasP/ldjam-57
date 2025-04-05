@@ -24,6 +24,9 @@ func remove_item() -> Item:
 func interact():
 	print("I was interacted with!", self)
 
+func remove_item() -> Item:
+	return inventory.pop_back()
+
 func reset_station():
 	inventory = []
 	
