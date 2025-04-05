@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://tp32esmsp3xq" path="res://features/camera/Camera.tscn" id="4_68ysj"]
 [ext_resource type="PackedScene" uid="uid://bjxatu6y03tvm" path="res://features/level/environments/default_light.tscn" id="5_ueg4n"]
 [ext_resource type="Material" uid="uid://bxdq4rif8cw7d" path="res://assets/materials/placeholder_furnace_mat.tres" id="6_g1d7o"]
-[ext_resource type="Script" uid="uid://dlkq0x30e5gl0" path="res://features/stations/furnace/furnace.gd" id="7_oopqf"]
+[ext_resource type="Script" uid="uid://dlkq0x30e5gl0" path="res://features/stations/processing_stations/furnace/furnace.gd" id="7_oopqf"]
 [ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="8_183uq"]
 [ext_resource type="Resource" uid="uid://ctyq587vipeyk" path="res://configurations/recipes/iron_ bar.tres" id="9_5elnx"]
 [ext_resource type="Resource" uid="uid://43th20nl26ww" path="res://configurations/recipes/steel_bar.tres" id="10_5elnx"]
