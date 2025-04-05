@@ -9,5 +9,5 @@ func _ready() -> void:
 	start_button.pressed.connect(_on_start_button_press)
 
 func _on_start_button_press():
-	GameManager.load_level(level_selection.levels.get(level_selection.selected_level))
+	GameManager.load_level(level_selection.selected_level)
 	

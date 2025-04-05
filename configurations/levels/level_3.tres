@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="LevelConfiguration" load_steps=5 format=3 uid="uid://dji142yfgye3g"]
+
+[ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="1_nbu38"]
+[ext_resource type="PackedScene" uid="uid://hag7k21uqn13" path="res://features/level/debug_levels/Laurynas.tscn" id="2_x2gpw"]
+[ext_resource type="Script" uid="uid://3i846dludlok" path="res://managers/loading_manager/level_configuration.gd" id="3_r58yy"]
+[ext_resource type="PackedScene" uid="uid://fmb0vcjtbe0j" path="res://features/gameplay_ui/gameplay_ui.tscn" id="4_akovj"]
+
+[resource]
+script = ExtResource("3_r58yy")
+name = "Triocs"
+level = ExtResource("2_x2gpw")
+gameplay = ExtResource("1_nbu38")
+ui = ExtResource("4_akovj")
+metadata/_custom_type_script = "uid://3i846dludlok"

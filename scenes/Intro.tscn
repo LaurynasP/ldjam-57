@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwopic2jtgphs"]
+
+[ext_resource type="PackedScene" uid="uid://cc2wi0oxkv8o" path="res://features/menu/Menu.tscn" id="1_45dpb"]
+
+[sub_resource type="GDScript" id="GDScript_45dpb"]
+
+[node name="Intro" type="Node3D"]
+script = SubResource("GDScript_45dpb")
+
+[node name="Menu" parent="." instance=ExtResource("1_45dpb")]
