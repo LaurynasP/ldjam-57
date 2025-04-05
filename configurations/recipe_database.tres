@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Recipes" load_steps=4 format=3 uid="uid://bu6n8uarslvs"]
+
+[ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="1_r4m65"]
+[ext_resource type="Script" uid="uid://cklfuy6e1ngsp" path="res://managers/recipe_manager/recipes.gd" id="2_lglhp"]
+[ext_resource type="Resource" uid="uid://ctyq587vipeyk" path="res://configurations/recipes/iron_ bar.tres" id="2_v7yia"]
+
+[resource]
+script = ExtResource("2_lglhp")
+recipes = Array[ExtResource("1_r4m65")]([ExtResource("2_v7yia")])
+metadata/_custom_type_script = "uid://cklfuy6e1ngsp"

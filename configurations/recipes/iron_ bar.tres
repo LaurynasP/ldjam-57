@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://ctyq587vipeyk"]
+
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_bo6er"]
+[ext_resource type="Resource" uid="uid://y5q0e2iyet3d" path="res://configurations/items/iron_ore.tres" id="2_gnjy5"]
+[ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="2_hpx4s"]
+[ext_resource type="Resource" uid="uid://btu28liqn3sai" path="res://configurations/items/iron_bar.tres" id="3_2og6k"]
+
+[resource]
+script = ExtResource("2_hpx4s")
+product = ExtResource("3_2og6k")
+ingredients = Array[ExtResource("1_bo6er")]([ExtResource("2_gnjy5")])
+metadata/_custom_type_script = "uid://bkkb1mtbo8xh5"

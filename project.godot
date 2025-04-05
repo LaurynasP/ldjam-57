@@ -21,6 +21,8 @@ GameManager="*res://managers/game_manager.gd"
 InputManager="*res://managers/input_manager.gd"
 SoundManager="*res://managers/sound_manager.gd"
 LoadingManager="*res://managers/loading_manager/loading_manager.gd"
+ItemManager="*res://managers/item_manager/item_manager.gd"
+RecipeManager="*res://managers/recipe_manager/recipe_manager.gd"
 
 [display]
 

@@ -1,40 +1,43 @@
-[gd_scene load_steps=6 format=3 uid="uid://crwoxhfx787al"]
+[gd_scene load_steps=7 format=3 uid="uid://crwoxhfx787al"]
 
-[ext_resource type="Script" uid="uid://jcyuj2h3gtq6" path="res://features/level/level.gd" id="1_yvns7"]
-[ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_mat.tres" id="2_mv3ks"]
+[ext_resource type="Script" uid="uid://d3fg3nwvm5kku" path="res://features/level/debug_levels/vilmantas.gd" id="1_g1d7o"]
+[ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_mv3ks"]
 [ext_resource type="PackedScene" uid="uid://dfjp2tythyjfd" path="res://features/player/player_spawner/PlayerSpawner.tscn" id="3_0no2m"]
 [ext_resource type="PackedScene" uid="uid://tp32esmsp3xq" path="res://features/camera/Camera.tscn" id="4_68ysj"]
 [ext_resource type="PackedScene" uid="uid://bjxatu6y03tvm" path="res://features/level/environments/default_light.tscn" id="5_ueg4n"]
+[ext_resource type="Material" uid="uid://bxdq4rif8cw7d" path="res://assets/materials/placeholder_furnace_mat.tres" id="6_g1d7o"]
 
 [node name="Vilmantas" type="Node3D"]
-script = ExtResource("1_yvns7")
+script = ExtResource("1_g1d7o")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="WallsAndGround" type="CSGCombiner3D" parent="CSGCombiner3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/WallsAndGround"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.548, -0.5, -3.48)
 size = Vector3(60, 1, 60)
 material = ExtResource("2_mv3ks")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03279, 26)
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/WallsAndGround"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2.5, 26)
 size = Vector3(60, 5, 1)
 material = ExtResource("2_mv3ks")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03279, -33)
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D/WallsAndGround"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2.5, -33)
 size = Vector3(60, 5, 1)
 material = ExtResource("2_mv3ks")
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 30.0068, 2.0521, -3.00676)
-size = Vector3(60, 5, 1)
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D/WallsAndGround"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 29, 2.5, -3.5)
+size = Vector3(58, 5, 1)
 material = ExtResource("2_mv3ks")
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.9932, 2.0521, -3.00676)
-size = Vector3(60, 5, 1)
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D/WallsAndGround"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -30, 2.5, -3.5)
+size = Vector3(58, 5, 1)
 material = ExtResource("2_mv3ks")
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("3_0no2m")]
@@ -43,6 +46,23 @@ material = ExtResource("2_mv3ks")
 transform = Transform3D(-0.668183, 0.270693, -0.693005, 1.49012e-08, 0.931463, 0.363837, 0.743997, 0.243109, -0.622388, -16.5927, 10.9582, -15.6506)
 
 [node name="environment" parent="." instance=ExtResource("5_ueg4n")]
+
+[node name="Furnace" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 2, -0.75)
+material_override = ExtResource("6_g1d7o")
+use_collision = true
+size = Vector3(8, 4, 5)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Furnace"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, 0)
+operation = 2
+size = Vector3(5, 1.5, 4)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 83.0
+offset_top = 52.0
+offset_right = 163.0
+offset_bottom = 92.0
 
 [editable path="PlayerSpawner"]
 [editable path="environment"]

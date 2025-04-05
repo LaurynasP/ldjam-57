@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://y5q0e2iyet3d"]
+
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_njdmg"]
+
+[resource]
+script = ExtResource("1_njdmg")
+name = "Iron Ore"
+metadata/_custom_type_script = "uid://ce12c8rt3nki4"
