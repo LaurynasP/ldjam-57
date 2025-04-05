@@ -61,7 +61,7 @@ func _on_interact_area_exited(body: Node3D):
 	
 	stations_in_hit_area.erase(station)
 	focused_station = null if stations_in_hit_area.size() == 0 else stations_in_hit_area[0]
-		
+
 	
 func _handle_movement(delta: float):
 	var dir = InputManager.get_input_vector(device_id)

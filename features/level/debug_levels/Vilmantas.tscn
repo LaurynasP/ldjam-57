@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://crwoxhfx787al"]
+[gd_scene load_steps=16 format=3 uid="uid://crwoxhfx787al"]
 
 [ext_resource type="Script" uid="uid://d3fg3nwvm5kku" path="res://features/level/debug_levels/vilmantas.gd" id="1_g1d7o"]
 [ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_mv3ks"]
@@ -6,12 +6,18 @@
 [ext_resource type="PackedScene" uid="uid://b88kbpsdnbm2j" path="res://features/stations/handoff_station/HandoffStation.tscn" id="3_nnvv4"]
 [ext_resource type="PackedScene" uid="uid://tp32esmsp3xq" path="res://features/camera/Camera.tscn" id="4_68ysj"]
 [ext_resource type="PackedScene" uid="uid://bjxatu6y03tvm" path="res://features/level/environments/default_light.tscn" id="5_ueg4n"]
-[ext_resource type="PackedScene" path="res://features/stations/processing_stations/furnace/furnace.tscn" id="8_i6aqx"]
-[ext_resource type="PackedScene" path="res://features/stations/resource_stations/coal_deposit.tscn" id="10_22oy1"]
-[ext_resource type="PackedScene" path="res://features/stations/resource_stations/iron_deposit.tscn" id="11_x52xm"]
-[ext_resource type="PackedScene" path="res://features/stations/counter.tscn" id="12_x52xm"]
-[ext_resource type="PackedScene" path="res://features/stations/processing_stations/anvil/anvil.tscn" id="13_n3gf4"]
+[ext_resource type="PackedScene" uid="uid://7ynlwr02wm3n" path="res://features/stations/processing_stations/furnace/furnace.tscn" id="8_i6aqx"]
+[ext_resource type="PackedScene" uid="uid://c5tdcrwcdt1af" path="res://features/stations/resource_stations/coal_deposit.tscn" id="10_22oy1"]
+[ext_resource type="PackedScene" uid="uid://b6h21p1llru5h" path="res://features/stations/resource_stations/iron_deposit.tscn" id="11_x52xm"]
+[ext_resource type="PackedScene" uid="uid://dluludjqopthn" path="res://features/stations/counter.tscn" id="12_x52xm"]
+[ext_resource type="Script" uid="uid://cqjaq18tt61cf" path="res://features/stations/resource_stations/resource_station.gd" id="13_i6aqx"]
+[ext_resource type="PackedScene" uid="uid://b4xllno8qbro" path="res://features/stations/processing_stations/anvil/anvil.tscn" id="13_n3gf4"]
 [ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="16_n3gf4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_x52xm"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_i6aqx"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="Vilmantas" type="Node3D"]
 script = ExtResource("1_g1d7o")
@@ -103,6 +109,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 6)
 
 [node name="counter6" parent="." instance=ExtResource("12_x52xm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, -1.5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.98233, 0.903275, 5.73071)
+mesh = SubResource("BoxMesh_x52xm")
+script = ExtResource("13_i6aqx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_i6aqx")
 
 [editable path="PlayerSpawner"]
 [editable path="environment"]

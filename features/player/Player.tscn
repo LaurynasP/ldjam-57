@@ -30,7 +30,7 @@ transform = Transform3D(-2.09058e-15, -1.1012e-08, 0.845386, -0.402441, -1.1012e
 mesh = SubResource("CylinderMesh_yrnqm")
 
 [node name="InteractArea" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -4.72276)
 
 [node name="InteractColliderVisualizer" type="CSGBox3D" parent="InteractArea"]
 size = Vector3(1, 2, 2)
