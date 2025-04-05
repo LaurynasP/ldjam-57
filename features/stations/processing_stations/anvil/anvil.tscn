@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4xllno8qbro"]
+
+[ext_resource type="Material" uid="uid://bxdq4rif8cw7d" path="res://assets/materials/placeholder_furnace_mat.tres" id="1_sk6r2"]
+[ext_resource type="Script" uid="uid://cxl3efdwrpmjh" path="res://features/stations/processing_stations/anvil/anvil.gd" id="2_bakm5"]
+
+[node name="anvil" type="Node3D"]
+script = ExtResource("2_bakm5")
+
+[node name="model" type="CSGBox3D" parent="."]
+transform = Transform3D(0.0683287, 0, -0.997663, 0, 1, 0, 0.997663, 0, 0.0683287, 3.03833, 1, -9.71831)
+material_override = ExtResource("1_sk6r2")
+use_collision = true
+size = Vector3(1.25, 2, 3.75)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="model"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33514e-05, -0.25, 1.25)
+operation = 2
+size = Vector3(1.5, 1.5, 1.5)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="model"]
+transform = Transform3D(1, 0, -7.45058e-09, 0, 1, 0, 7.45058e-09, 0, 1, 1.52588e-05, -0.25, -1.25)
+operation = 2
+size = Vector3(1.5, 1.5, 1.5)
+
+[node name="debug_label" type="Label3D" parent="."]
+transform = Transform3D(0.75377, 0, -0.657139, 0, 1, 0, 0.657139, 0, 0.75377, 3.25918, 5.58712, -8.23371)
+text = "Avaialawdwadeewqr
+awdwadwadwad
+awdwadwad"
+font_size = 172

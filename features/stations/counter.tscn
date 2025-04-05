@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://dluludjqopthn"]
+
+[ext_resource type="Material" uid="uid://bxdq4rif8cw7d" path="res://assets/materials/placeholder_furnace_mat.tres" id="1_o1olo"]
+
+[node name="counter" type="Node3D"]
+
+[node name="model" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="model"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+size = Vector3(1.5, 1, 1.5)
+material = ExtResource("1_o1olo")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="model/CSGBox3D"]
+transform = Transform3D(-0.00126662, 0.000363439, -0.999999, 0.00189003, 0.999998, 0.000361019, 0.999997, -0.00188956, -0.00126732, -0.000227496, -0.249999, 0.00118105)
+operation = 2
+size = Vector3(1, 1, 2)
+material = ExtResource("1_o1olo")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="model/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+operation = 2
+size = Vector3(1, 1, 2)
+material = ExtResource("1_o1olo")

@@ -2,10 +2,11 @@ extends Level
 
 @onready var label = $Label
 @onready var label_2 = $Label2
-@onready var furnace_label = $Furnace/Label3D
-@onready var furnace = $Furnace as Furnace
-@onready var anvil: Anvil = $Anvil
-@onready var anvil_label = $Anvil/Label3D
+@onready var label_3 = $Label3
+@onready var furnace_label = $furnace/debug_label
+@onready var furnace = $furnace as Furnace
+@onready var anvil: Anvil = $anvil
+@onready var anvil_label = $anvil/debug_label
 
 @onready var coal_deposit = $coal_deposit as ResourceStation
 @onready var iron_deposit = $iron_deposit as ResourceStation
@@ -20,35 +21,9 @@ func _ready() -> void:
 	label.text += str(RecipeManager.recipes.size())
 	furnace_label.text = ''
 	
-	furnace.on_resource_added.connect(on_furnace_resource_added)
-	furnace.on_progress_tick.connect(on_progress_tick)
-	furnace.on_processing_completed.connect(on_product_completed)
-	
-	anvil.on_resource_added.connect(on_furnace_resource_added)
-	anvil.on_progress_tick.connect(on_progress_tick)
-	anvil.on_processing_completed.connect(on_product_completed)
-	
-	on_furnace_resource_added(ItemManager.items.values()[0])
-	
-	
 func _process(delta: float) -> void:
-	pass
-	
-func on_furnace_resource_added(resource: Item):
-	_debug_furnace()
-	_debug_anvil()
-
-func _physics_process(delta: float) -> void:
-	if InputManager.is_interact_just_pressed(-1):
-		print(anvil.add_item(ItemManager.items['iron_bar']))
-		if not anvil.add_item(ItemManager.items['iron_bar']):
-			anvil.interact()
-
-func on_progress_tick(progress: int):
-	_debug_furnace()
-	_debug_anvil()
-	
-func on_product_completed(item: Item):
+	_debug_player_focus()
+	_debug_player_item()
 	_debug_furnace()
 	_debug_anvil()
 
@@ -76,3 +51,18 @@ func _debug_anvil():
 	if anvil.prepared_item != null:
 		anvil_label.text += '\n'
 		anvil_label.text += 'Prepared Item: ' + str(anvil.prepared_item.display_name)
+
+func _debug_player_item():
+	if GameManager.current_gameplay.players[-1].item != null:
+		label_3.text = GameManager.current_gameplay.players[-1].item.name
+	else:
+		label_3.text = ''
+	pass
+	
+func _debug_player_focus():
+	if GameManager.current_gameplay.players[-1].focused_station != null:
+		label_2.text = GameManager.current_gameplay.players[-1].focused_station.name
+	else:
+		label_2.text = ''
+	pass
+	

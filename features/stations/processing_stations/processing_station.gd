@@ -39,6 +39,8 @@ func add_item(item: Item) -> bool:
 	return true
 
 func remove_item() -> Item:
+	if prepared_item != null:
+		return retrieve_product()
 	if progress == 0:
 		return inventory.pop_back()
 	
@@ -54,18 +56,30 @@ func do_processing(increment: int = 5):
 		
 	if prepared_item != null:
 		return
-		
+	
+	progress += increment
+	
+	progress = min(100, progress)
+	
 	if progress == 100: 
 		complete_product()
 		return
-	
-	progress += increment
 	
 	on_progress_tick.emit(progress)
 	pass
 	
 func complete_product():
 	if available_recipes.size() != 1:
+		return
+		
+	var recipe = available_recipes.values()[0]
+	
+	var can_cook = true
+	for ingredient in recipe.ingredients:
+		if not inventory.any(func(item: Item): return item.name == ingredient.name):
+			can_cook = false
+	
+	if not can_cook:
 		return
 	
 	prepared_item = available_recipes.values()[0].product
