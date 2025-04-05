@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_5tvkc")
-name = "Iron Bar"
+name = "iron_bar"
+display_name = "Iron Bar"
 metadata/_custom_type_script = "uid://ce12c8rt3nki4"

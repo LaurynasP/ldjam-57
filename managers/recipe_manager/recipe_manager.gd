@@ -1,10 +1,9 @@
 extends Node
 
-var recipes: Array[Recipe]
+var recipes: Dictionary[String, Recipe]
 
 func _ready() -> void:
-	recipes = (load("res://configurations/recipe_database.tres") as Recipes).recipes
+	var r = (load("res://configurations/recipe_database.tres") as Recipes).recipes
 	
-	for n in range(recipes.size()):
-		recipes[n].id = n
-		
+	for recipe in r:
+		recipes[recipe.name] = recipe
