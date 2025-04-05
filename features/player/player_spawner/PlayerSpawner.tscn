@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfjp2tythyjfd"]
+
+[ext_resource type="Script" uid="uid://bma6hpojysyxt" path="res://features/player/player_spawner/player_spawner.gd" id="1_eep2c"]
+[ext_resource type="PackedScene" uid="uid://da1p078wf0dfu" path="res://features/player/Player.tscn" id="2_8s1b1"]
+[ext_resource type="PackedScene" uid="uid://yepplcbaa1cd" path="res://features/player/player_spawner/spawn_point.tscn" id="2_rdkm7"]
+
+[node name="PlayerSpawner" type="Node3D"]
+script = ExtResource("1_eep2c")
+player_scene = ExtResource("2_8s1b1")
+
+[node name="SpawnPoints" type="Node3D" parent="."]
+
+[node name="SpawnPoint1" parent="SpawnPoints" instance=ExtResource("2_rdkm7")]
+
+[node name="SpawnPoint2" parent="SpawnPoints" instance=ExtResource("2_rdkm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
+
+[node name="SpawnPoint3" parent="SpawnPoints" instance=ExtResource("2_rdkm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0)
+
+[node name="SpawnPoint4" parent="SpawnPoints" instance=ExtResource("2_rdkm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -1.5)
+
+[node name="SpawnPoint5" parent="SpawnPoints" instance=ExtResource("2_rdkm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 1.5)
+
+[node name="SpawnPoint6" parent="SpawnPoints" instance=ExtResource("2_rdkm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 1.5)
+
+[node name="SpawnPoint7" parent="SpawnPoints" instance=ExtResource("2_rdkm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -1.5)
+
+[node name="SpawnPoint8" parent="SpawnPoints" instance=ExtResource("2_rdkm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
+
+[node name="SpawnPoint9" parent="SpawnPoints" instance=ExtResource("2_rdkm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)

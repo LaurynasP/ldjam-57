@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://yepplcbaa1cd"]
+
+[ext_resource type="Script" uid="uid://bu1u3cnnp5gxi" path="res://features/player/player_spawner/spawn_point.gd" id="1_nn5q8"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_j4saw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nn5q8"]
+transparency = 1
+albedo_color = Color(0.564706, 0.6, 0.121569, 0.45098)
+
+[node name="SpawnPoint" type="Node3D"]
+script = ExtResource("1_nn5q8")
+
+[node name="SpawnPointMarker" type="Marker3D" parent="." groups=["player_spawn_point_marker"]]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+mesh = SubResource("CapsuleMesh_j4saw")
+material = SubResource("StandardMaterial3D_nn5q8")

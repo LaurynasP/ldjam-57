@@ -2,7 +2,7 @@ extends Node
 
 var current_gameplay: Gameplay
 var current_level: Level
-var selected_player_devices: Array[int] = [-1]
+var selected_player_devices: Array[int] = [-1, 0]
 
 @onready var menu: Menu = load("res://features/menu/Menu.tscn").instantiate()
 
