@@ -37,17 +37,30 @@ func _handle_input():
 	if InputManager.is_add_remove_item_just_pressed(device_id):
 		_add_remove_item_action()
 
-func _on_interact_area_entered(body):
-	if body is Station:
-		stations_in_hit_area.append(body)
-		focused_station = stations_in_hit_area[0]
+func _on_interact_area_entered(body: Node3D):
+	var station = body as Station
+	
+	if station == null:
+		station = body.get_parent() as Station
+	
+	if station == null:
+		return
 		
+	stations_in_hit_area.append(station)
+	focused_station = stations_in_hit_area[0]
 		
-func _on_interact_area_exited(body):
-	if body is Station:
-		stations_in_hit_area.erase(body)
-		focused_station = null if stations_in_hit_area.size() == 0 else stations_in_hit_area[0]
-		
+func _on_interact_area_exited(body: Node3D):
+	var station = body as Station
+	
+	if station == null:
+		station = body.get_parent() as Station
+	
+	if station == null:
+		return
+	
+	stations_in_hit_area.erase(station)
+	focused_station = null if stations_in_hit_area.size() == 0 else stations_in_hit_area[0]
+
 	
 func _handle_movement(delta: float):
 	var dir = InputManager.get_input_vector(device_id)
