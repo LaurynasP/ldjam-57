@@ -3,12 +3,14 @@ class_name Station
 
 
 var inventory: Array[Item] = []
-var allow_duplicates = false
+
+@export var allow_duplicates = false
+@export var inventory_space = 1
 
 signal on_resource_added(resource: Item)
 
 func add_item(item: Item) -> bool:
-	if allow_duplicates and ItemManager.is_item_already_in_inventory(item, inventory):
+	if inventory_space <= inventory.size() or (not allow_duplicates and ItemManager.is_item_already_in_inventory(item, inventory)):
 		return false
 		
 	inventory.append(item)

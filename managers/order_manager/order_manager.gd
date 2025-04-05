@@ -12,8 +12,8 @@ var order_list: Array[Order] = []
 
 
 func _ready() -> void:
-	var coal = load("res://configurations/items/coal.tres").duplicate()
-	var iron = load("res://configurations/items/iron_ore.tres").duplicate()
+	var coal = ItemManager.items["coal"]
+	var iron = ItemManager.items["iron_ore"]
 	_available_order_items.append(coal);
 	_available_order_items.append(iron);
 	_available_order_items

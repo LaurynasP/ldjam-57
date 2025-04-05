@@ -3,14 +3,14 @@
 [ext_resource type="Script" uid="uid://d3fg3nwvm5kku" path="res://features/level/debug_levels/vilmantas.gd" id="1_g1d7o"]
 [ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_mv3ks"]
 [ext_resource type="PackedScene" uid="uid://dfjp2tythyjfd" path="res://features/player/player_spawner/PlayerSpawner.tscn" id="3_0no2m"]
-[ext_resource type="PackedScene" path="res://features/stations/handoff_station/HandoffStation.tscn" id="3_nnvv4"]
+[ext_resource type="PackedScene" uid="uid://b88kbpsdnbm2j" path="res://features/stations/handoff_station/HandoffStation.tscn" id="3_nnvv4"]
 [ext_resource type="PackedScene" uid="uid://tp32esmsp3xq" path="res://features/camera/Camera.tscn" id="4_68ysj"]
 [ext_resource type="PackedScene" uid="uid://bjxatu6y03tvm" path="res://features/level/environments/default_light.tscn" id="5_ueg4n"]
-[ext_resource type="PackedScene" uid="uid://7ynlwr02wm3n" path="res://features/stations/processing_stations/furnace/furnace.tscn" id="8_i6aqx"]
-[ext_resource type="PackedScene" uid="uid://c5tdcrwcdt1af" path="res://features/stations/resource_stations/coal_deposit.tscn" id="10_22oy1"]
-[ext_resource type="PackedScene" uid="uid://b6h21p1llru5h" path="res://features/stations/resource_stations/iron_deposit.tscn" id="11_x52xm"]
-[ext_resource type="PackedScene" uid="uid://dluludjqopthn" path="res://features/stations/counter.tscn" id="12_x52xm"]
-[ext_resource type="PackedScene" uid="uid://b4xllno8qbro" path="res://features/stations/processing_stations/anvil/anvil.tscn" id="13_n3gf4"]
+[ext_resource type="PackedScene" path="res://features/stations/processing_stations/furnace/furnace.tscn" id="8_i6aqx"]
+[ext_resource type="PackedScene" path="res://features/stations/resource_stations/coal_deposit.tscn" id="10_22oy1"]
+[ext_resource type="PackedScene" path="res://features/stations/resource_stations/iron_deposit.tscn" id="11_x52xm"]
+[ext_resource type="PackedScene" path="res://features/stations/counter.tscn" id="12_x52xm"]
+[ext_resource type="PackedScene" path="res://features/stations/processing_stations/anvil/anvil.tscn" id="13_n3gf4"]
 [ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="16_n3gf4"]
 
 [node name="Vilmantas" type="Node3D"]
@@ -53,7 +53,7 @@ material = ExtResource("2_mv3ks")
 [node name="PlayerSpawner" parent="." instance=ExtResource("3_0no2m")]
 
 [node name="Camera" parent="." instance=ExtResource("4_68ysj")]
-transform = Transform3D(-0.668183, 0.270693, -0.693005, 1.49012e-08, 0.931463, 0.363837, 0.743997, 0.243109, -0.622388, -16.5927, 10.9582, -15.6506)
+transform = Transform3D(-0.626386, 0.578031, -0.522993, -0.0275018, 0.654118, 0.755893, 0.779028, 0.487864, -0.393833, -39.9117, 20.5969, -32.9563)
 
 [node name="environment" parent="." instance=ExtResource("5_ueg4n")]
 
