@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://dfvmww7o4b74h"]
+
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_k8nmb"]
+
+[resource]
+script = ExtResource("1_k8nmb")
+name = "steel_ore"
+display_name = "Steel Ore"
+metadata/_custom_type_script = "uid://ce12c8rt3nki4"

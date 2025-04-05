@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://crwoxhfx787al"]
+[gd_scene load_steps=11 format=3 uid="uid://crwoxhfx787al"]
 
 [ext_resource type="Script" uid="uid://d3fg3nwvm5kku" path="res://features/level/debug_levels/vilmantas.gd" id="1_g1d7o"]
 [ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_mv3ks"]
@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://tp32esmsp3xq" path="res://features/camera/Camera.tscn" id="4_68ysj"]
 [ext_resource type="PackedScene" uid="uid://bjxatu6y03tvm" path="res://features/level/environments/default_light.tscn" id="5_ueg4n"]
 [ext_resource type="Material" uid="uid://bxdq4rif8cw7d" path="res://assets/materials/placeholder_furnace_mat.tres" id="6_g1d7o"]
+[ext_resource type="Script" uid="uid://dlkq0x30e5gl0" path="res://features/stations/furnace/furnace.gd" id="7_oopqf"]
+[ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="8_183uq"]
+[ext_resource type="Resource" uid="uid://ctyq587vipeyk" path="res://configurations/recipes/iron_ bar.tres" id="9_5elnx"]
+[ext_resource type="Resource" uid="uid://43th20nl26ww" path="res://configurations/recipes/steel_bar.tres" id="10_5elnx"]
 
 [node name="Vilmantas" type="Node3D"]
 script = ExtResource("1_g1d7o")
@@ -52,6 +56,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 2, -0.75)
 material_override = ExtResource("6_g1d7o")
 use_collision = true
 size = Vector3(8, 4, 5)
+script = ExtResource("7_oopqf")
+recipes = Array[ExtResource("8_183uq")]([ExtResource("9_5elnx"), ExtResource("10_5elnx")])
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Furnace"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, 0)
