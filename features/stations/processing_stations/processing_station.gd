@@ -29,6 +29,9 @@ func add_item(item: Item) -> bool:
 	on_resource_added.emit(item)
 	
 	return true
+	
+func interact():
+	pass
 
 func do_processing():
 	if inventory.size() == 0:

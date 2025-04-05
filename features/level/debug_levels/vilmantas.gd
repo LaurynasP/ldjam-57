@@ -3,6 +3,7 @@ extends Level
 @onready var label = $Label
 @onready var furnace_label = $Furnace/Label3D
 @onready var furnace = $Furnace as Furnace
+@onready var anvil: Anvil = $Anvil
 
 func _ready() -> void:
 	label.text += 'Items Count: ' 

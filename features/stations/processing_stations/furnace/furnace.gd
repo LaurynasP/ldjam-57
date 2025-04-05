@@ -1,7 +1,6 @@
 extends ProcessingStation
 class_name Furnace
 
-
 @onready var timer: Timer = $Timer
 
 func _ready() -> void:

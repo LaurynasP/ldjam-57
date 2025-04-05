@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://crwoxhfx787al"]
+[gd_scene load_steps=13 format=3 uid="uid://crwoxhfx787al"]
 
 [ext_resource type="Script" uid="uid://d3fg3nwvm5kku" path="res://features/level/debug_levels/vilmantas.gd" id="1_g1d7o"]
 [ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_mv3ks"]
@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://ctyq587vipeyk" path="res://configurations/recipes/iron_ bar.tres" id="9_5elnx"]
 [ext_resource type="Resource" uid="uid://43th20nl26ww" path="res://configurations/recipes/steel_bar.tres" id="10_5elnx"]
 [ext_resource type="Script" uid="uid://cxl3efdwrpmjh" path="res://features/stations/processing_stations/anvil/anvil.gd" id="11_22oy1"]
+[ext_resource type="Resource" uid="uid://cprw5synye7uq" path="res://configurations/recipes/iron_sword.tres" id="12_x52xm"]
 
 [node name="Vilmantas" type="Node3D"]
 script = ExtResource("1_g1d7o")
@@ -81,6 +82,7 @@ material_override = ExtResource("6_g1d7o")
 use_collision = true
 size = Vector3(1.25, 2, 3.75)
 script = ExtResource("11_22oy1")
+recipes = Array[ExtResource("8_183uq")]([ExtResource("12_x52xm")])
 
 [node name="Label3D" type="Label3D" parent="Anvil"]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.49427, 4.58712, -0.0941617)
