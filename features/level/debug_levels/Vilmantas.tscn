@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://crwoxhfx787al"]
+[gd_scene load_steps=13 format=3 uid="uid://crwoxhfx787al"]
 
 [ext_resource type="Script" uid="uid://d3fg3nwvm5kku" path="res://features/level/debug_levels/vilmantas.gd" id="1_g1d7o"]
 [ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_mv3ks"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://7ynlwr02wm3n" path="res://features/stations/processing_stations/furnace/furnace.tscn" id="8_i6aqx"]
 [ext_resource type="PackedScene" uid="uid://c5tdcrwcdt1af" path="res://features/stations/resource_stations/coal_deposit.tscn" id="10_22oy1"]
 [ext_resource type="PackedScene" uid="uid://b6h21p1llru5h" path="res://features/stations/resource_stations/iron_deposit.tscn" id="11_x52xm"]
+[ext_resource type="PackedScene" uid="uid://dluludjqopthn" path="res://features/stations/counter.tscn" id="12_x52xm"]
 [ext_resource type="PackedScene" uid="uid://b4xllno8qbro" path="res://features/stations/processing_stations/anvil/anvil.tscn" id="13_n3gf4"]
 [ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="16_n3gf4"]
 
@@ -84,6 +85,24 @@ offset_bottom = 379.0
 
 [node name="HandoffStation" parent="." instance=ExtResource("3_nnvv4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.95032, 0.393202, -3.03596)
+
+[node name="counter" parent="." instance=ExtResource("12_x52xm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 0)
+
+[node name="counter2" parent="." instance=ExtResource("12_x52xm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 1.5)
+
+[node name="counter3" parent="." instance=ExtResource("12_x52xm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 3)
+
+[node name="counter4" parent="." instance=ExtResource("12_x52xm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 4.5)
+
+[node name="counter5" parent="." instance=ExtResource("12_x52xm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 6)
+
+[node name="counter6" parent="." instance=ExtResource("12_x52xm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, -1.5)
 
 [editable path="PlayerSpawner"]
 [editable path="environment"]
