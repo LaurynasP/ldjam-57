@@ -88,8 +88,10 @@ offset_right = 167.0
 offset_bottom = 379.0
 
 [node name="coal_deposit" parent="." instance=ExtResource("10_22oy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.25058, 9.53674e-07, -7.92952)
 
 [node name="iron_deposit" parent="." instance=ExtResource("11_x52xm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.61036, 0, -10.6375)
 
 [node name="HandoffStation" parent="." instance=ExtResource("3_nnvv4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.95032, 0.393202, -3.03596)
@@ -101,7 +103,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 1.5)
 
 [node name="counter3" parent="." instance=ExtResource("12_x52xm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 3)
+transform = Transform3D(0.996474, 0, 0, 0, 0.996474, 0, 0, 0, 0.996474, 8.5, 0, 3)
 
 [node name="counter4" parent="." instance=ExtResource("12_x52xm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 4.5)
