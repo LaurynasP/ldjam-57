@@ -38,11 +38,23 @@ func _handle_input():
 	if InputManager.is_add_remove_item_just_pressed(device_id):
 		_add_remove_item_action()
 
-func _on_interact_area_entered(body: Node3D):
+func _on_interact_area_entered(body):
 	var station = body as Station
 	
 	if station == null:
-		station = body.get_parent() as Station
+		body = body.get_parent()
+	
+	station = body as Station
+	
+	if station == null:
+		body = body.get_parent()
+	
+	station = body as Station
+		
+	if station == null:
+		body = body.get_parent()
+	
+	station = body as Station
 	
 	if station == null:
 		return
@@ -50,11 +62,23 @@ func _on_interact_area_entered(body: Node3D):
 	stations_in_hit_area.append(station)
 	focused_station = stations_in_hit_area[0]
 		
-func _on_interact_area_exited(body: Node3D):
+func _on_interact_area_exited(body):
 	var station = body as Station
 	
 	if station == null:
-		station = body.get_parent() as Station
+		body = body.get_parent()
+	
+	station = body as Station
+	
+	if station == null:
+		body = body.get_parent()
+	
+	station = body as Station
+		
+	if station == null:
+		body = body.get_parent()
+	
+	station = body as Station
 	
 	if station == null:
 		return

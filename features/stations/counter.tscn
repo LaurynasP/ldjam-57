@@ -1,27 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dluludjqopthn"]
+[gd_scene load_steps=4 format=3 uid="uid://dluludjqopthn"]
 
 [ext_resource type="Script" uid="uid://qt6ytig0eb21" path="res://features/stations/counter.gd" id="1_kdsga"]
-[ext_resource type="Material" uid="uid://bxdq4rif8cw7d" path="res://assets/materials/placeholder_furnace_mat.tres" id="1_o1olo"]
+[ext_resource type="PackedScene" uid="uid://dhw61hbbbr3yn" path="res://assets/prefabs/counter.tscn" id="2_kdsga"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yrowt"]
+points = PackedVector3Array(0.282005, 0.901443, 0.305519, -0.401422, 0.772619, -0.405822, 0.378487, 0.758322, -0.405822, -0.2772, 0.00657421, 0.264864, 0.272644, 0.000749647, -0.271, -0.39159, 0.863695, 0.379097, 0.273089, 0, 0.268767, -0.2772, 0.00657421, -0.267543, 0.407467, 0.772619, 0.403067, -0.304597, 0.902494, -0.308921, 0.3942, 0.860137, -0.392556, -0.401422, 0.772619, 0.403067, 0.407467, 0.772619, -0.405822, -0.308282, 0.907854, 0.295808, 0.310752, 0.902655, -0.309031, 0.38243, 0.862548, 0.392127, -0.392657, 0.8648, -0.397057, 0.3942, 0.860137, 0.361848, -0.375385, 0.861473, 0.39109, 0.308937, 0.900015, 0.290663)
 
 [node name="counter" type="Node3D"]
 script = ExtResource("1_kdsga")
 
-[node name="model" type="CSGCombiner3D" parent="."]
-use_collision = true
+[node name="SM_Prop_Dwarf_Table_Small_01" parent="." instance=ExtResource("2_kdsga")]
+transform = Transform3D(1.782, 0, 0, 0, 1, 0, 0, 0, 1.782, 0, 0, 0)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="model"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-size = Vector3(1.5, 1, 1.5)
-material = ExtResource("1_o1olo")
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_Prop_Dwarf_Table_Small_01"]
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="model/CSGBox3D"]
-transform = Transform3D(-0.00126662, 0.000363439, -0.999999, 0.00189003, 0.999998, 0.000361019, 0.999997, -0.00188956, -0.00126732, -0.000227496, -0.249999, 0.00118105)
-operation = 2
-size = Vector3(1, 1, 2)
-material = ExtResource("1_o1olo")
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="model/CSGBox3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
-operation = 2
-size = Vector3(1, 1, 2)
-material = ExtResource("1_o1olo")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Prop_Dwarf_Table_Small_01/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_yrowt")
