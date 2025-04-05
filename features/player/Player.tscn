@@ -1,15 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://da1p078wf0dfu"]
+[gd_scene load_steps=4 format=3 uid="uid://da1p078wf0dfu"]
 
 [ext_resource type="Script" uid="uid://y73xnw6ot1ol" path="res://features/player/player.gd" id="1_yrnqm"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mjcdy"]
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_yrnqm"]
+
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_yrnqm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10171, 0)
 shape = SubResource("SphereShape3D_mjcdy")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.17142, 0, 0, 0, 1, 0, 1.10171, 0)
 radial_segments = 60
 rings = 60
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.09058e-15, -1.1012e-08, 0.845386, -0.402441, -1.1012e-08, 0, 1.75913e-08, -0.251925, -3.6953e-08, 0.00564218, 1.25393, -0.2486)
+mesh = SubResource("CylinderMesh_yrnqm")

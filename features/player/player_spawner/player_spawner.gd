@@ -4,6 +4,8 @@ extends Node3D
 func _ready() -> void:
 	spawn_players()
 
+# TODO: Fix spawning. If Y is not 0 the players don't get spawned on the actual target. 
+
 func spawn_players():
 	var markers = get_tree().get_nodes_in_group("player_spawn_point_marker")
 	print("Spawning players")

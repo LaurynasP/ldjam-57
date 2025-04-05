@@ -1,6 +1,48 @@
-[gd_scene load_steps=2 format=3 uid="uid://crwoxhfx787al"]
+[gd_scene load_steps=6 format=3 uid="uid://crwoxhfx787al"]
 
 [ext_resource type="Script" uid="uid://jcyuj2h3gtq6" path="res://features/level/level.gd" id="1_yvns7"]
+[ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_mat.tres" id="2_mv3ks"]
+[ext_resource type="PackedScene" uid="uid://dfjp2tythyjfd" path="res://features/player/player_spawner/PlayerSpawner.tscn" id="3_0no2m"]
+[ext_resource type="PackedScene" uid="uid://tp32esmsp3xq" path="res://features/camera/Camera.tscn" id="4_68ysj"]
+[ext_resource type="PackedScene" uid="uid://bjxatu6y03tvm" path="res://features/level/environments/default_light.tscn" id="5_ueg4n"]
 
 [node name="Vilmantas" type="Node3D"]
 script = ExtResource("1_yvns7")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.548, -0.5, -3.48)
+size = Vector3(60, 1, 60)
+material = ExtResource("2_mv3ks")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03279, 26)
+size = Vector3(60, 5, 1)
+material = ExtResource("2_mv3ks")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03279, -33)
+size = Vector3(60, 5, 1)
+material = ExtResource("2_mv3ks")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 30.0068, 2.0521, -3.00676)
+size = Vector3(60, 5, 1)
+material = ExtResource("2_mv3ks")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.9932, 2.0521, -3.00676)
+size = Vector3(60, 5, 1)
+material = ExtResource("2_mv3ks")
+
+[node name="PlayerSpawner" parent="." instance=ExtResource("3_0no2m")]
+
+[node name="Camera" parent="." instance=ExtResource("4_68ysj")]
+transform = Transform3D(-0.668183, 0.270693, -0.693005, 1.49012e-08, 0.931463, 0.363837, 0.743997, 0.243109, -0.622388, -16.5927, 10.9582, -15.6506)
+
+[node name="environment" parent="." instance=ExtResource("5_ueg4n")]
+
+[editable path="PlayerSpawner"]
+[editable path="environment"]
