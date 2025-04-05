@@ -64,8 +64,10 @@ transform = Transform3D(-0.626386, 0.578031, -0.522993, -0.0275018, 0.654118, 0.
 [node name="environment" parent="." instance=ExtResource("5_ueg4n")]
 
 [node name="furnace" parent="." instance=ExtResource("8_i6aqx")]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, -7.18457, 0, -2.95929)
 
 [node name="anvil" parent="." instance=ExtResource("13_n3gf4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86416, 0, -8.19017)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 83.0
