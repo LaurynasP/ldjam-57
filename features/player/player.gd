@@ -43,10 +43,9 @@ func _handle_movement(delta: float):
 
 	velocity.x = dir.x * move_speed
 	velocity.z = dir.y * move_speed
-	var a = Vector3(dir.x, 0, dir.y)
 	
 	if dir.length() > 0.01:
-		look_at(global_position + a)
+		look_at(global_position + Vector3(dir.x, 0, dir.y))
 
 	move_and_slide()
 
