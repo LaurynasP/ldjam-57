@@ -13,9 +13,21 @@ var dash_cooldown_timer := 0.0
 
 var dash_sound_effect: AudioStream = preload("res://assets/sound/sound_effects/dash.mp3")
 
-func _physics_process(delta):
+func _physics_process(delta: float):
+	_handle_movement(delta)
+
+	if InputManager.is_interact_just_pressed(device_id):
+		interact()
+		
+func _handle_movement(delta: float):
 	var dir = InputManager.get_input_vector(device_id)
 	var move_speed = dash_speed if is_dashing else speed
+	
+	if not is_on_floor():
+		velocity.y -= ProjectSettings.get_setting("physics/3d/default_gravity") * delta
+	else:
+		velocity.y = 0.0
+		
 
 	if is_dashing:
 		dash_timer -= delta
@@ -31,10 +43,12 @@ func _physics_process(delta):
 
 	velocity.x = dir.x * move_speed
 	velocity.z = dir.y * move_speed
-	move_and_slide()
+	var a = Vector3(dir.x, 0, dir.y)
+	
+	if dir.length() > 0.01:
+		look_at(global_position + a)
 
-	if InputManager.is_interact_just_pressed(device_id):
-		interact()
+	move_and_slide()
 
 func interact():
 	print("Device %d interacts" % device_id)
