@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://22wue4dyb3ai"]
+
+[ext_resource type="Script" uid="uid://4ggwkto7kc5n" path="res://features/gameplay_ui/timer_bar.gd" id="1_er3me"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_er3me"]
+bg_color = Color(0.694426, 0.101541, 0.297423, 1)
+
+[node name="TimerBar" type="ProgressBar"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_er3me")
+show_percentage = false
+script = ExtResource("1_er3me")

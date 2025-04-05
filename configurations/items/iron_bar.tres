@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://btu28liqn3sai"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://btu28liqn3sai"]
 
 [ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_5tvkc"]
+[ext_resource type="Texture2D" uid="uid://csguwp3oqmxto" path="res://assets/images/icons/steam_button_color_a.png" id="1_rqxd7"]
 
 [resource]
 script = ExtResource("1_5tvkc")
 name = "iron_bar"
 display_name = "Iron Bar"
+icon = ExtResource("1_rqxd7")
 metadata/_custom_type_script = "uid://ce12c8rt3nki4"

@@ -4,6 +4,7 @@ class_name HandoffStation
 var current_order: Order
 
 @onready var label: Label3D = $Label3D
+@onready var handoff_station_ui: HandoffStationUI = %HandoffStationUi
 
 func _ready() -> void:
 	allow_duplicates = true
@@ -13,6 +14,7 @@ func _process(delta: float) -> void:
 	_update_debug_label()
 	if not current_order:
 		current_order = OrderManager.create_order()
+		handoff_station_ui.update_ui(current_order)
 		
 	_handle_order()
 

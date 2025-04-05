@@ -1,13 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://hag7k21uqn13"]
+[gd_scene load_steps=10 format=3 uid="uid://hag7k21uqn13"]
 
 [ext_resource type="Script" uid="uid://jcyuj2h3gtq6" path="res://features/level/level.gd" id="1_vjoi7"]
 [ext_resource type="PackedScene" uid="uid://tp32esmsp3xq" path="res://features/camera/Camera.tscn" id="2_ax20a"]
+[ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="2_ll5wr"]
 [ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_yp1q3"]
 [ext_resource type="PackedScene" uid="uid://dfjp2tythyjfd" path="res://features/player/player_spawner/PlayerSpawner.tscn" id="3_ax20a"]
+[ext_resource type="PackedScene" uid="uid://b88kbpsdnbm2j" path="res://features/stations/handoff_station/HandoffStation.tscn" id="3_mx3uc"]
 [ext_resource type="PackedScene" uid="uid://bjxatu6y03tvm" path="res://features/level/environments/default_light.tscn" id="5_lrli3"]
+[ext_resource type="PackedScene" uid="uid://bs4w5rinlwem2" path="res://features/stations/resource_stations/coal_deposit.tscn" id="8_5bf0n"]
+[ext_resource type="PackedScene" uid="uid://b2piqq17j6g7x" path="res://features/stations/resource_stations/iron_deposit.tscn" id="9_5e45d"]
 
 [node name="Laurynas" type="Node3D"]
 script = ExtResource("1_vjoi7")
+
+[node name="gameplay" parent="." instance=ExtResource("2_ll5wr")]
+
+[node name="handoff_station" parent="." instance=ExtResource("3_mx3uc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.17532, 0.585107, -1.98691)
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
@@ -40,11 +49,18 @@ size = Vector3(58, 5, 1)
 material = ExtResource("2_yp1q3")
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("3_ax20a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.29382, 0)
 
 [node name="Camera" parent="." instance=ExtResource("2_ax20a")]
-transform = Transform3D(-0.668183, 0.270693, -0.693005, 1.49012e-08, 0.931463, 0.363837, 0.743997, 0.243109, -0.622388, -16.5927, 10.9582, -15.6506)
+transform = Transform3D(-0.626386, 0.578031, -0.522993, -0.0275018, 0.654118, 0.755893, 0.779028, 0.487864, -0.393833, -39.9117, 20.5969, -32.9563)
 
 [node name="environment" parent="." instance=ExtResource("5_lrli3")]
+
+[node name="coal_deposit" parent="." instance=ExtResource("8_5bf0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13861, 0.276313, -7.59557)
+
+[node name="iron_deposit" parent="." instance=ExtResource("9_5e45d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.71664, 0.178623, -6.94951)
 
 [editable path="PlayerSpawner"]
 [editable path="environment"]
