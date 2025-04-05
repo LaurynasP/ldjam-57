@@ -17,7 +17,7 @@ func _ready() -> void:
 	available_recipes = loaded_recipes
 
 func add_item(item: String) -> bool:
-	if (RecipeManager.is_resource_in_recipes(item, loaded_recipes.values())):
+	if (RecipeManager.is_resource_in_recipes(item, available_recipes.values())):
 		available_recipes = RecipeManager.get_related_recipes(item, available_recipes.values())
 		on_resource_added.emit(item)
 		return true
