@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dluludjqopthn"]
+[gd_scene load_steps=3 format=3 uid="uid://dluludjqopthn"]
 
+[ext_resource type="Script" uid="uid://qt6ytig0eb21" path="res://features/stations/counter.gd" id="1_kdsga"]
 [ext_resource type="Material" uid="uid://bxdq4rif8cw7d" path="res://assets/materials/placeholder_furnace_mat.tres" id="1_o1olo"]
 
 [node name="counter" type="Node3D"]
+script = ExtResource("1_kdsga")
 
 [node name="model" type="CSGCombiner3D" parent="."]
 use_collision = true
