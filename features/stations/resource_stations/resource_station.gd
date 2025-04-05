@@ -4,7 +4,7 @@ class_name ResourceStation
 @export var resource: Item
 
 func add_item(item: Item) -> bool:
-	return false
+	return item == resource
 
 func remove_item() -> Item:
 	return ItemManager.items[resource.name]

@@ -3,10 +3,10 @@ extends Level
 @onready var label = $Label
 @onready var label_2 = $Label2
 @onready var label_3 = $Label3
-@onready var furnace_label = $Furnace/Label3D
-@onready var furnace = $Furnace as Furnace
-@onready var anvil: Anvil = $Anvil
-@onready var anvil_label = $Anvil/Label3D
+@onready var furnace_label = $furnace/debug_label
+@onready var furnace = $furnace as Furnace
+@onready var anvil: Anvil = $anvil
+@onready var anvil_label = $anvil/debug_label
 
 @onready var coal_deposit = $coal_deposit as ResourceStation
 @onready var iron_deposit = $iron_deposit as ResourceStation
