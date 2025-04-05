@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://crwoxhfx787al"]
+[gd_scene load_steps=18 format=3 uid="uid://crwoxhfx787al"]
 
 [ext_resource type="Script" uid="uid://d3fg3nwvm5kku" path="res://features/level/debug_levels/vilmantas.gd" id="1_g1d7o"]
 [ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_mv3ks"]
 [ext_resource type="PackedScene" uid="uid://dfjp2tythyjfd" path="res://features/player/player_spawner/PlayerSpawner.tscn" id="3_0no2m"]
+[ext_resource type="PackedScene" path="res://features/stations/handoff_station/HandoffStation.tscn" id="3_nnvv4"]
 [ext_resource type="PackedScene" uid="uid://tp32esmsp3xq" path="res://features/camera/Camera.tscn" id="4_68ysj"]
 [ext_resource type="PackedScene" uid="uid://bjxatu6y03tvm" path="res://features/level/environments/default_light.tscn" id="5_ueg4n"]
 [ext_resource type="Material" uid="uid://bxdq4rif8cw7d" path="res://assets/materials/placeholder_furnace_mat.tres" id="6_g1d7o"]
@@ -16,12 +17,13 @@
 [ext_resource type="Resource" uid="uid://cgkhyu1216ah7" path="res://configurations/items/coal.tres" id="14_3hwcb"]
 [ext_resource type="Resource" uid="uid://y5q0e2iyet3d" path="res://configurations/items/iron_ore.tres" id="15_31q1i"]
 [ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="16_n3gf4"]
-[ext_resource type="PackedScene" uid="uid://b88kbpsdnbm2j" path="res://features/stations/handoff_station/HandoffStation.tscn" id="16_n3gf4"]
 
 [node name="Vilmantas" type="Node3D"]
 script = ExtResource("1_g1d7o")
 
-[node name="Gameplay" parent="." instance=ExtResource("16_n3gf4")]
+[node name="gameplay" parent="." instance=ExtResource("16_n3gf4")]
+
+[node name="handoff_station" parent="." instance=ExtResource("3_nnvv4")]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
@@ -397,7 +399,7 @@ material = ExtResource("6_g1d7o")
 transform = Transform3D(0.78917, 0, 0.614175, 0, 1, 0, -0.614175, 0, 0.78917, 0.209859, 0.223688, 1.52242)
 material = ExtResource("6_g1d7o")
 
-[node name="HandoffStation" parent="." instance=ExtResource("16_n3gf4")]
+[node name="HandoffStation" parent="." instance=ExtResource("3_nnvv4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.95032, 0.393202, -3.03596)
 
 [editable path="PlayerSpawner"]
