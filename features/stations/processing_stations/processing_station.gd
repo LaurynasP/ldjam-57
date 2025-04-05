@@ -1,6 +1,8 @@
 extends Station
 class_name ProcessingStation
 
+@export var recipes: Array[Recipe]
+
 var loaded_recipes: Dictionary[String, Recipe]
 
 var available_recipes: Dictionary[String, Recipe]
