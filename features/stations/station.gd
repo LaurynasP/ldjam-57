@@ -1,5 +1,6 @@
-extends Node
+extends Node3D
 class_name Station
+
 
 var inventory: Array[Item] = []
 
@@ -13,6 +14,16 @@ func add_item(item: Item) -> bool:
 	on_resource_added.emit(item)
 	
 	return true
+	
+func remove_item() -> Item:
+	if inventory.size() == 0:
+		return null
+	else:
+		return inventory[inventory.size() - 1]
+
+func interact():
+	print("I was interacted with!", self)
 
 func reset_station():
 	inventory = []
+	
