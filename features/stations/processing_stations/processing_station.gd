@@ -45,6 +45,7 @@ func remove_item() -> Item:
 	return null
 
 func interact():
+	print("Interacted with furance")
 	pass
 
 func do_processing(increment: int = 5):

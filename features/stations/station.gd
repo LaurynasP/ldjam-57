@@ -15,14 +15,8 @@ func add_item(item: Item) -> bool:
 	
 	return true
 	
-func remove_item() -> Item:
-	if inventory.size() == 0:
-		return null
-	else:
-		return inventory[inventory.size() - 1]
-
 func interact():
-	print("I was interacted with!", self)
+	pass
 
 func remove_item() -> Item:
 	return inventory.pop_back()

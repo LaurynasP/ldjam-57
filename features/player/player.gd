@@ -23,41 +23,29 @@ func _ready():
 	interact_area.body_entered.connect(_on_interact_area_entered)
 	interact_area.body_exited.connect(_on_interact_area_exited)
 
-
-
 func _physics_process(delta: float):
 	_handle_movement(delta)
-
-	
 		
 func _process(delta: float) -> void:
-	_handle_station_focus()
 	_handle_input()
-	print(stations_in_hit_area, focused_station)
-	
-
 
 func _handle_input():
 	if InputManager.is_interact_just_pressed(device_id):
-		interact()
+		_interact_action()
 	if InputManager.is_add_remove_item_just_pressed(device_id):
-		add_remove_item()
+		_add_remove_item_action()
 
 func _on_interact_area_entered(body):
 	if body is Station:
 		stations_in_hit_area.append(body)
+		focused_station = stations_in_hit_area[0]
+		
 		
 func _on_interact_area_exited(body):
 	if body is Station:
 		stations_in_hit_area.erase(body)
+		focused_station = null if stations_in_hit_area.size() == 0 else stations_in_hit_area[0]
 		
-func _handle_station_focus():
-	if stations_in_hit_area.size() == 0:
-		focused_station = null
-		return
-	
-	if focused_station != stations_in_hit_area[0]:
-		focused_station = stations_in_hit_area[0]
 	
 func _handle_movement(delta: float):
 	var dir = InputManager.get_input_vector(device_id)
@@ -89,16 +77,13 @@ func _handle_movement(delta: float):
 
 	move_and_slide()
 
-func interact():
-	print(focused_station)
+func _interact_action():
 	if focused_station == null:
-		print("Device %d interacts, but there is no station" % device_id)
 		return
 	
-	print("Device %d interacts" % device_id)
+	focused_station.interact()
 	
-func add_remove_item():
-	print(focused_station)
+func _add_remove_item_action():
 	if focused_station == null:
 		return
 		
