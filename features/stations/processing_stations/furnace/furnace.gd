@@ -3,9 +3,7 @@ class_name Furnace
 
 @onready var timer: Timer = $Timer
 
-func _ready() -> void:
-	loaded_recipes = RecipeManager.get_recipes(recipes)
-	
+func on_ready() -> void:
 	timer.timeout.connect(do_processing)
 	timer.start()
 	

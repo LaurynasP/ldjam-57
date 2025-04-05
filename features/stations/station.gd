@@ -14,5 +14,8 @@ func add_item(item: Item) -> bool:
 	
 	return true
 
+func remove_item() -> Item:
+	return inventory.pop_back()
+
 func reset_station():
 	inventory = []

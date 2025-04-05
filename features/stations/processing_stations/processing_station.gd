@@ -14,6 +14,14 @@ signal on_progress_tick(progress: int)
 signal on_processing_completed(product: Item)
 signal on_product_removed(product: Item)
 
+func _ready() -> void:
+	loaded_recipes = RecipeManager.get_recipes(recipes)
+	reset_station()
+	on_ready()
+	
+func on_ready():
+	pass
+
 func add_item(item: Item) -> bool:
 	if prepared_item != null:
 		return false
@@ -29,11 +37,17 @@ func add_item(item: Item) -> bool:
 	on_resource_added.emit(item)
 	
 	return true
+
+func remove_item() -> Item:
+	if progress == 0:
+		return inventory.pop_back()
 	
+	return null
+
 func interact():
 	pass
 
-func do_processing():
+func do_processing(increment: int = 5):
 	if inventory.size() == 0:
 		return
 		
@@ -44,7 +58,7 @@ func do_processing():
 		complete_product()
 		return
 	
-	progress += 1
+	progress += increment
 	
 	on_progress_tick.emit(progress)
 	pass
