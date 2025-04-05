@@ -1,4 +1,5 @@
 extends Station
+class_name Furnace
 
 @export var is_in_use: bool
 @export var progress: int
