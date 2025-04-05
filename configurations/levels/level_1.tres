@@ -1,14 +1,16 @@
-[gd_resource type="Resource" script_class="LevelConfiguration" load_steps=5 format=3 uid="uid://cb8q6siec6idd"]
+[gd_resource type="Resource" script_class="LevelConfiguration" load_steps=6 format=3 uid="uid://cb8q6siec6idd"]
 
 [ext_resource type="PackedScene" uid="uid://hag7k21uqn13" path="res://features/level/debug_levels/Laurynas.tscn" id="1_bybsw"]
 [ext_resource type="Script" uid="uid://3i846dludlok" path="res://managers/loading_manager/level_configuration.gd" id="1_obw2w"]
 [ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="1_y0xee"]
+[ext_resource type="PackedScene" uid="uid://bjxatu6y03tvm" path="res://features/level/environments/default_light.tscn" id="3_8h3vk"]
 [ext_resource type="PackedScene" uid="uid://fmb0vcjtbe0j" path="res://features/gameplay_ui/gameplay_ui.tscn" id="3_r1yrh"]
 
 [resource]
 script = ExtResource("1_obw2w")
 name = "Pirms"
 level = ExtResource("1_bybsw")
+lighting = ExtResource("3_8h3vk")
 gameplay = ExtResource("1_y0xee")
 ui = ExtResource("3_r1yrh")
 metadata/_custom_type_script = "uid://3i846dludlok"

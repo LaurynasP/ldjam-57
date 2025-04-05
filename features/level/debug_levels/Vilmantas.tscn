@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://crwoxhfx787al"]
+[gd_scene load_steps=17 format=3 uid="uid://crwoxhfx787al"]
 
 [ext_resource type="Script" uid="uid://d3fg3nwvm5kku" path="res://features/level/debug_levels/vilmantas.gd" id="1_g1d7o"]
 [ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_mv3ks"]
@@ -15,9 +15,12 @@
 [ext_resource type="Script" uid="uid://cqjaq18tt61cf" path="res://features/stations/resource_stations/resource_station.gd" id="13_i6aqx"]
 [ext_resource type="Resource" uid="uid://cgkhyu1216ah7" path="res://configurations/items/coal.tres" id="14_3hwcb"]
 [ext_resource type="Resource" uid="uid://y5q0e2iyet3d" path="res://configurations/items/iron_ore.tres" id="15_31q1i"]
+[ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="16_n3gf4"]
 
 [node name="Vilmantas" type="Node3D"]
 script = ExtResource("1_g1d7o")
+
+[node name="Gameplay" parent="." instance=ExtResource("16_n3gf4")]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
@@ -118,6 +121,12 @@ offset_left = 87.0
 offset_top = 213.0
 offset_right = 167.0
 offset_bottom = 253.0
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 87.0
+offset_top = 339.0
+offset_right = 167.0
+offset_bottom = 379.0
 
 [node name="coal_deposit" type="CSGCombiner3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0863, 0, -10.7395)
