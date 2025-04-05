@@ -1,4 +1,4 @@
-extends Station
+extends ProcessingStation
 class_name Furnace
 
 @export var recipes: Array[Recipe]
