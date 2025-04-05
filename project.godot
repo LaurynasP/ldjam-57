@@ -23,6 +23,7 @@ SoundManager="*res://managers/sound_manager.gd"
 LoadingManager="*res://managers/loading_manager/loading_manager.gd"
 ItemManager="*res://managers/item_manager/item_manager.gd"
 RecipeManager="*res://managers/recipe_manager/recipe_manager.gd"
+PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 
 [display]
 
@@ -34,6 +35,10 @@ window/stretch/mode="viewport"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
 
 [file_customization]
 
