@@ -4,7 +4,7 @@ var rng = RandomNumberGenerator.new()
 var _available_order_items: Array[Item] = []
 var _max_items_per_order: int = 2
 
-var seconds_per_item:float = 30
+var seconds_per_item:float = 2
 
 var order_list: Array[Order] = []
 
@@ -29,6 +29,7 @@ func create_order() -> Order:
 	order.order_completed.connect(_handle_completed_order)
 	order.order_failed.connect(_handle_failed_order)
 	order_list.append(order)
+	add_child(order)
 	return order
 	
 

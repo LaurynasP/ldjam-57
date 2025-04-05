@@ -19,6 +19,7 @@ font_size = 172
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 
 [node name="Billboard" type="Sprite3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 3.0842, 0)
 billboard = 2
 texture = SubResource("ViewportTexture_kyyji")
