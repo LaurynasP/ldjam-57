@@ -35,7 +35,7 @@ func on_product_completed(item: Item):
 
 func _debug_furnace():
 	furnace_label.text = ''
-	furnace_label.text += 'Inventory: ' + str(furnace.added_resources.map(func(item: Item): return item.display_name))
+	furnace_label.text += 'Inventory: ' + str(furnace.inventory.map(func(item: Item): return item.display_name))
 	furnace_label.text += '\n'
 	furnace_label.text += 'Available: ' + str(furnace.available_recipes.keys())
 	furnace_label.text += '\n'
