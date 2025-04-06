@@ -1,13 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://7ynlwr02wm3n"]
+[gd_scene load_steps=7 format=3 uid="uid://7ynlwr02wm3n"]
 
+[ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="2_6tyw8"]
 [ext_resource type="PackedScene" uid="uid://c8l1sensuvyba" path="res://assets/prefabs/furnace.tscn" id="2_8dyju"]
 [ext_resource type="Script" uid="uid://dlkq0x30e5gl0" path="res://features/stations/processing_stations/furnace/furnace.gd" id="2_aalje"]
+[ext_resource type="Resource" uid="uid://ctyq587vipeyk" path="res://configurations/recipes/iron_ bar.tres" id="3_aalje"]
+[ext_resource type="Resource" uid="uid://43th20nl26ww" path="res://configurations/recipes/steel_bar.tres" id="4_d2ala"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8dyju"]
 points = PackedVector3Array(0.103758, 1.9964, 0.575526, -0.103864, 1.9964, 0.575526, 0.250501, 1.84937, 0.575526, -0.000105977, 2.32174, 0.513557, -0.224668, 1.87557, 0.575526, 0.363576, 2.32174, 0.362915, 0.250501, 1.64193, 0.575526, 0.430172, 0, 0.391308, 0.142191, 2.71765, 0.141515, -0.000105977, 2.71765, 0.200443, -0.363683, 2.32174, 0.362915, -0.250608, 1.80232, 0.575526, 0.514131, 2.32174, -0.000676036, 0.103758, 1.49516, 0.575526, -0.000105977, 0.274011, 0.539359, 0.391951, 0, 0.429504, 0.430172, 0, -0.39266, 0.539965, 0.274011, -0.000676036, 0.540812, 0.329348, -0.000676036, 0.438642, 0.0695052, 0.36269, 0.201057, 2.71765, -0.000676036, 0.173001, 2.73102, -0.000676036, 0.122286, 2.73102, 0.121685, -0.000105977, 2.73102, 0.172275, -0.122392, 2.73102, 0.121685, -0.142297, 2.71765, 0.141515, -0.483957, 2.32174, 0.0724478, -0.496027, 1.61306, 0.158416, -0.460241, 1.61306, 0.244497, -0.434831, 1.54729, 0.30534, -0.430278, 0, 0.391308, -0.250608, 1.64193, 0.575526, 0.521331, 1.54729, -0.0990383, 0.495921, 1.61306, -0.159881, 0.363576, 2.32174, -0.36438, -0.103864, 1.49516, 0.575526, -0.392057, 0, 0.429504, 0.521331, 1.13106, -0.0990383, 0.391951, 0, -0.430969, 0.250501, 0.823904, -0.575526, 0.250501, 1.03162, -0.575526, 0.434725, 1.54729, -0.306805, 0.460135, 1.61306, -0.245962, 0.142191, 2.71765, -0.142868, 0.122286, 2.73102, -0.123037, -0.173107, 2.73102, -0.000676036, -0.201164, 2.71765, -0.000676036, -0.514238, 2.29741, -0.000676036, -0.521437, 1.54729, 0.0975736, -0.521437, 1.13106, 0.0975736, -0.540812, 0.329348, -0.000676036, -0.540071, 0.274011, -0.000676036, -0.430278, 0, -0.39266, -0.000105977, 2.32174, -0.514909, -0.000105977, 2.71765, -0.201795, -0.392057, 0, -0.430969, -0.000105977, 0.274011, -0.540711, 0.103758, 0.677141, -0.575526, 0.103758, 1.17838, -0.575526, -0.000105977, 2.73102, -0.17374, -0.122392, 2.73102, -0.123037, -0.142297, 2.71765, -0.142868, -0.487557, 2.32174, -0.0652368, -0.438748, 0.0695052, -0.364155, -0.250608, 1.03162, -0.575526, -0.250608, 0.823904, -0.575526, -0.363683, 2.32174, -0.36438, -0.103864, 1.17838, -0.575526, -0.103864, 0.677141, -0.575526)
 
 [node name="furnace" type="Node3D"]
 script = ExtResource("2_aalje")
+recipes = Array[ExtResource("2_6tyw8")]([ExtResource("3_aalje"), ExtResource("4_d2ala")])
 
 [node name="processing_timer" type="Timer" parent="."]
 wait_time = 0.05
@@ -19,9 +23,9 @@ awdwadwadwad
 awdwadwad"
 font_size = 172
 
-[node name="SM_Prop_Tech_Furnace_02" parent="." instance=ExtResource("2_8dyju")]
+[node name="model" parent="." instance=ExtResource("2_8dyju")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SM_Prop_Tech_Furnace_02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="model"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Prop_Tech_Furnace_02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="model/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_8dyju")
