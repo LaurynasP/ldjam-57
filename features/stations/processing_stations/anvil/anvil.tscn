@@ -13,6 +13,7 @@ script = ExtResource("2_bakm5")
 recipes = Array[ExtResource("2_sk6r2")]([ExtResource("3_bakm5")])
 
 [node name="model" parent="." instance=ExtResource("2_px4ea")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="model"]
 

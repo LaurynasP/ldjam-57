@@ -10,7 +10,7 @@ points = PackedVector3Array(0.282005, 0.901443, 0.305519, -0.401422, 0.772619, -
 script = ExtResource("1_kdsga")
 
 [node name="model" parent="." instance=ExtResource("2_kdsga")]
-transform = Transform3D(1.782, 0, 0, 0, 1, 0, 0, 0, 1.782, 0, 0, 0)
+transform = Transform3D(3, 0, 0, 0, 1.684, 0, 0, 0, 3, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="model"]
 
