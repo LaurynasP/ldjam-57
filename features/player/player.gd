@@ -15,6 +15,7 @@ var dash_sound_effect: AudioStream = preload("res://assets/sound/sound_effects/d
 @onready var interact_area: Area3D = $InteractArea
 @onready var label: Label3D = $Label3D
 
+@onready var anim_tree := $dwarf_mixamo_mesh/AnimationTree
 
 var item:Item
 var stations_in_hit_area: Array[Station] = []
@@ -90,6 +91,13 @@ func _on_interact_area_exited(body):
 func _handle_movement(delta: float):
 	var dir = InputManager.get_input_vector(device_id)
 	var move_speed = dash_speed if is_dashing else speed
+	
+	if dir.is_zero_approx():
+		anim_tree["parameters/conditions/idle"] = true
+		anim_tree["parameters/conditions/moving"] = false
+	else:
+		anim_tree["parameters/conditions/idle"] = false
+		anim_tree["parameters/conditions/moving"] = true
 	
 	if not is_on_floor():
 		velocity.y -= ProjectSettings.get_setting("physics/3d/default_gravity") * delta
