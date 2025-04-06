@@ -5,9 +5,9 @@
 [ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="3_g01l4"]
 [ext_resource type="PackedScene" uid="uid://dfjp2tythyjfd" path="res://features/player/player_spawner/PlayerSpawner.tscn" id="3_jwm2l"]
 [ext_resource type="Resource" uid="uid://y5q0e2iyet3d" path="res://configurations/items/iron_ore.tres" id="4_mlay7"]
-[ext_resource type="PackedScene" uid="uid://cv23mhfhoyttm" path="res://features/level/environments/AmateurForgeEnvironment.tscn" id="6_s2jqq"]
-[ext_resource type="PackedScene" uid="uid://bs4w5rinlwem2" path="res://features/stations/resource_stations/coal_deposit.tscn" id="7_014fr"]
-[ext_resource type="PackedScene" uid="uid://b2piqq17j6g7x" path="res://features/stations/resource_stations/iron_deposit.tscn" id="8_vebj1"]
+[ext_resource type="PackedScene" path="res://features/level/environments/AmateurForgeEnvironment.tscn" id="6_s2jqq"]
+[ext_resource type="PackedScene" uid="uid://bs4w5rinlwem2" path="res://features/stations/resource_stations/CoalDeposit.tscn" id="7_014fr"]
+[ext_resource type="PackedScene" uid="uid://b2piqq17j6g7x" path="res://features/stations/resource_stations/IronDeposit.tscn" id="8_vebj1"]
 [ext_resource type="PackedScene" uid="uid://b88kbpsdnbm2j" path="res://features/stations/handoff_station/HandoffStation.tscn" id="10_h5nvm"]
 
 [node name="AmateurForge" type="Node3D"]

@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://qyeagt8atlas"]
 
 [ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_dnyt2"]
-[ext_resource type="Resource" uid="uid://depciv7en7nag" path="res://configurations/items/log.tres" id="2_dnyt2"]
-[ext_resource type="Resource" uid="uid://cs4oe6l5na3xu" path="res://configurations/items/wooden_shaft.tres" id="3_fkavh"]
+[ext_resource type="Resource" uid="uid://cl6g4do8aq4aj" path="res://configurations/items/plank.tres" id="2_dnyt2"]
+[ext_resource type="Resource" uid="uid://cs4oe6l5na3xu" path="res://configurations/items/shaft.tres" id="3_fkavh"]
 [ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="4_myn2j"]
 
 [resource]
 script = ExtResource("4_myn2j")
-name = "Shaft"
+name = "shaft"
 product = ExtResource("3_fkavh")
 ingredients = Array[ExtResource("1_dnyt2")]([ExtResource("2_dnyt2")])
 metadata/_custom_type_script = "uid://bkkb1mtbo8xh5"
