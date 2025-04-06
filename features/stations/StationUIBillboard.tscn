@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bcuetfkb7aihc"]
+[gd_scene load_steps=4 format=3 uid="uid://dpw7ye1e0n6h6"]
 
 [ext_resource type="PackedScene" uid="uid://ddecery6g50f1" path="res://features/stations/StationUI.tscn" id="1_6pqf0"]
-[ext_resource type="Script" path="res://features/stations/station_ui_billboard.gd" id="1_t5ic0"]
+[ext_resource type="Script" uid="uid://lhyiol8siyae" path="res://features/stations/station_ui_billboard.gd" id="1_t5ic0"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_t5ic0"]
 viewport_path = NodePath("Billboard/SubViewport")

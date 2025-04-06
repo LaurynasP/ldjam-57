@@ -25,6 +25,7 @@ transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 
 
 [node name="furnace" parent="Map/Stations" instance=ExtResource("6_knfqh")]
 transform = Transform3D(0.377308, 0, -0.926088, 0, 1, 0, 0.926088, 0, 0.377308, -20.2326, 0, -3.13788)
+crafted_sound_effect = null
 
 [node name="coal_deposit" parent="Map/Stations" instance=ExtResource("7_2u7wp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0905, 0.276313, -21.8038)

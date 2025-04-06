@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://da1p078wf0dfu"]
+[gd_scene load_steps=11 format=3 uid="uid://da1p078wf0dfu"]
 
 [ext_resource type="Script" uid="uid://y73xnw6ot1ol" path="res://features/player/player.gd" id="1_yrnqm"]
 [ext_resource type="PackedScene" uid="uid://bdns8spnm3jxn" path="res://assets/prefabs/characters/dwarf.tscn" id="2_mjcdy"]
+[ext_resource type="Script" uid="uid://lhyiol8siyae" path="res://features/stations/station_ui_billboard.gd" id="3_47nop"]
+[ext_resource type="Script" uid="uid://b8v85bkyjg24j" path="res://features/stations/station_ui.gd" id="4_dcbbn"]
+[ext_resource type="PackedScene" uid="uid://22wue4dyb3ai" path="res://features/gameplay_ui/timer_bar.tscn" id="5_vld8p"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mjcdy"]
 radius = 0.863903
@@ -14,6 +17,16 @@ albedo_color = Color(1, 1, 1, 0.14902)
 [sub_resource type="BoxShape3D" id="BoxShape3D_yrnqm"]
 size = Vector3(2, 2.75, 3.5)
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_t5ic0"]
+viewport_path = NodePath("Billboard/SubViewport")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47nop"]
+bg_color = Color(0.227451, 0.227451, 0.227451, 0.619608)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_yrnqm")
 
@@ -21,47 +34,47 @@ script = ExtResource("1_yrnqm")
 transform = Transform3D(-2, 0, 3.01992e-07, 0, 2, 0, -3.01992e-07, 0, -2, 0, 0, 0)
 
 [node name="Skeleton3D" parent="dwarf_mixamo_mesh/Armature" index="0"]
-bones/0/position = Vector3(0.000931234, 0.920933, 0.0418797)
-bones/0/rotation = Quaternion(-0.0185877, -0.00473203, -0.0107731, 0.999758)
-bones/1/rotation = Quaternion(-0.0327566, -0.00160114, 6.10319e-05, 0.999462)
-bones/2/rotation = Quaternion(0.0116497, -0.0234591, -0.000320854, 0.999657)
-bones/3/rotation = Quaternion(0.0115723, -0.0234496, 0.00016982, 0.999658)
-bones/4/rotation = Quaternion(0.0305663, 0.0110483, -0.0111298, 0.99941)
-bones/5/rotation = Quaternion(0.0392486, -0.00812473, 0.0320527, 0.998682)
-bones/8/rotation = Quaternion(-0.511676, -0.471962, 0.583861, -0.417786)
-bones/9/rotation = Quaternion(0.411888, 0.15939, 0.119994, 0.889126)
-bones/10/rotation = Quaternion(0.0220165, -0.054678, 0.244355, 0.967893)
-bones/11/rotation = Quaternion(0.121855, 0.0807307, 0.00935826, 0.989215)
-bones/12/rotation = Quaternion(0.125651, 0.029074, -0.0201116, 0.991444)
-bones/13/rotation = Quaternion(0.0263044, 0.0223264, -0.0970645, 0.99468)
-bones/14/rotation = Quaternion(-0.0211533, -0.0101851, 0.098802, 0.99483)
-bones/17/rotation = Quaternion(0.184931, -0.0073642, -0.126291, 0.974575)
-bones/18/rotation = Quaternion(0.310146, 0.000676751, -0.0287033, 0.950255)
-bones/19/rotation = Quaternion(0.128822, -2.18907e-06, -0.000871901, 0.991667)
-bones/22/rotation = Quaternion(0.239178, 0.00694575, -0.140376, 0.96075)
-bones/23/rotation = Quaternion(0.212192, 0.000279155, -0.0169313, 0.977081)
-bones/24/rotation = Quaternion(0.104155, 0.000439599, 0.000850436, 0.994561)
-bones/27/rotation = Quaternion(0.559654, -0.446873, 0.527667, 0.456793)
-bones/28/rotation = Quaternion(0.420183, -0.131389, -0.134918, 0.887682)
-bones/29/rotation = Quaternion(0.0226149, 0.0539652, -0.242312, 0.968432)
-bones/30/rotation = Quaternion(0.022578, -0.0292497, -0.000859315, 0.999317)
-bones/31/rotation = Quaternion(0.169061, -0.146521, 0.0695937, 0.972166)
-bones/32/rotation = Quaternion(0.019562, -0.0133248, 0.0554174, 0.998183)
-bones/33/rotation = Quaternion(-0.0321902, 0.0112457, -0.163336, 0.985981)
-bones/36/rotation = Quaternion(0.0728663, -0.0139138, 0.176483, 0.981504)
-bones/37/rotation = Quaternion(0.33263, -0.0012972, 0.0473919, 0.941865)
-bones/38/rotation = Quaternion(0.0667795, 0.000711396, -0.00668058, 0.997745)
-bones/41/rotation = Quaternion(0.140592, -0.0242436, 0.180164, 0.973236)
-bones/42/rotation = Quaternion(0.272464, -0.00110082, 0.0273426, 0.961777)
-bones/43/rotation = Quaternion(0.0522772, 0.0100383, -0.00178692, 0.998581)
-bones/46/rotation = Quaternion(0.0381548, 0.0823569, 0.994979, -0.0421623)
-bones/47/rotation = Quaternion(-0.268812, -0.0774364, -0.00357218, 0.960068)
-bones/48/rotation = Quaternion(0.563878, -0.135946, 0.0440888, 0.813398)
-bones/49/rotation = Quaternion(0.331467, -0.168366, 0.0588103, 0.926458)
-bones/52/rotation = Quaternion(-0.107179, 0.0737191, 0.989663, 0.0603829)
-bones/53/rotation = Quaternion(-0.225659, 0.0306005, 0.00838489, 0.97369)
-bones/54/rotation = Quaternion(0.519687, 0.141742, -0.0279225, 0.842054)
-bones/55/rotation = Quaternion(0.334791, 0.159991, -0.0577677, 0.926812)
+bones/0/position = Vector3(-0.0221239, 0.915308, 0.0406777)
+bones/0/rotation = Quaternion(-0.021342, -0.00132252, -0.00892226, 0.999732)
+bones/1/rotation = Quaternion(-0.033595, -0.00233938, 0.000920644, 0.999432)
+bones/2/rotation = Quaternion(0.0091499, -0.0267976, 0.0014511, 0.999598)
+bones/3/rotation = Quaternion(0.00898321, -0.0267502, 0.00186747, 0.9996)
+bones/4/rotation = Quaternion(0.0441913, 0.0127571, -0.0111791, 0.998879)
+bones/5/rotation = Quaternion(0.0435513, -0.00530649, 0.0285796, 0.998628)
+bones/8/rotation = Quaternion(-0.523768, -0.463867, 0.575261, -0.423757)
+bones/9/rotation = Quaternion(0.417797, 0.158973, 0.110048, 0.887729)
+bones/10/rotation = Quaternion(0.0221263, -0.0549374, 0.245575, 0.967567)
+bones/11/rotation = Quaternion(0.119065, 0.0806232, 0.00642575, 0.989587)
+bones/12/rotation = Quaternion(0.127246, 0.0324943, -0.0385281, 0.99059)
+bones/13/rotation = Quaternion(0.0221445, -0.0152771, -0.0707263, 0.997133)
+bones/14/rotation = Quaternion(-0.0256466, -0.0119566, 0.110669, 0.993454)
+bones/17/rotation = Quaternion(0.179201, -0.0066702, -0.12539, 0.975766)
+bones/18/rotation = Quaternion(0.298958, 0.000644956, -0.0278948, 0.953858)
+bones/19/rotation = Quaternion(0.117938, -2.10814e-06, -5.06094e-05, 0.993021)
+bones/22/rotation = Quaternion(0.236016, 0.00741175, -0.140033, 0.961578)
+bones/23/rotation = Quaternion(0.197864, 0.000263971, -0.016305, 0.980094)
+bones/24/rotation = Quaternion(0.10588, 0.000444597, 0.000771694, 0.994379)
+bones/27/rotation = Quaternion(0.570839, -0.439366, 0.522046, 0.456693)
+bones/28/rotation = Quaternion(0.413584, -0.138258, -0.133035, 0.890019)
+bones/29/rotation = Quaternion(0.0227793, 0.0543408, -0.244077, 0.967964)
+bones/30/rotation = Quaternion(0.0232429, -0.0255445, -0.000651401, 0.999403)
+bones/31/rotation = Quaternion(0.171872, -0.136502, 0.0637013, 0.973535)
+bones/32/rotation = Quaternion(0.0220382, -0.0242542, 0.0650271, 0.997345)
+bones/33/rotation = Quaternion(-0.0306875, 0.0100346, -0.156199, 0.987198)
+bones/36/rotation = Quaternion(0.0389362, -0.0172156, 0.173208, 0.983965)
+bones/37/rotation = Quaternion(0.351967, -0.00140326, 0.0497444, 0.934689)
+bones/38/rotation = Quaternion(0.0891759, 0.000783952, -0.00385339, 0.996008)
+bones/41/rotation = Quaternion(0.0729955, -0.0310918, 0.176129, 0.981164)
+bones/42/rotation = Quaternion(0.30694, -0.00120108, 0.0303765, 0.951243)
+bones/43/rotation = Quaternion(0.0810892, 0.0048397, -0.00043948, 0.996695)
+bones/46/rotation = Quaternion(0.0311167, 0.0921251, 0.993751, -0.0548072)
+bones/47/rotation = Quaternion(-0.289331, -0.0810988, 0.00276369, 0.953783)
+bones/48/rotation = Quaternion(0.566579, -0.138519, 0.022654, 0.811965)
+bones/49/rotation = Quaternion(0.330115, -0.167921, 0.0590841, 0.927004)
+bones/52/rotation = Quaternion(-0.105046, 0.089391, 0.989129, 0.0509774)
+bones/53/rotation = Quaternion(-0.267746, 0.0260024, 0.0120385, 0.963063)
+bones/54/rotation = Quaternion(0.543841, 0.145747, -0.0420779, 0.825363)
+bones/55/rotation = Quaternion(0.335068, 0.160004, -0.0577417, 0.926711)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.53648, 0)
@@ -80,9 +93,67 @@ physics_interpolation_mode = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.375, -0.75)
 shape = SubResource("BoxShape3D_yrnqm")
 
-[node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 3, 0)
-text = "Label"
-font_size = 172
+[node name="StationUiBillboard" type="Node3D" parent="."]
+script = ExtResource("3_47nop")
+
+[node name="Billboard" type="Sprite3D" parent="StationUiBillboard"]
+unique_name_in_owner = true
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 0.25, 2.0842, -2.25)
+texture = SubResource("ViewportTexture_t5ic0")
+
+[node name="SubViewport" type="SubViewport" parent="StationUiBillboard/Billboard"]
+transparent_bg = true
+
+[node name="StationUI" type="Control" parent="StationUiBillboard/Billboard/SubViewport"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_dcbbn")
+
+[node name="Panel" type="Panel" parent="StationUiBillboard/Billboard/SubViewport/StationUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_47nop")
+
+[node name="IconContainer" type="GridContainer" parent="StationUiBillboard/Billboard/SubViewport/StationUI/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.001
+anchor_top = 0.203
+anchor_right = 0.996
+anchor_bottom = 0.984
+offset_left = -0.523
+offset_top = -0.164001
+offset_right = -0.0920105
+offset_bottom = 0.00799561
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="Control" type="Control" parent="StationUiBillboard/Billboard/SubViewport/StationUI"]
+layout_mode = 1
+anchor_left = 0.002
+anchor_top = 0.082
+anchor_right = 1.0
+anchor_bottom = 0.198
+offset_left = 0.108
+offset_top = 0.103996
+offset_right = -4.0
+offset_bottom = 0.0559845
+
+[node name="Timer" parent="StationUiBillboard/Billboard/SubViewport/StationUI/Control" instance=ExtResource("5_vld8p")]
+unique_name_in_owner = true
+layout_mode = 1
+theme_override_font_sizes/font_size = 100
 
 [editable path="dwarf_mixamo_mesh"]

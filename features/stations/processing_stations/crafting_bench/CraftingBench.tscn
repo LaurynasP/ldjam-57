@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ckkpkgjsjhr4i" path="res://features/stations/processing_stations/crafting_bench/crafting_bench.gd" id="1_h381n"]
 [ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="2_crqcg"]
 [ext_resource type="Texture2D" uid="uid://b71gi3gdksgtu" path="res://imports/Textures/Dungeons_2_Texture_01_A.png" id="2_j2ohs"]
-[ext_resource type="Resource" path="res://configurations/recipes/shaft.tres" id="3_xft0q"]
+[ext_resource type="Resource" uid="uid://qyeagt8atlas" path="res://configurations/recipes/shaft.tres" id="3_xft0q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dgdhg"]
 resource_name = "PolygonDungeonRealms_Mat_01_A"

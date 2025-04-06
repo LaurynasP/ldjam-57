@@ -16,6 +16,8 @@ var dash_sound_effect: AudioStream = preload("res://assets/sound/sound_effects/d
 @onready var label: Label3D = $Label3D
 
 @onready var anim_tree := $dwarf_mixamo_mesh/AnimationTree
+@onready var icon_container := %IconContainer
+@onready var billboard = $StationUiBillboard
 
 var item:Item
 var stations_in_hit_area: Array[Station] = []
@@ -30,7 +32,22 @@ func _physics_process(delta: float):
 	_handle_movement(delta)
 		
 func _process(delta: float) -> void:
-	debug()
+	if item != null: 
+		if not billboard.visible:
+			var texture_rect = TextureRect.new()
+			texture_rect.name = item.display_name + "Icon"
+			texture_rect.texture = item.icon
+			texture_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			texture_rect.stretch_mode =TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+			texture_rect.size_flags_horizontal = Control.SIZE_FILL | Control.SIZE_EXPAND
+			texture_rect.size_flags_vertical = Control.SIZE_FILL | Control.SIZE_EXPAND
+			icon_container.add_child(texture_rect)
+			billboard.visible = true
+	else:
+		billboard.visible = false
+		for child in icon_container.get_children():
+			child.queue_free()
+	
 	_handle_input()
 
 func _handle_input():
@@ -143,8 +160,3 @@ func _add_remove_item_action():
 			item = null
 	else:
 		item = focused_station.remove_item()
-		
-		
-func debug():
-	label.text = 'Item: '
-	label.text = item.display_name if item != null else "No Item"

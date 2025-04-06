@@ -1,17 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4xllno8qbro"]
+[gd_scene load_steps=11 format=3 uid="uid://b4xllno8qbro"]
 
 [ext_resource type="Script" uid="uid://cxl3efdwrpmjh" path="res://features/stations/processing_stations/anvil/anvil.gd" id="2_bakm5"]
+[ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="2_koytt"]
 [ext_resource type="PackedScene" uid="uid://bh2drec2l4a6u" path="res://assets/prefabs/anvil.tscn" id="2_px4ea"]
+[ext_resource type="Resource" uid="uid://dpwddw05bl2sl" path="res://configurations/recipes/iron_pickaxe.tres" id="3_f5o1g"]
+[ext_resource type="Resource" uid="uid://cprw5synye7uq" path="res://configurations/recipes/iron_sword.tres" id="4_2pcri"]
+[ext_resource type="Resource" uid="uid://doe11uec4fmgg" path="res://configurations/recipes/steel_sword.tres" id="5_45etq"]
 [ext_resource type="AudioStream" uid="uid://bqj3jyp3vr77f" path="res://assets/sound/sound_effects/anvil.mp3" id="5_wkc21"]
 [ext_resource type="AudioStream" uid="uid://choscvebbh0r2" path="res://assets/sound/sound_effects/bell.mp3" id="6_ydxrt"]
+[ext_resource type="AudioStream" uid="uid://clgfwc60dscc0" path="res://assets/sound/sound_effects/pop.mp3" id="7_f5o1g"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sk6r2"]
 size = Vector3(1.79742, 0.880859, 0.456543)
 
 [node name="anvil" type="Node3D"]
 script = ExtResource("2_bakm5")
+recipes = Array[ExtResource("2_koytt")]([ExtResource("3_f5o1g"), ExtResource("4_2pcri"), ExtResource("5_45etq")])
 interact_sound_effect = ExtResource("5_wkc21")
-add_remove_sound_effect = ExtResource("5_wkc21")
+add_remove_sound_effect = ExtResource("7_f5o1g")
 crafted_sound_effect = ExtResource("6_ydxrt")
 
 [node name="model" parent="." instance=ExtResource("2_px4ea")]

@@ -58,8 +58,8 @@ func remove_item() -> Item:
 		return retrieve_product()
 	if progress == 0:
 		var result = inventory.pop_back()
-		available_recipes = RecipeManager.get_inventory_related_recipes(inventory, loaded_recipes.values())
 		if result != null:
+			available_recipes = RecipeManager.get_inventory_related_recipes(inventory, loaded_recipes.values())
 			play_add_remove_sound_effect()
 		return result
 	
