@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://btu28liqn3sai"]
 
 [ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_5tvkc"]
-[ext_resource type="Texture2D" uid="uid://csguwp3oqmxto" path="res://assets/images/icons/steam_button_color_a.png" id="1_rqxd7"]
+[ext_resource type="Texture2D" uid="uid://bkbtfkweh3fie" path="res://assets/images/icons/products/bars/iron_bar.png" id="1_rqxd7"]
 
 [resource]
 script = ExtResource("1_5tvkc")

@@ -20,7 +20,6 @@ func add_item(item: Item) -> bool:
 		return false
 		
 	inventory.append(item)
-	ui.station_ui.update_ui(inventory)
 	on_resource_added.emit(item)
 	
 	return true
