@@ -8,7 +8,7 @@ var seconds_per_item:float = 30
 
 var order_list: Array[Order] = []
 
-
+signal on_new_order(order: Order)
 
 
 func _ready() -> void:
@@ -30,6 +30,7 @@ func create_order() -> Order:
 	order.order_failed.connect(_handle_failed_order)
 	order_list.append(order)
 	add_child(order)
+	on_new_order.emit(order)
 	return order
 	
 
