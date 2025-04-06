@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1scr3x8f74a5"]
+[gd_scene load_steps=8 format=3 uid="uid://b1scr3x8f74a5"]
 
 [ext_resource type="Script" uid="uid://hmv2qttw5yhx" path="res://features/gameplay/gameplay.gd" id="1_x43aj"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_p3wni"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_ol0by"]
 [ext_resource type="PackedScene" uid="uid://tp32esmsp3xq" path="res://features/camera/Camera.tscn" id="4_sjye3"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_oohhn"]
+[ext_resource type="PackedScene" uid="uid://fmb0vcjtbe0j" path="res://features/gameplay_ui/gameplay_ui.tscn" id="6_ol0by"]
 
 [sub_resource type="Resource" id="Resource_lyd10"]
 script = ExtResource("3_ol0by")
@@ -30,3 +31,5 @@ transform = Transform3D(1, 0, 0, 0, 0.57763, 0.816299, 0, -0.816299, 0.57763, -7
 process_priority = 300
 process_physics_priority = 300
 script = ExtResource("5_oohhn")
+
+[node name="GameplayUi" parent="." instance=ExtResource("6_ol0by")]

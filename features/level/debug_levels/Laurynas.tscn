@@ -13,7 +13,7 @@
 [node name="Laurynas" type="Node3D"]
 script = ExtResource("1_vjoi7")
 
-[node name="gameplay" parent="." instance=ExtResource("2_ll5wr")]
+[node name="Gameplay" parent="." instance=ExtResource("2_ll5wr")]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 129.175)
@@ -58,9 +58,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13861, 0.276313, -7.59557)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.71664, 0.178623, -6.94951)
 
 [node name="Level1Environment" parent="." instance=ExtResource("10_5e45d")]
-
-[node name="Camera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 20, 20)
 
 [node name="handoff_station" parent="." instance=ExtResource("3_mx3uc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12136, 0.585107, 18.5903)
