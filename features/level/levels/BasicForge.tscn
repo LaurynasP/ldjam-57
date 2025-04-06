@@ -18,19 +18,16 @@ script = ExtResource("1_w1r02")
 next_level = ExtResource("2_a5ygj")
 ordered_items = Array[ExtResource("3_a5ygj")]([ExtResource("4_knfqh")])
 
-[node name="PlayerSpawner" parent="." instance=ExtResource("3_am5gx")]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 4.29382, 0)
-
 [node name="Map" type="Node3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
 
 [node name="Level1Environment" parent="Map" instance=ExtResource("5_a5ygj")]
-transform = Transform3D(-8.9407e-08, 0, -1, 0, 1, 0, 1, 0, -8.9407e-08, 0, 0, 0)
+transform = Transform3D(0.0029844, 0, -0.999996, 0, 1, 0, 0.999996, 0, 0.0029844, 0, 0, 0)
 
 [node name="Stations" type="Node3D" parent="Map"]
 
 [node name="furnace" parent="Map/Stations" instance=ExtResource("6_knfqh")]
-transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 13.9693, 0, 16.7554)
+transform = Transform3D(0.377308, 0, -0.926088, 0, 1, 0, 0.926088, 0, 0.377308, -20.2326, 0, -3.13788)
 
 [node name="coal_deposit" parent="Map/Stations" instance=ExtResource("7_2u7wp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0905, 0.276313, -21.8038)
@@ -38,17 +35,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0905, 0.276313, -21.8038)
 [node name="iron_deposit" parent="Map/Stations" instance=ExtResource("8_rsogl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2601, 0.178623, -28.5282)
 
-[node name="anvil" parent="Map/Stations" instance=ExtResource("9_crbgj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1129, 0.0487938, 13.2739)
-
 [node name="HandoffStation" parent="Map/Stations" instance=ExtResource("10_wc4j5")]
 transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -22.1764, 0.244991, -17.53)
 
-[node name="anvil2" parent="Map/Stations" instance=ExtResource("9_crbgj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1129, 0.0487938, 8.68318)
-
 [node name="anvil3" parent="Map/Stations" instance=ExtResource("9_crbgj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1129, 0.0487938, 3.86082)
+transform = Transform3D(-0.0538523, 0, -0.998549, 0, 1, 0, 0.998549, 0, -0.0538523, 28.4562, 0.0487938, -3.16833)
 
 [node name="HandoffStation2" parent="Map/Stations" instance=ExtResource("10_wc4j5")]
 transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -17.4132, 0.244991, -17.53)
@@ -66,27 +57,19 @@ transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -2.0357,
 transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, 2.75793, 0.244991, -17.53)
 
 [node name="counter" parent="Map/Stations" instance=ExtResource("11_no3u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.62421, 0, 0)
-
-[node name="counter2" parent="Map/Stations" instance=ExtResource("11_no3u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13561, 0, 0)
-
-[node name="counter3" parent="Map/Stations" instance=ExtResource("11_no3u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.427957, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.404, 0, 0.490242)
 
 [node name="counter4" parent="Map/Stations" instance=ExtResource("11_no3u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91286, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3826, 0, -4.35945)
 
 [node name="counter5" parent="Map/Stations" instance=ExtResource("11_no3u5")]
-transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 19.4378, 0, 8.62206)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.89439, 0, -4.46733)
 
 [node name="counter6" parent="Map/Stations" instance=ExtResource("11_no3u5")]
-transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 16.9492, 0, 8.62206)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3961, 0, -4.41717)
 
 [node name="counter7" parent="Map/Stations" instance=ExtResource("11_no3u5")]
-transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 14.3857, 0, 8.62206)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89023, 0, -4.4857)
 
-[node name="counter8" parent="Map/Stations" instance=ExtResource("11_no3u5")]
-transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 11.9008, 0, 8.62206)
-
-[editable path="PlayerSpawner"]
+[node name="PlayerSpawner" parent="Map" instance=ExtResource("3_am5gx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20681, 0, -8.21613)
