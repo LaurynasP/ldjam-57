@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://y5q0e2iyet3d"]
 
 [ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_alt5r"]
-[ext_resource type="Texture2D" uid="uid://oepmteh136q5" path="res://assets/images/icons/xbox_button_color_y.png" id="1_wb7im"]
+[ext_resource type="Texture2D" uid="uid://dfd50ogsm3yy2" path="res://assets/images/icons/ores/iron_ore.png" id="1_wb7im"]
 
 [resource]
 script = ExtResource("1_alt5r")
