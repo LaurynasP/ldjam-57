@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_mbh6a"]
 [ext_resource type="Resource" uid="uid://cgkhyu1216ah7" path="res://configurations/items/coal.tres" id="3_htyv4"]
-[ext_resource type="Resource" uid="uid://dfvmww7o4b74h" path="res://configurations/items/steel_ore.tres" id="3_mbh6a"]
+[ext_resource type="Resource" uid="uid://btu28liqn3sai" path="res://configurations/items/iron_bar.tres" id="3_mbh6a"]
 [ext_resource type="Resource" uid="uid://b0vqfs1by8fnb" path="res://configurations/items/steel_bar.tres" id="4_u2u8e"]
 [ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="5_maxui"]
 

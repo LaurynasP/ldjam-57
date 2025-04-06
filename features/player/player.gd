@@ -117,11 +117,15 @@ func _handle_movement(delta: float):
 			dash_timer = dash_time
 			dash_cooldown_timer = dash_cooldown
 
-	velocity.x = dir.x * move_speed
-	velocity.z = dir.y * move_speed
+	velocity.x = lerp(velocity.x, dir.x * move_speed, 0.3)
+	velocity.z = lerp(velocity.z, dir.y * move_speed, 0.3)
 	
 	if dir.length() > 0.01:
-		look_at(global_position + Vector3(dir.x, 0, dir.y))
+		var target_dir = Vector3(dir.x, 0, dir.y).normalized()
+		var target_rot = transform.basis.looking_at(target_dir, Vector3.UP).rotated(Vector3.UP, 0).get_euler()
+		var current_rot = rotation
+		current_rot.y = lerp_angle(current_rot.y, target_rot.y, delta * 8.0)
+		rotation = current_rot
 
 	move_and_slide()
 
