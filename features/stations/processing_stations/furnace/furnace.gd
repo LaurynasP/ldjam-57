@@ -20,5 +20,5 @@ func do_processing(increment: int = 5):
 		if not RecipeManager.can_complete_recipe(recipe, inventory):
 			return
 		
-	super()
+	super(increment)
 	
