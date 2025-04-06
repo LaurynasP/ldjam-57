@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://qt6ytig0eb21" path="res://features/stations/counter.gd" id="1_kdsga"]
 [ext_resource type="PackedScene" uid="uid://dhw61hbbbr3yn" path="res://assets/prefabs/counter.tscn" id="2_kdsga"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yrowt"]
-points = PackedVector3Array(0.282005, 0.901443, 0.305519, -0.401422, 0.772619, -0.405822, 0.378487, 0.758322, -0.405822, -0.2772, 0.00657421, 0.264864, 0.272644, 0.000749647, -0.271, -0.39159, 0.863695, 0.379097, 0.273089, 0, 0.268767, -0.2772, 0.00657421, -0.267543, 0.407467, 0.772619, 0.403067, -0.304597, 0.902494, -0.308921, 0.3942, 0.860137, -0.392556, -0.401422, 0.772619, 0.403067, 0.407467, 0.772619, -0.405822, -0.308282, 0.907854, 0.295808, 0.310752, 0.902655, -0.309031, 0.38243, 0.862548, 0.392127, -0.392657, 0.8648, -0.397057, 0.3942, 0.860137, 0.361848, -0.375385, 0.861473, 0.39109, 0.308937, 0.900015, 0.290663)
+[sub_resource type="BoxShape3D" id="BoxShape3D_kdsga"]
+size = Vector3(0.772827, 0.834961, 0.796997)
 
 [node name="counter" type="Node3D"]
 script = ExtResource("1_kdsga")
@@ -15,4 +15,5 @@ transform = Transform3D(3, 0, 0, 0, 1.684, 0, 0, 0, 3, 0, 0, 0)
 [node name="StaticBody3D" type="StaticBody3D" parent="model"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="model/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_yrowt")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000671387, 0.48951, 6.10352e-05)
+shape = SubResource("BoxShape3D_kdsga")

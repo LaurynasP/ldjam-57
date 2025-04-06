@@ -92,6 +92,8 @@ func _handle_movement(delta: float):
 	var dir = InputManager.get_input_vector(device_id)
 	var move_speed = dash_speed if is_dashing else speed
 	
+	
+	
 	if dir.is_zero_approx():
 		anim_tree["parameters/conditions/idle"] = true
 		anim_tree["parameters/conditions/moving"] = false
@@ -117,11 +119,14 @@ func _handle_movement(delta: float):
 			dash_timer = dash_time
 			dash_cooldown_timer = dash_cooldown
 
-	velocity.x = dir.x * move_speed
-	velocity.z = dir.y * move_speed
+	velocity.x = lerp(velocity.x, dir.x * move_speed, 0.3)
+	velocity.z = lerp(velocity.z, dir.y * move_speed, 0.3)
 	
 	if dir.length() > 0.01:
-		look_at(global_position + Vector3(dir.x, 0, dir.y))
+		var target_dir = Vector3(dir.x, 0, dir.y).normalized()
+		var current_dir = -global_transform.basis.z.normalized()
+		var new_dir = current_dir.slerp(target_dir, delta * 5.0)
+		look_at(global_position + new_dir, Vector3.UP)
 
 	move_and_slide()
 
