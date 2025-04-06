@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvqservkdeqs6"]
+
+[ext_resource type="MeshLibrary" uid="uid://heqpp5lgphst" path="res://assets/mesh_libraries/environment.tres" id="1_y7afm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hb4up"]
+albedo_color = Color(0.311429, 0.214902, 0.120741, 1)
+
+[node name="MiningCave" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 0.1, 0, 0, 0, 20, 0, 0, 0)
+use_collision = true
+material = SubResource("StandardMaterial3D_hb4up")
+
+[node name="Env" type="GridMap" parent="."]
+mesh_library = ExtResource("1_y7afm")
+cell_size = Vector3(5, 5, 5)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(0, 0, 1179969, 131070, 65535, 1310807, 131070, 0, 1310807, 131070, 2, 1310807, 131071, 65534, 131159, 65536, 65534, 131159, 65538, 65535, 1179735, 65538, 0, 1179735, 65535, 65535, 1179966, 1, 65535, 1179745, 65535, 0, 1179973, 65535, 1, 1179971, 0, 1, 1179967)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
