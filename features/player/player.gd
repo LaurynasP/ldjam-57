@@ -2,8 +2,8 @@ class_name Player
 extends CharacterBody3D
 
 @export var device_id: int = -1
-var speed := 5.0
-var dash_speed := 15.0
+var speed := 10
+var dash_speed := 30
 var dash_time := 0.2
 var dash_cooldown := 1.5
 
