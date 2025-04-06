@@ -9,4 +9,3 @@ func _ready() -> void:
 	
 	reset_station()
 	super()
-	
