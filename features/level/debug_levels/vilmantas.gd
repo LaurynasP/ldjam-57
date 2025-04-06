@@ -1,6 +1,5 @@
 extends Level
 
-@onready var label = $Label
 @onready var label_2 = $Label2
 @onready var label_3 = $Label3
 @onready var furnace = $furnace as Furnace
@@ -10,13 +9,6 @@ extends Level
 @onready var iron_deposit = $iron_deposit as ResourceStation
 
 @export var inventory: Array[Item] = []
-
-func _ready() -> void:
-	label.text += 'Items Count: ' 
-	label.text += str(ItemManager.items.size())
-	label.text += '\n'
-	label.text += 'Recipes Count: '
-	label.text += str(RecipeManager.recipes.size())
 	
 func _process(delta: float) -> void:
 	_debug_player_focus()

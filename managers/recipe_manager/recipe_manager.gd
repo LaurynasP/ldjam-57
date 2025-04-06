@@ -40,3 +40,13 @@ func can_complete_recipe(recipe: Recipe, items: Array[Item]) -> bool:
 			result = false
 			
 	return result
+
+func get_completable_recipe(recipes: Array[Recipe], items: Array[Item]) -> Recipe:
+	var result: Recipe
+	
+	for recipe in recipes:
+		if can_complete_recipe(recipe, items):
+			result = recipe
+			break
+			
+	return result
