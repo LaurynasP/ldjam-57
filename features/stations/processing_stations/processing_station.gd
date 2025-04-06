@@ -27,6 +27,14 @@ func _process(delta: float) -> void:
 		
 	ui.station_ui.update_ui(items)
 	
+	if progress > 0:
+		ui.station_ui.timer_bar.visible = true
+		ui.station_ui.timer_bar.max_value = 100
+		ui.station_ui.timer_bar.value = progress
+		ui.station_ui.timer_bar.time_left = progress
+	else:
+		ui.station_ui.timer_bar.visible = false
+	
 func add_item(item: Item) -> bool:
 	if prepared_item != null:
 		return false
