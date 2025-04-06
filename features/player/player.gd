@@ -92,6 +92,8 @@ func _handle_movement(delta: float):
 	var dir = InputManager.get_input_vector(device_id)
 	var move_speed = dash_speed if is_dashing else speed
 	
+	
+	
 	if dir.is_zero_approx():
 		anim_tree["parameters/conditions/idle"] = true
 		anim_tree["parameters/conditions/moving"] = false
@@ -122,10 +124,9 @@ func _handle_movement(delta: float):
 	
 	if dir.length() > 0.01:
 		var target_dir = Vector3(dir.x, 0, dir.y).normalized()
-		var target_rot = transform.basis.looking_at(target_dir, Vector3.UP).rotated(Vector3.UP, 0).get_euler()
-		var current_rot = rotation
-		current_rot.y = lerp_angle(current_rot.y, target_rot.y, delta * 8.0)
-		rotation = current_rot
+		var current_dir = -global_transform.basis.z.normalized()
+		var new_dir = current_dir.slerp(target_dir, delta * 5.0)
+		look_at(global_position + new_dir, Vector3.UP)
 
 	move_and_slide()
 
