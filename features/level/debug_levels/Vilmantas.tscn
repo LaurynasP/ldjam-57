@@ -1,10 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://crwoxhfx787al"]
+[gd_scene load_steps=15 format=3 uid="uid://crwoxhfx787al"]
 
 [ext_resource type="Script" uid="uid://d3fg3nwvm5kku" path="res://features/level/debug_levels/vilmantas.gd" id="1_g1d7o"]
 [ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_mv3ks"]
 [ext_resource type="PackedScene" uid="uid://dfjp2tythyjfd" path="res://features/player/player_spawner/PlayerSpawner.tscn" id="3_0no2m"]
 [ext_resource type="PackedScene" uid="uid://b88kbpsdnbm2j" path="res://features/stations/handoff_station/HandoffStation.tscn" id="3_nnvv4"]
-[ext_resource type="PackedScene" uid="uid://tp32esmsp3xq" path="res://features/camera/Camera.tscn" id="4_68ysj"]
 [ext_resource type="PackedScene" uid="uid://bjxatu6y03tvm" path="res://features/level/environments/default_light.tscn" id="5_ueg4n"]
 [ext_resource type="PackedScene" uid="uid://7ynlwr02wm3n" path="res://features/stations/processing_stations/furnace/furnace.tscn" id="8_i6aqx"]
 [ext_resource type="PackedScene" uid="uid://bs4w5rinlwem2" path="res://features/stations/resource_stations/coal_deposit.tscn" id="10_22oy1"]
@@ -23,6 +22,9 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 script = ExtResource("1_g1d7o")
 
 [node name="gameplay" parent="." instance=ExtResource("16_n3gf4")]
+
+[node name="Camera" parent="gameplay" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.57763, 0.816299, 0, -0.816299, 0.57763, -7.18457, 0.816299, -2.38166)
 
 [node name="handoff_station" parent="." instance=ExtResource("3_nnvv4")]
 
@@ -57,9 +59,6 @@ size = Vector3(58, 5, 1)
 material = ExtResource("2_mv3ks")
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("3_0no2m")]
-
-[node name="Camera" parent="." instance=ExtResource("4_68ysj")]
-transform = Transform3D(-0.626386, 0.578031, -0.522993, -0.0275018, 0.654118, 0.755893, 0.779028, 0.487864, -0.393833, -39.9117, 20.5969, -32.9563)
 
 [node name="environment" parent="." instance=ExtResource("5_ueg4n")]
 
@@ -124,6 +123,7 @@ script = ExtResource("13_i6aqx")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_i6aqx")
 
+[editable path="gameplay"]
 [editable path="PlayerSpawner"]
 [editable path="environment"]
 [editable path="furnace"]

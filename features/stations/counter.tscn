@@ -9,10 +9,10 @@ points = PackedVector3Array(0.282005, 0.901443, 0.305519, -0.401422, 0.772619, -
 [node name="counter" type="Node3D"]
 script = ExtResource("1_kdsga")
 
-[node name="SM_Prop_Dwarf_Table_Small_01" parent="." instance=ExtResource("2_kdsga")]
+[node name="model" parent="." instance=ExtResource("2_kdsga")]
 transform = Transform3D(1.782, 0, 0, 0, 1, 0, 0, 0, 1.782, 0, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SM_Prop_Dwarf_Table_Small_01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="model"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Prop_Dwarf_Table_Small_01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="model/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_yrowt")
