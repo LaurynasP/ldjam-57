@@ -19,7 +19,7 @@ ordered_items = Array[ExtResource("3_g01l4")]([ExtResource("4_mlay7")])
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 4.29382, 0)
 
 [node name="Map" type="Node3D" parent="."]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0)
 
 [node name="AmateurForgeEnvironment" parent="Map" instance=ExtResource("6_s2jqq")]
 

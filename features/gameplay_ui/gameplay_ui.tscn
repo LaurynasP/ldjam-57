@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://fmb0vcjtbe0j"]
+[gd_scene load_steps=4 format=3 uid="uid://fmb0vcjtbe0j"]
 
 [ext_resource type="Script" uid="uid://ckkqmx2cut0fv" path="res://features/gameplay_ui/gameplay_ui.gd" id="1_ljovr"]
 [ext_resource type="PackedScene" uid="uid://dynf5itxy42ka" path="res://features/gameplay_ui/order_ui/OrderUI.tscn" id="2_m1eul"]
+[ext_resource type="PackedScene" uid="uid://cc4vac8ctgxxh" path="res://features/gameplay_ui/stats/Stats.tscn" id="3_2gr57"]
 
 [node name="GameplayUi" type="Control"]
 layout_mode = 3
@@ -32,3 +33,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Stats" parent="." instance=ExtResource("3_2gr57")]
+layout_mode = 1
+offset_left = 24.0
+offset_top = 23.0
+offset_right = -1629.0
+offset_bottom = -945.0
