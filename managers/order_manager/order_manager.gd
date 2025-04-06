@@ -3,6 +3,8 @@ extends Node
 var rng = RandomNumberGenerator.new()
 var _available_order_items: Array[Item] = []
 var _max_items_per_order: int = 2
+var _completed_orders = 0
+var _failed_orders = 0
 
 var seconds_per_item:float = 30
 
@@ -18,6 +20,11 @@ func _ready() -> void:
 	_available_order_items.append(iron);
 	_available_order_items
 	pass
+	
+func reset():
+	_available_order_items = []
+	_completed_orders = 0
+	_failed_orders = 0
 	
 
 func create_order() -> Order:
@@ -35,9 +42,11 @@ func create_order() -> Order:
 	
 
 func _handle_completed_order(order: Order):
+	_completed_orders += 1
 	_erase_order(order)
 	
 func _handle_failed_order(order:Order):
+	_failed_orders += 1
 	_erase_order(order)
 	
 func _erase_order(order: Order):
