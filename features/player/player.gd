@@ -18,7 +18,7 @@ var dash_sound_effect: AudioStream = preload("res://assets/sound/sound_effects/d
 @onready var anim_tree := $dwarf_mixamo_mesh/AnimationTree
 @onready var icon_container := %IconContainer
 @onready var billboard = $StationUiBillboard
-
+@onready var ui = %StationUI
 var item:Item
 var stations_in_hit_area: Array[Station] = []
 var focused_station: Station
@@ -34,19 +34,11 @@ func _physics_process(delta: float):
 func _process(delta: float) -> void:
 	if item != null: 
 		if not billboard.visible:
-			var texture_rect = TextureRect.new()
-			texture_rect.name = item.display_name + "Icon"
-			texture_rect.texture = item.icon
-			texture_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-			texture_rect.stretch_mode =TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-			texture_rect.size_flags_horizontal = Control.SIZE_FILL | Control.SIZE_EXPAND
-			texture_rect.size_flags_vertical = Control.SIZE_FILL | Control.SIZE_EXPAND
-			icon_container.add_child(texture_rect)
+			var input: Array[Item] = [item]
+			ui.update_ui(input)
 			billboard.visible = true
 	else:
 		billboard.visible = false
-		for child in icon_container.get_children():
-			child.queue_free()
 	
 	_handle_input()
 
