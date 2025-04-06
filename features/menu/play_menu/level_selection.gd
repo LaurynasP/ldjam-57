@@ -5,7 +5,7 @@ var selected_level: LevelConfiguration
 
 @onready var level_selector: OptionButton = %LevelSelector
 
-var configuration: LevelsConfiguration = load("res://configurations/all_levels.tres")
+@onready var configuration: LevelsConfiguration = load("res://configurations/all_levels.tres")
 
 func _ready():
 	_prepare_ui()

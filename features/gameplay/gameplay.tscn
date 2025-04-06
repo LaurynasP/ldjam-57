@@ -25,7 +25,6 @@ tween_resource = SubResource("Resource_lyd10")
 follow_offset = Vector3(0, 20, 10)
 
 [node name="Camera" parent="." instance=ExtResource("4_sjye3")]
-transform = Transform3D(1, 0, 0, 0, 0.57763, 0.816299, 0, -0.816299, 0.57763, -7.18457, 0.816299, -2.38166)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera"]
 process_priority = 300

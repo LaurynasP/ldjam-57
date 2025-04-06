@@ -32,6 +32,7 @@ func _show_loading_screen() -> Node:
 	get_tree().root.add_child(loading_screen_instance)
 	
 	for child in level_host.get_children():
+		level_host.remove_child(child)
 		child.queue_free()
 			
 	return loading_screen_instance

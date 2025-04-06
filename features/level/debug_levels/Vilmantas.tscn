@@ -55,7 +55,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -30, 2
 size = Vector3(58, 5, 1)
 material = ExtResource("2_mv3ks")
 
-[node name="PlayerSpawner" parent="." instance=ExtResource("3_0no2m")]
+[node name="PlayerSpawner" parent="." groups=["player_spawner"] instance=ExtResource("3_0no2m")]
 
 [node name="environment" parent="." instance=ExtResource("5_ueg4n")]
 

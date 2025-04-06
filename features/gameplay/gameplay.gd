@@ -14,8 +14,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if _is_level_completed() and GameManager.current_level.next_level != null:
 		LoadingManager._load_level(GameManager.current_level.next_level)
-	
-	
+
 func _is_level_completed() -> bool:
 	if GameManager.current_level.next_level == null:
 		return false
