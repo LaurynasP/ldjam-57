@@ -23,6 +23,9 @@ script = ExtResource("1_g1d7o")
 
 [node name="gameplay" parent="." instance=ExtResource("16_n3gf4")]
 
+[node name="Camera" parent="gameplay" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.57763, 0.816299, 0, -0.816299, 0.57763, -7.18457, 0.816299, -2.38166)
+
 [node name="handoff_station" parent="." instance=ExtResource("3_nnvv4")]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
