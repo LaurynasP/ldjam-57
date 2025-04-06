@@ -49,15 +49,18 @@ func add_item(item: Item) -> bool:
 	inventory.append(item)
 	progress = max(0, progress - 40)
 	on_resource_added.emit(item)
-	
+	play_add_remove_sound_effect()
 	return true
 
 func remove_item() -> Item:
 	if prepared_item != null:
+		play_add_remove_sound_effect()
 		return retrieve_product()
 	if progress == 0:
 		var result = inventory.pop_back()
 		available_recipes = RecipeManager.get_inventory_related_recipes(inventory, loaded_recipes.values())
+		if result != null:
+			play_add_remove_sound_effect()
 		return result
 	
 	return null
