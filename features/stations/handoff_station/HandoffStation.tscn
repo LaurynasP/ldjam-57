@@ -89,6 +89,8 @@ viewport_path = NodePath("OrderBillboard/OrderBillboardVieport")
 mesh = SubResource("ArrayMesh_sf26s")
 skeleton = NodePath("")
 script = ExtResource("1_nfw1f")
+allow_duplicates = true
+inventory_space = 4
 
 [node name="SM_Prop_Sarcophagus_01_Lid" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11185, 0)
