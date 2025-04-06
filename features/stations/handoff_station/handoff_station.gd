@@ -11,9 +11,8 @@ var new_order_timeout = 5
 var current_new_order_timeout = 0
 
 func _ready() -> void:
-	allow_duplicates = true
-	inventory_space = 4
 	super()
+	ui.visible = false
 
 func _process(delta: float) -> void:
 	if not current_order:
