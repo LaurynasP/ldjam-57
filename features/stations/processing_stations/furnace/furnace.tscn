@@ -13,6 +13,9 @@ points = PackedVector3Array(0.103758, 1.9964, 0.575526, -0.103864, 1.9964, 0.575
 script = ExtResource("2_aalje")
 recipes = Array[ExtResource("2_6tyw8")]([ExtResource("3_aalje"), ExtResource("4_d2ala")])
 
+[node name="ui_spawn" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.92497, 0)
+
 [node name="processing_timer" type="Timer" parent="."]
 wait_time = 0.05
 
