@@ -47,6 +47,7 @@ func add_item(item: Item) -> bool:
 	
 	available_recipes = RecipeManager.get_related_recipes(item, available_recipes.values())
 	inventory.append(item)
+	progress = max(0, progress - 40)
 	on_resource_added.emit(item)
 	
 	return true
@@ -55,13 +56,11 @@ func remove_item() -> Item:
 	if prepared_item != null:
 		return retrieve_product()
 	if progress == 0:
-		return inventory.pop_back()
+		var result = inventory.pop_back()
+		available_recipes = RecipeManager.get_inventory_related_recipes(inventory, loaded_recipes.values())
+		return result
 	
 	return null
-
-func interact():
-	print("Interacted with furance")
-	pass
 
 func do_processing(increment: int = 5):
 	if inventory.size() == 0:
@@ -82,12 +81,9 @@ func do_processing(increment: int = 5):
 	pass
 	
 func complete_product():
-	if available_recipes.size() != 1:
-		return
-		
-	var recipe = available_recipes.values()[0]
+	var recipe = RecipeManager.get_completable_recipe(available_recipes.values(), inventory)
 	
-	if not RecipeManager.can_complete_recipe(recipe, inventory):
+	if recipe == null:
 		return
 	
 	prepared_item = recipe.product
@@ -104,6 +100,6 @@ func retrieve_product() -> Item:
 	return product
 	
 func reset_station():
-	available_recipes = loaded_recipes
+	available_recipes = loaded_recipes.duplicate()
 	inventory = []
 	progress = 0
