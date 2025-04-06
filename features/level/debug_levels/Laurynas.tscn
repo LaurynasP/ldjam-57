@@ -60,16 +60,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.71664, 0.178623, -6.94951)
 [node name="Level1Environment" parent="." instance=ExtResource("10_5e45d")]
 
 [node name="Camera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 20, 20)
+transform = Transform3D(1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 20, 20)
 
 [node name="handoff_station" parent="." instance=ExtResource("3_mx3uc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12136, 0.585107, 18.5903)
 
 [node name="handoff_station3" parent="." instance=ExtResource("3_mx3uc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12136, 0.585107, 20.8211)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5194, 0.570499, 18.7196)
 
 [node name="handoff_station4" parent="." instance=ExtResource("3_mx3uc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12136, 0.585107, 23.2706)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.367717, 0.585107, 18.4709)
 
 [editable path="PlayerSpawner"]
 [editable path="environment"]
