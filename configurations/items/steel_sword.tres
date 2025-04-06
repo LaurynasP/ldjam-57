@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_52i7u")
-name = "iron_sword"
-display_name = "Iron Sword"
+name = "steel_sword"
+display_name = "Steel Sword"
 icon = ExtResource("1_ejcm7")
 metadata/_custom_type_script = "uid://ce12c8rt3nki4"
