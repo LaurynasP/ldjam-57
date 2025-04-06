@@ -3,6 +3,10 @@ class_name ResourceStation
 
 @export var resource: Item
 
+func _ready() -> void:
+	super()
+	ui.visible = false
+
 func add_item(item: Item) -> bool:
 	return item == resource
 

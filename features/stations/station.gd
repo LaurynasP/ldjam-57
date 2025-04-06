@@ -1,19 +1,26 @@
 extends Node3D
 class_name Station
 
-
 var inventory: Array[Item] = []
 
 @export var allow_duplicates = false
 @export var inventory_space = 1
 
+var ui: StationUIBillboard
+
 signal on_resource_added(resource: Item)
+
+func _ready() -> void:
+	var ui_instance = load("res://features/stations/StationUIBillboard.tscn").instantiate()
+	ui = ui_instance
+	add_child(ui_instance)
 
 func add_item(item: Item) -> bool:
 	if inventory_space <= inventory.size() or (not allow_duplicates and ItemManager.is_item_already_in_inventory(item, inventory)):
 		return false
 		
 	inventory.append(item)
+	ui.station_ui.update_ui(inventory)
 	on_resource_added.emit(item)
 	
 	return true

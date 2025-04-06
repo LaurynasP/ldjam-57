@@ -17,11 +17,16 @@ signal on_product_removed(product: Item)
 func _ready() -> void:
 	loaded_recipes = RecipeManager.get_recipes(recipes)
 	reset_station()
-	on_ready()
+	super()
 	
-func on_ready():
-	pass
-
+func _process(delta: float) -> void:
+	var items = inventory.duplicate()
+	
+	if prepared_item != null:
+		items.append(prepared_item)
+		
+	ui.station_ui.update_ui(items)
+	
 func add_item(item: Item) -> bool:
 	if prepared_item != null:
 		return false

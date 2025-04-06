@@ -4,7 +4,6 @@ class_name HandoffStation
 var current_order: Order
 
 @onready var label: Label3D = $Label3D
-@onready var handoff_station_ui: HandoffStationUI = %HandoffStationUi
 @onready var billboard: Sprite3D = %Billboard
 
 var new_order_timeout = 5
@@ -13,7 +12,7 @@ var current_new_order_timeout = 0
 func _ready() -> void:
 	allow_duplicates = true
 	inventory_space = 4
-	
+	super()
 
 func _process(delta: float) -> void:
 	if not current_order:
@@ -58,11 +57,11 @@ func _handle_completed_or_failed_order(order: Order):
 	
 func _update_ui():
 	if current_order != null:
-		billboard.visible = true
-		handoff_station_ui.update_ui(current_order)
+		ui.station_ui.visible = true
+		ui.station_ui.update_ui(current_order.items, current_order.duration)
 	else:
-		billboard.visible = false
-		handoff_station_ui.cleanup_ui()
+		ui.station_ui.visible = false
+		ui.station_ui.cleanup_ui()
 		
 	
 	
