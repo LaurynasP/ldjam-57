@@ -4,7 +4,7 @@ var rng = RandomNumberGenerator.new()
 var _available_order_items: Array[Item] = []
 var _max_items_per_order: int = 2
 
-var seconds_per_item:float = 2
+var seconds_per_item:float = 30
 
 var order_list: Array[Order] = []
 
