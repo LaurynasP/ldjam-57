@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dehwd1cc640kf"]
+
+[ext_resource type="Texture2D" uid="uid://b44vyg5co7mo1" path="res://assets/images/icons/products/tools/iron_pickaxe.png" id="1_vxcnf"]
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="2_wdtl7"]
+
+[resource]
+script = ExtResource("2_wdtl7")
+name = "iron_pickaxe"
+display_name = "Iron Pickaxe"
+icon = ExtResource("1_vxcnf")
+metadata/_custom_type_script = "uid://ce12c8rt3nki4"

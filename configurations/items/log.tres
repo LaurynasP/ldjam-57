@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://depciv7en7nag"]
+
+[ext_resource type="Texture2D" uid="uid://tkmwyda21l7j" path="res://assets/images/icons/base_materials/log.png" id="1_0vdy7"]
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="2_4bdtd"]
+
+[resource]
+script = ExtResource("2_4bdtd")
+name = "log"
+display_name = "Log"
+icon = ExtResource("1_0vdy7")
+metadata/_custom_type_script = "uid://ce12c8rt3nki4"

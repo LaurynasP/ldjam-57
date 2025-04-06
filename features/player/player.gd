@@ -92,8 +92,6 @@ func _handle_movement(delta: float):
 	var dir = InputManager.get_input_vector(device_id)
 	var move_speed = dash_speed if is_dashing else speed
 	
-	
-	
 	if dir.is_zero_approx():
 		anim_tree["parameters/conditions/idle"] = true
 		anim_tree["parameters/conditions/moving"] = false

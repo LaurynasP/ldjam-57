@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://doe11uec4fmgg"]
+
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_0yeig"]
+[ext_resource type="Resource" uid="uid://b0vqfs1by8fnb" path="res://configurations/items/steel_bar.tres" id="2_0yeig"]
+[ext_resource type="Resource" uid="uid://dn8opa5fg0c32" path="res://configurations/items/steel_sword.tres" id="3_0yeig"]
+[ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="4_5nyq8"]
+
+[resource]
+script = ExtResource("4_5nyq8")
+name = "Steel Sword"
+product = ExtResource("3_0yeig")
+ingredients = Array[ExtResource("1_0yeig")]([ExtResource("2_0yeig")])
+metadata/_custom_type_script = "uid://bkkb1mtbo8xh5"

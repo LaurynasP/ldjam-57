@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cs4oe6l5na3xu"]
+
+[ext_resource type="Texture2D" uid="uid://o16w3ddbkyvv" path="res://assets/images/icons/base_materials/shaft.png" id="1_q4vfq"]
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="2_vfvbp"]
+
+[resource]
+script = ExtResource("2_vfvbp")
+name = "shaft"
+display_name = "shaft"
+icon = ExtResource("1_q4vfq")
+metadata/_custom_type_script = "uid://ce12c8rt3nki4"

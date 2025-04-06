@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfd50ogsm3yy2"
-path="res://.godot/imported/iron_ore.png-791d83721b6af01ec97b994c4d42084f.ctex"
+uid="uid://b44vyg5co7mo1"
+path="res://.godot/imported/iron_pickaxe.png-dd41b1fb1ee28058fd310704f179c05c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/icons/ores/iron_ore.png"
-dest_files=["res://.godot/imported/iron_ore.png-791d83721b6af01ec97b994c4d42084f.ctex"]
+source_file="res://assets/images/icons/products/tools/iron_pickaxe.png"
+dest_files=["res://.godot/imported/iron_pickaxe.png-dd41b1fb1ee28058fd310704f179c05c.ctex"]
 
 [params]
 

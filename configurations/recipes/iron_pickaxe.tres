@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://dpwddw05bl2sl"]
+
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_571on"]
+[ext_resource type="Resource" uid="uid://btu28liqn3sai" path="res://configurations/items/iron_bar.tres" id="2_wdkjj"]
+[ext_resource type="Resource" uid="uid://cs4oe6l5na3xu" path="res://configurations/items/wooden_shaft.tres" id="3_wdkjj"]
+[ext_resource type="Resource" uid="uid://bxl57bdc8lmu1" path="res://configurations/items/iron_sword.tres" id="3_x85hj"]
+[ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="4_agmxq"]
+
+[resource]
+script = ExtResource("4_agmxq")
+name = "Iron Sword"
+product = ExtResource("3_x85hj")
+ingredients = Array[ExtResource("1_571on")]([ExtResource("2_wdkjj"), ExtResource("3_wdkjj")])
+metadata/_custom_type_script = "uid://bkkb1mtbo8xh5"

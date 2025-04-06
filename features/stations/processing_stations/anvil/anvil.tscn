@@ -10,7 +10,7 @@ size = Vector3(1.79742, 0.880859, 0.456543)
 
 [node name="anvil" type="Node3D"]
 script = ExtResource("2_bakm5")
-recipes = Array[ExtResource("2_sk6r2")]([ExtResource("3_bakm5")])
+recipes = Array[ExtResource("2_sk6r2")]([ExtResource("3_bakm5"), null])
 
 [node name="model" parent="." instance=ExtResource("2_px4ea")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
