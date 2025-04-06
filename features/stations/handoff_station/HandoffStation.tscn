@@ -86,6 +86,7 @@ points = PackedVector3Array(-0.742514, 0.00125455, -1.09213, 0.832348, 0.293302,
 viewport_path = NodePath("OrderBillboard/OrderBillboardVieport")
 
 [node name="HandoffStation" type="MeshInstance3D"]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
 mesh = SubResource("ArrayMesh_sf26s")
 skeleton = NodePath("")
 script = ExtResource("1_nfw1f")
