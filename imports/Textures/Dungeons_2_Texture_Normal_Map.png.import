@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyou8mt1dil55"
-path.s3tc="res://.godot/imported/Dungeons_2_Texture_Normal_Map.png-abc7d40ca075dd8a6a40149554500b85.s3tc.ctex"
+path.s3tc="res://.godot/imported/Dungeons_2_Texture_Normal_Map.png-7172b768d18d96198065706318ebe96e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://imports/textures/Dungeons_2_Texture_Normal_Map.png"
-dest_files=["res://.godot/imported/Dungeons_2_Texture_Normal_Map.png-abc7d40ca075dd8a6a40149554500b85.s3tc.ctex"]
+source_file="res://imports/Textures/Dungeons_2_Texture_Normal_Map.png"
+dest_files=["res://.godot/imported/Dungeons_2_Texture_Normal_Map.png-7172b768d18d96198065706318ebe96e.s3tc.ctex"]
 
 [params]
 

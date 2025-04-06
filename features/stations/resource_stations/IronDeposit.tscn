@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2piqq17j6g7x"]
+[gd_scene load_steps=5 format=3 uid="uid://cvkfp72qyp7gw"]
 
 [ext_resource type="PackedScene" uid="uid://cju4ghmvgcj40" path="res://assets/prefabs/IronDeposit.tscn" id="1_lta1p"]
 [ext_resource type="Script" uid="uid://cqjaq18tt61cf" path="res://features/stations/resource_stations/resource_station.gd" id="1_u8kve"]
 [ext_resource type="Resource" uid="uid://y5q0e2iyet3d" path="res://configurations/items/iron_ore.tres" id="2_ykk2p"]
+[ext_resource type="AudioStream" uid="uid://d2gaflbpod0je" path="res://assets/sound/sound_effects/mining.mp3" id="4_i5gb6"]
 
 [node name="iron_deposit" type="Node3D"]
 
@@ -10,3 +11,4 @@
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 script = ExtResource("1_u8kve")
 resource = ExtResource("2_ykk2p")
+add_remove_sound_effect = ExtResource("4_i5gb6")

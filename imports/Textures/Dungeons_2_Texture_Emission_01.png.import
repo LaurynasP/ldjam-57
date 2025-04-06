@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://de5ec6x7ibe52"
-path.s3tc="res://.godot/imported/Dungeons_2_Texture_Emission_01.png-685967826eaacc81bdf29a7705492c64.s3tc.ctex"
+path.s3tc="res://.godot/imported/Dungeons_2_Texture_Emission_01.png-9c4624cdc2d98641b7c4b2046d4aa213.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://imports/textures/Dungeons_2_Texture_Emission_01.png"
-dest_files=["res://.godot/imported/Dungeons_2_Texture_Emission_01.png-685967826eaacc81bdf29a7705492c64.s3tc.ctex"]
+source_file="res://imports/Textures/Dungeons_2_Texture_Emission_01.png"
+dest_files=["res://.godot/imported/Dungeons_2_Texture_Emission_01.png-9c4624cdc2d98641b7c4b2046d4aa213.s3tc.ctex"]
 
 [params]
 

@@ -93,7 +93,7 @@ func complete_product():
 	prepared_item = recipe.product
 	
 	reset_station()
-	
+	play_crafted_sound_effect()
 	on_processing_completed.emit(prepared_item)
 	
 func retrieve_product() -> Item:

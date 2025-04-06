@@ -5,6 +5,9 @@ var inventory: Array[Item] = []
 
 @export var allow_duplicates = false
 @export var inventory_space = 1
+@export var interact_sound_effect: AudioStream
+@export var add_remove_sound_effect: AudioStream = load("res://assets/sound/sound_effects/pop.mp3")
+@export var crafted_sound_effect: AudioStream
 
 var ui: StationUIBillboard
 
@@ -21,15 +24,29 @@ func add_item(item: Item) -> bool:
 		
 	inventory.append(item)
 	on_resource_added.emit(item)
-	
+	play_add_remove_sound_effect()
 	return true
 	
 func interact():
+	play_interact_sound_effect()
 	pass
 
 func remove_item() -> Item:
-	return inventory.pop_back()
+	var item = inventory.pop_back()
+	if item != null:
+		play_add_remove_sound_effect()
+	return item
 
 func reset_station():
 	inventory = []
 	
+func play_interact_sound_effect():
+	if interact_sound_effect != null:
+		SoundManager.play_sfx(interact_sound_effect)
+
+func play_crafted_sound_effect():
+	if crafted_sound_effect != null:
+		SoundManager.play_sfx(crafted_sound_effect)
+		
+func play_add_remove_sound_effect():
+	SoundManager.play_sfx(add_remove_sound_effect)
