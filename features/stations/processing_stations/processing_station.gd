@@ -87,15 +87,10 @@ func complete_product():
 		
 	var recipe = available_recipes.values()[0]
 	
-	var can_cook = true
-	for ingredient in recipe.ingredients:
-		if not inventory.any(func(item: Item): return item.name == ingredient.name):
-			can_cook = false
-	
-	if not can_cook:
+	if not RecipeManager.can_complete_recipe(recipe, inventory):
 		return
 	
-	prepared_item = available_recipes.values()[0].product
+	prepared_item = recipe.product
 	
 	reset_station()
 	

@@ -16,13 +16,6 @@ recipes = Array[ExtResource("2_6tyw8")]([ExtResource("3_aalje"), ExtResource("4_
 [node name="processing_timer" type="Timer" parent="."]
 wait_time = 0.05
 
-[node name="debug_label" type="Label3D" parent="."]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -4.77723, 6.58712, 1.90165)
-text = "Avaialawdwadeewqr
-awdwadwadwad
-awdwadwad"
-font_size = 172
-
 [node name="model" parent="." instance=ExtResource("2_8dyju")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="model"]

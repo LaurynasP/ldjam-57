@@ -32,3 +32,11 @@ func get_related_recipes(resource: Item, available_recipes: Array[Recipe]) -> Di
 			result[recipe.name] = recipe
 		
 	return result
+
+func can_complete_recipe(recipe: Recipe, items: Array[Item]) -> bool:
+	var result = true
+	for ingredient in recipe.ingredients:
+		if not items.any(func(i: Item): return i.name == ingredient.name):
+			result = false
+			
+	return result
