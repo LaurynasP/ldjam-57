@@ -1,13 +1,14 @@
 
 extends Control
-class_name HandoffStationUI
+class_name OrderUI
 
-
+var order: Order
 @onready var icon_container: GridContainer = %IconContainer
 @onready var timer_bar: TimerBar = %Timer
 
-func update_ui(order: Order):
-	cleanup_ui()
+	
+func init(_order: Order) -> void:
+	order = _order
 	timer_bar.start_timer(order.duration)
 	icon_container.columns = order.items.size()
 	for item in order.items:
@@ -19,11 +20,8 @@ func update_ui(order: Order):
 		texture_rect.size_flags_horizontal = Control.SIZE_FILL | Control.SIZE_EXPAND
 		texture_rect.size_flags_vertical = Control.SIZE_FILL | Control.SIZE_EXPAND
 		icon_container.add_child(texture_rect)
-		
-		
-func cleanup_ui():
-	for child in icon_container.get_children():
-		child.queue_free()
-		
+	order.order_completed.connect(_on_order_deleted)
+	order.order_failed.connect(_on_order_deleted)
 
-	
+func _on_order_deleted(order: Order):
+	queue_free()

@@ -8,11 +8,9 @@ func _ready() -> void:
 
 
 func _handle_new_order(order: Order):
-	var order_ui = order_ui_scene.instantiate() as HandoffStationUI
+	var order_ui = order_ui_scene.instantiate() as OrderUI
 	orders_container.add_child(order_ui)
-	order_ui.update_ui(order)
-	order.order_completed.connect(func(order: Order): order_ui.queue_free())
-	order.order_failed.connect(func(order: Order): order_ui.queue_free())
+	order_ui.init(order)
 
 
 

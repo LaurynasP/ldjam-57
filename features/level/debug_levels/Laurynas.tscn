@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://hag7k21uqn13"]
+[gd_scene load_steps=11 format=3 uid="uid://hag7k21uqn13"]
 
 [ext_resource type="Script" uid="uid://jcyuj2h3gtq6" path="res://features/level/level.gd" id="1_vjoi7"]
 [ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="2_ll5wr"]
-[ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_yp1q3"]
 [ext_resource type="PackedScene" uid="uid://dfjp2tythyjfd" path="res://features/player/player_spawner/PlayerSpawner.tscn" id="3_ax20a"]
 [ext_resource type="PackedScene" uid="uid://b88kbpsdnbm2j" path="res://features/stations/handoff_station/HandoffStation.tscn" id="3_mx3uc"]
 [ext_resource type="PackedScene" uid="uid://bjxatu6y03tvm" path="res://features/level/environments/default_light.tscn" id="5_lrli3"]
@@ -16,37 +15,6 @@
 script = ExtResource("1_vjoi7")
 
 [node name="Gameplay" parent="." instance=ExtResource("2_ll5wr")]
-
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 129.175)
-use_collision = true
-
-[node name="WallsAndGround" type="CSGCombiner3D" parent="CSGCombiner3D"]
-
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/WallsAndGround"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.548, -0.5, -3.48)
-size = Vector3(60, 1, 60)
-material = ExtResource("2_yp1q3")
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/WallsAndGround"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2.5, 26)
-size = Vector3(60, 5, 1)
-material = ExtResource("2_yp1q3")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D/WallsAndGround"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2.5, -33)
-size = Vector3(60, 5, 1)
-material = ExtResource("2_yp1q3")
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D/WallsAndGround"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 29, 2.5, -3.5)
-size = Vector3(58, 5, 1)
-material = ExtResource("2_yp1q3")
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D/WallsAndGround"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -30, 2.5, -3.5)
-size = Vector3(58, 5, 1)
-material = ExtResource("2_yp1q3")
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("3_ax20a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.29382, 0)

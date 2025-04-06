@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://fmb0vcjtbe0j"]
 
-[ext_resource type="Script" path="res://features/gameplay_ui/gameplay_ui.gd" id="1_ljovr"]
-[ext_resource type="PackedScene" uid="uid://dynf5itxy42ka" path="res://features/stations/handoff_station/HandoffStationUI.tscn" id="2_m1eul"]
+[ext_resource type="Script" uid="uid://ckkqmx2cut0fv" path="res://features/gameplay_ui/gameplay_ui.gd" id="1_ljovr"]
+[ext_resource type="PackedScene" uid="uid://dynf5itxy42ka" path="res://features/gameplay_ui/order_ui/OrderUI.tscn" id="2_m1eul"]
 
 [node name="GameplayUi" type="Control"]
 layout_mode = 3

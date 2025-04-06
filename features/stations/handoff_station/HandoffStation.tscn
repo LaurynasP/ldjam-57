@@ -1,10 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://b88kbpsdnbm2j"]
+[gd_scene load_steps=4 format=3 uid="uid://b88kbpsdnbm2j"]
 
 [ext_resource type="Script" uid="uid://cwob883btxcgh" path="res://features/stations/handoff_station/handoff_station.gd" id="1_nfw1f"]
 [ext_resource type="PackedScene" uid="uid://c760fntu410ut" path="res://assets/prefabs/handoff.tscn" id="3_aexmx"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_kyyji"]
+viewport_path = NodePath("OrderBillboard/OrderBillboardVieport")
 
 [node name="HandoffStation" type="CSGBox3D"]
 use_collision = true
 script = ExtResource("1_nfw1f")
 
 [node name="HandoffModel" parent="." instance=ExtResource("3_aexmx")]
+
+[node name="OrderBillboard" type="Sprite3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 7.35998, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_kyyji")
+
+[node name="OrderBillboardVieport" type="SubViewport" parent="OrderBillboard"]
+unique_name_in_owner = true
+transparent_bg = true

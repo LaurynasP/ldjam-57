@@ -3,8 +3,9 @@ class_name HandoffStation
 
 var current_order: Order
 
-@onready var label: Label3D = $Label3D
-@onready var billboard: Sprite3D = %Billboard
+@onready var order_billboard: Sprite3D = %OrderBillboard
+@onready var order_billboard_vieport: SubViewport = %OrderBillboardVieport
+var order_ui_scene: PackedScene = load("res://features/gameplay_ui/order_ui/OrderUI.tscn")
 
 var new_order_timeout = 5
 var current_new_order_timeout = 0
@@ -20,13 +21,14 @@ func _process(delta: float) -> void:
 		
 	if not current_order and current_new_order_timeout <= 0:
 		get_new_order()
-	
 	_handle_current_order()
+
 	
 func get_new_order():
 	current_order = OrderManager.create_order()
 	current_order.order_completed.connect(_handle_completed_or_failed_order)
 	current_order.order_failed.connect(_handle_completed_or_failed_order)
+	add_order_ui()
 	_update_ui()
 
 	
@@ -54,14 +56,19 @@ func _handle_completed_or_failed_order(order: Order):
 	current_order = null
 	_update_ui()
 	
+func add_order_ui():
+	var order_ui = order_ui_scene.instantiate() as OrderUI
+	order_billboard_vieport.add_child(order_ui)
+	order_ui.init(current_order)
+
 	
 func _update_ui():
 	if current_order != null:
-		ui.station_ui.visible = true
-		ui.station_ui.update_ui(current_order.items, current_order.duration)
+		order_billboard.visible = true
 	else:
-		ui.station_ui.visible = false
-		ui.station_ui.cleanup_ui()
+		order_billboard.visible = false
+		
+	
 		
 	
 	
