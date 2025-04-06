@@ -1,9 +1,9 @@
 extends Camera3D
 class_name Camera
 
-@export var distance := 10.0
-@export var angle_deg := 45.0
-@export var height := 10.0
+@export var distance := 1225.0
+@export var angle_deg := 10.0
+@export var height := 2220.0
 @export var target_position := Vector3.ZERO
 
 func _ready():

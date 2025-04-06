@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://3i846dludlok" path="res://managers/loading_manager/level_configuration.gd" id="1_cxu2p"]
 [ext_resource type="Script" uid="uid://s5t52rbo0tvf" path="res://managers/loading_manager/levels_configuration.gd" id="2_6wiv2"]
-[ext_resource type="Resource" uid="uid://cb8q6siec6idd" path="res://configurations/levels/level_1.tres" id="2_jgj8n"]
-[ext_resource type="Resource" uid="uid://bk5gfvqqns5ot" path="res://configurations/levels/level_2.tres" id="3_xl0mc"]
-[ext_resource type="Resource" uid="uid://dji142yfgye3g" path="res://configurations/levels/level_3.tres" id="4_jlrpo"]
+[ext_resource type="Resource" uid="uid://cb8q6siec6idd" path="res://configurations/levels/basic_forge.tres" id="2_jgj8n"]
+[ext_resource type="Resource" uid="uid://bk5gfvqqns5ot" path="res://configurations/levels/amateaur_forge.tres" id="3_xl0mc"]
+[ext_resource type="Resource" uid="uid://dji142yfgye3g" path="res://configurations/levels/advanced_forge.tres" id="4_jlrpo"]
 
 [resource]
 script = ExtResource("2_6wiv2")

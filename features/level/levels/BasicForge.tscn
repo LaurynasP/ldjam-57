@@ -1,6 +1,92 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1bcxicj4m1qr"]
+[gd_scene load_steps=13 format=3 uid="uid://b1bcxicj4m1qr"]
 
 [ext_resource type="Script" uid="uid://jcyuj2h3gtq6" path="res://features/level/level.gd" id="1_w1r02"]
+[ext_resource type="Resource" uid="uid://bk5gfvqqns5ot" path="res://configurations/levels/amateaur_forge.tres" id="2_a5ygj"]
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="3_a5ygj"]
+[ext_resource type="PackedScene" uid="uid://dfjp2tythyjfd" path="res://features/player/player_spawner/PlayerSpawner.tscn" id="3_am5gx"]
+[ext_resource type="Resource" uid="uid://cgkhyu1216ah7" path="res://configurations/items/coal.tres" id="4_knfqh"]
+[ext_resource type="PackedScene" uid="uid://dql6soj75d3u3" path="res://features/level/environments/BasicForgeEnvironment.tscn" id="5_a5ygj"]
+[ext_resource type="PackedScene" uid="uid://7ynlwr02wm3n" path="res://features/stations/processing_stations/furnace/furnace.tscn" id="6_knfqh"]
+[ext_resource type="PackedScene" uid="uid://bs4w5rinlwem2" path="res://features/stations/resource_stations/coal_deposit.tscn" id="7_2u7wp"]
+[ext_resource type="PackedScene" uid="uid://b2piqq17j6g7x" path="res://features/stations/resource_stations/iron_deposit.tscn" id="8_rsogl"]
+[ext_resource type="PackedScene" uid="uid://b4xllno8qbro" path="res://features/stations/processing_stations/anvil/anvil.tscn" id="9_crbgj"]
+[ext_resource type="PackedScene" uid="uid://b88kbpsdnbm2j" path="res://features/stations/handoff_station/HandoffStation.tscn" id="10_wc4j5"]
+[ext_resource type="PackedScene" uid="uid://dluludjqopthn" path="res://features/stations/counter.tscn" id="11_no3u5"]
 
-[node name="Level1" type="Node3D"]
+[node name="BasicForge" type="Node3D"]
 script = ExtResource("1_w1r02")
+next_level = ExtResource("2_a5ygj")
+ordered_items = Array[ExtResource("3_a5ygj")]([ExtResource("4_knfqh")])
+
+[node name="PlayerSpawner" parent="." instance=ExtResource("3_am5gx")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 4.29382, 0)
+
+[node name="Map" type="Node3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="Level1Environment" parent="Map" instance=ExtResource("5_a5ygj")]
+transform = Transform3D(-8.9407e-08, 0, -1, 0, 1, 0, 1, 0, -8.9407e-08, 0, 0, 0)
+
+[node name="Stations" type="Node3D" parent="Map"]
+
+[node name="furnace" parent="Map/Stations" instance=ExtResource("6_knfqh")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 13.9693, 0, 16.7554)
+
+[node name="coal_deposit" parent="Map/Stations" instance=ExtResource("7_2u7wp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0905, 0.276313, -21.8038)
+
+[node name="iron_deposit" parent="Map/Stations" instance=ExtResource("8_rsogl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2601, 0.178623, -28.5282)
+
+[node name="anvil" parent="Map/Stations" instance=ExtResource("9_crbgj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1129, 0.0487938, 13.2739)
+
+[node name="HandoffStation" parent="Map/Stations" instance=ExtResource("10_wc4j5")]
+transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -22.1764, 0.244991, -17.53)
+
+[node name="anvil2" parent="Map/Stations" instance=ExtResource("9_crbgj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1129, 0.0487938, 8.68318)
+
+[node name="anvil3" parent="Map/Stations" instance=ExtResource("9_crbgj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1129, 0.0487938, 3.86082)
+
+[node name="HandoffStation2" parent="Map/Stations" instance=ExtResource("10_wc4j5")]
+transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -17.4132, 0.244991, -17.53)
+
+[node name="HandoffStation3" parent="Map/Stations" instance=ExtResource("10_wc4j5")]
+transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -12.1073, 0.244991, -17.53)
+
+[node name="HandoffStation4" parent="Map/Stations" instance=ExtResource("10_wc4j5")]
+transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -6.99363, 0.244991, -17.53)
+
+[node name="HandoffStation5" parent="Map/Stations" instance=ExtResource("10_wc4j5")]
+transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -2.0357, 0.244991, -17.53)
+
+[node name="HandoffStation6" parent="Map/Stations" instance=ExtResource("10_wc4j5")]
+transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, 2.75793, 0.244991, -17.53)
+
+[node name="counter" parent="Map/Stations" instance=ExtResource("11_no3u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.62421, 0, 0)
+
+[node name="counter2" parent="Map/Stations" instance=ExtResource("11_no3u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13561, 0, 0)
+
+[node name="counter3" parent="Map/Stations" instance=ExtResource("11_no3u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.427957, 0, 0)
+
+[node name="counter4" parent="Map/Stations" instance=ExtResource("11_no3u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91286, 0, 0)
+
+[node name="counter5" parent="Map/Stations" instance=ExtResource("11_no3u5")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 19.4378, 0, 8.62206)
+
+[node name="counter6" parent="Map/Stations" instance=ExtResource("11_no3u5")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 16.9492, 0, 8.62206)
+
+[node name="counter7" parent="Map/Stations" instance=ExtResource("11_no3u5")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 14.3857, 0, 8.62206)
+
+[node name="counter8" parent="Map/Stations" instance=ExtResource("11_no3u5")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 11.9008, 0, 8.62206)
+
+[editable path="PlayerSpawner"]

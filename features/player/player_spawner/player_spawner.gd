@@ -1,12 +1,13 @@
 extends Node3D
+class_name PlayerSpawner
 @export var player_scene: PackedScene
 
 func _ready() -> void:
-	spawn_players()
+	add_to_group("player_spawner")
 
 # TODO: Fix spawning. If Y is not 0 the players don't get spawned on the actual target. 
 
-func spawn_players():
+func spawn_all_players():
 	var markers = get_tree().get_nodes_in_group("player_spawn_point_marker")
 	print("Spawning players")
 	for i in GameManager.selected_player_devices.size():
@@ -17,6 +18,3 @@ func spawn_players():
 		add_child(player)
 		print("Spawning at ", markers[i].global_position)
 		
-		
-		#print()
-		#add_child(player)

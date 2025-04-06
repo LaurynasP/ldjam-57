@@ -15,74 +15,81 @@
 [node name="Laurynas" type="Node3D"]
 script = ExtResource("1_vjoi7")
 
-[node name="furnace" parent="." instance=ExtResource("10_4y8xs")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 13.9693, 0, 16.7554)
-
 [node name="Gameplay" parent="." instance=ExtResource("2_ll5wr")]
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("3_ax20a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.29382, 0)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 4.29382, 0)
 
 [node name="environment" parent="." instance=ExtResource("5_lrli3")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
 
-[node name="coal_deposit" parent="." instance=ExtResource("8_5bf0n")]
+[node name="Map" type="Node3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="Level1Environment" parent="Map" instance=ExtResource("10_5e45d")]
+transform = Transform3D(-8.9407e-08, 0, -1, 0, 1, 0, 1, 0, -8.9407e-08, 0, 0, 0)
+
+[node name="Stations" type="Node3D" parent="Map"]
+
+[node name="furnace" parent="Map/Stations" instance=ExtResource("10_4y8xs")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 13.9693, 0, 16.7554)
+
+[node name="coal_deposit" parent="Map/Stations" instance=ExtResource("8_5bf0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0905, 0.276313, -21.8038)
 
-[node name="iron_deposit" parent="." instance=ExtResource("9_5e45d")]
+[node name="iron_deposit" parent="Map/Stations" instance=ExtResource("9_5e45d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2601, 0.178623, -28.5282)
 
-[node name="Level1Environment" parent="." instance=ExtResource("10_5e45d")]
-
-[node name="anvil" parent="." instance=ExtResource("11_xmbb4")]
+[node name="anvil" parent="Map/Stations" instance=ExtResource("11_xmbb4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1129, 0.0487938, 13.2739)
 
-[node name="HandoffStation" parent="." instance=ExtResource("3_mx3uc")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.1764, 0.244991, -17.53)
+[node name="HandoffStation" parent="Map/Stations" instance=ExtResource("3_mx3uc")]
+transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -22.1764, 0.244991, -17.53)
 
-[node name="anvil2" parent="." instance=ExtResource("11_xmbb4")]
+[node name="anvil2" parent="Map/Stations" instance=ExtResource("11_xmbb4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1129, 0.0487938, 8.68318)
 
-[node name="anvil3" parent="." instance=ExtResource("11_xmbb4")]
+[node name="anvil3" parent="Map/Stations" instance=ExtResource("11_xmbb4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1129, 0.0487938, 3.86082)
 
-[node name="HandoffStation2" parent="." instance=ExtResource("3_mx3uc")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.4132, 0.244991, -17.53)
+[node name="HandoffStation2" parent="Map/Stations" instance=ExtResource("3_mx3uc")]
+transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -17.4132, 0.244991, -17.53)
 
-[node name="HandoffStation3" parent="." instance=ExtResource("3_mx3uc")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12.1073, 0.244991, -17.53)
+[node name="HandoffStation3" parent="Map/Stations" instance=ExtResource("3_mx3uc")]
+transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -12.1073, 0.244991, -17.53)
 
-[node name="HandoffStation4" parent="." instance=ExtResource("3_mx3uc")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.99363, 0.244991, -17.53)
+[node name="HandoffStation4" parent="Map/Stations" instance=ExtResource("3_mx3uc")]
+transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -6.99363, 0.244991, -17.53)
 
-[node name="HandoffStation5" parent="." instance=ExtResource("3_mx3uc")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.0357, 0.244991, -17.53)
+[node name="HandoffStation5" parent="Map/Stations" instance=ExtResource("3_mx3uc")]
+transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -2.0357, 0.244991, -17.53)
 
-[node name="HandoffStation6" parent="." instance=ExtResource("3_mx3uc")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.75793, 0.244991, -17.53)
+[node name="HandoffStation6" parent="Map/Stations" instance=ExtResource("3_mx3uc")]
+transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, 2.75793, 0.244991, -17.53)
 
-[node name="counter" parent="." instance=ExtResource("11_4y8xs")]
+[node name="counter" parent="Map/Stations" instance=ExtResource("11_4y8xs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.62421, 0, 0)
 
-[node name="counter2" parent="." instance=ExtResource("11_4y8xs")]
+[node name="counter2" parent="Map/Stations" instance=ExtResource("11_4y8xs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13561, 0, 0)
 
-[node name="counter3" parent="." instance=ExtResource("11_4y8xs")]
+[node name="counter3" parent="Map/Stations" instance=ExtResource("11_4y8xs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.427957, 0, 0)
 
-[node name="counter4" parent="." instance=ExtResource("11_4y8xs")]
+[node name="counter4" parent="Map/Stations" instance=ExtResource("11_4y8xs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91286, 0, 0)
 
-[node name="counter5" parent="." instance=ExtResource("11_4y8xs")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 19.4378, 0, 8.62206)
+[node name="counter5" parent="Map/Stations" instance=ExtResource("11_4y8xs")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 19.4378, 0, 8.62206)
 
-[node name="counter6" parent="." instance=ExtResource("11_4y8xs")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16.9492, 0, 8.62206)
+[node name="counter6" parent="Map/Stations" instance=ExtResource("11_4y8xs")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 16.9492, 0, 8.62206)
 
-[node name="counter7" parent="." instance=ExtResource("11_4y8xs")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14.3857, 0, 8.62206)
+[node name="counter7" parent="Map/Stations" instance=ExtResource("11_4y8xs")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 14.3857, 0, 8.62206)
 
-[node name="counter8" parent="." instance=ExtResource("11_4y8xs")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.9008, 0, 8.62206)
+[node name="counter8" parent="Map/Stations" instance=ExtResource("11_4y8xs")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 11.9008, 0, 8.62206)
 
 [editable path="PlayerSpawner"]
 [editable path="environment"]
