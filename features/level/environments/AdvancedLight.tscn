@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh50v7yf2c2u3"]
+
+[sub_resource type="Environment" id="Environment_am5gx"]
+background_mode = 1
+background_color = Color(0.471582, 0.148803, 0.0386268, 1)
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0192
+
+[node name="environment" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_am5gx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+light_color = Color(0.824728, 0.816692, 0.80341, 1)
+shadow_enabled = true

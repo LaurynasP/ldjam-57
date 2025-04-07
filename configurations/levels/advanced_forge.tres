@@ -2,15 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="1_nbu38"]
 [ext_resource type="PackedScene" uid="uid://b5r2eup5bxft3" path="res://features/level/levels/AdvancedForge.tscn" id="2_ofy46"]
+[ext_resource type="PackedScene" uid="uid://dh50v7yf2c2u3" path="res://features/level/environments/AdvancedLight.tscn" id="3_ofy46"]
 [ext_resource type="Script" uid="uid://3i846dludlok" path="res://managers/loading_manager/level_configuration.gd" id="3_r58yy"]
-[ext_resource type="PackedScene" uid="uid://bjxatu6y03tvm" path="res://features/level/environments/default_light.tscn" id="3_x2gpw"]
 [ext_resource type="PackedScene" uid="uid://fmb0vcjtbe0j" path="res://features/gameplay_ui/gameplay_ui.tscn" id="4_akovj"]
 
 [resource]
 script = ExtResource("3_r58yy")
 name = "Advanced Forge"
 level = ExtResource("2_ofy46")
-lighting = ExtResource("3_x2gpw")
+lighting = ExtResource("3_ofy46")
 gameplay = ExtResource("1_nbu38")
 ui = ExtResource("4_akovj")
 metadata/_custom_type_script = "uid://3i846dludlok"
