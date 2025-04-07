@@ -34,7 +34,6 @@ func _on_play_button_pressed():
 		play_menu.open()
 	
 func _on_settings_button_pressed():
-	print('www')
 	options_menu.open()
 	
 func _on_controls_button_pressed():
