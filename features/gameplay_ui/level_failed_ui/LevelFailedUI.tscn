@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://ye2fddtia1tt"]
+
+[ext_resource type="Script" uid="uid://cgu6k3ll1d43" path="res://features/gameplay_ui/level_failed_ui/level_failed_ui.gd" id="1_oontm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dlnph"]
+bg_color = Color(1, 0.341176, 0.305882, 0.380392)
+
+[sub_resource type="LabelSettings" id="LabelSettings_oontm"]
+font_size = 50
+
+[node name="LevelFailedUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oontm")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dlnph")
+
+[node name="RestartButton" type="Button" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.368
+anchor_top = 0.432
+anchor_right = 0.582
+anchor_bottom = 0.562
+offset_left = 0.439941
+offset_top = 0.440002
+offset_right = 0.559937
+offset_bottom = 0.039978
+theme_override_font_sizes/font_size = 30
+text = "Restart"
+
+[node name="MainMenuButton" type="Button" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.369
+anchor_top = 0.583
+anchor_right = 0.583
+anchor_bottom = 0.713
+offset_left = 0.519958
+offset_top = 0.359985
+offset_right = 0.640015
+offset_bottom = -0.0400391
+theme_override_font_sizes/font_size = 30
+text = "Main Menu"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.191
+anchor_top = 0.178
+anchor_right = 0.774
+anchor_bottom = 0.375
+offset_left = -0.720032
+offset_top = -0.240005
+offset_right = 0.919922
+offset_bottom = -3.05176e-05
+text = "LEVEL FAILED!
+
+OUR FORGE IS OVERRUN YOU LAZY BASTARTD!"
+label_settings = SubResource("LabelSettings_oontm")
+horizontal_alignment = 1

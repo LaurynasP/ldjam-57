@@ -1,4 +1,5 @@
 extends Control
+class_name GamePlayUI
 
 @export var order_ui_scene: PackedScene
 @onready var orders_container := %OrdersContainer
@@ -12,6 +13,7 @@ extends Control
 const RECIPE_UI = preload("res://features/gameplay_ui/recipe_ui/recipe_ui.tscn")
 
 func _ready() -> void:
+	GameManager.current_gameplay_ui = self
 	GameManager.current_gameplay.on_recipe_screen_toggled.connect(toggle_recipe_screen)
 	OrderManager.on_new_order.connect(_handle_new_order)
 	
@@ -53,4 +55,5 @@ func toggle_recipe_screen(display: bool):
 	
 	orders_ui.visible = !display
 	stats_ui.visible = !display
+	
 	

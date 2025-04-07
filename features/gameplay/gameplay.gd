@@ -9,6 +9,8 @@ var score: int = 0;
 
 signal on_recipe_screen_toggled(show: bool)
 
+
+
 func _ready() -> void:
 	GameManager.current_gameplay = self
 	OrderManager.setup(GameManager.current_level)
@@ -19,7 +21,10 @@ func _process(_delta: float) -> void:
 	if _is_level_completed() and GameManager.current_level.next_level != null:
 		OrderManager.stop_generating_orders()
 		LoadingManager._load_level(GameManager.current_level.next_level)
-
+	if _is_level_failed():
+		_on_level_failed()
+			
+		
 func _is_level_completed() -> bool:
 	if GameManager.current_level.next_level == null:
 		return false
@@ -44,3 +49,15 @@ func _spawn_players():
 
 func toggle_recipe_screen(show: bool):
 	on_recipe_screen_toggled.emit(show)
+
+	
+func _is_level_failed():
+	return OrderManager._failed_orders >= GameManager.current_level.max_failed_orders
+
+func _on_level_failed():
+	if GameManager.current_gameplay_ui != null:
+		var fail_screen = load("res://features/gameplay_ui/level_failed_ui/LevelFailedUI.tscn").instantiate()
+		GameManager.current_gameplay_ui.add_child(fail_screen)
+		get_tree().paused = true
+	else:
+		LoadingManager._exit_level()
