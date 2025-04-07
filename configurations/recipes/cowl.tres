@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://bo21waoc4eti7"]
+
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_4vkn2"]
+[ext_resource type="Resource" uid="uid://brv2n4msl2ovt" path="res://configurations/items/leather.tres" id="2_4vkn2"]
+[ext_resource type="Resource" uid="uid://bwof5s42tnq43" path="res://configurations/items/cowl.tres" id="3_vexek"]
+[ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="4_5lnl1"]
+
+[resource]
+script = ExtResource("4_5lnl1")
+name = "cowl"
+product = ExtResource("3_vexek")
+ingredients = Array[ExtResource("1_4vkn2")]([ExtResource("2_4vkn2")])
+metadata/_custom_type_script = "uid://bkkb1mtbo8xh5"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bwof5s42tnq43"]
+
+[ext_resource type="Texture2D" uid="uid://dcvtlpuejua2j" path="res://assets/images/icons/products/armor/cowl.png" id="1_ixkj0"]
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="2_cuc16"]
+
+[resource]
+script = ExtResource("2_cuc16")
+name = "cowl"
+display_name = "Cowl"
+icon = ExtResource("1_ixkj0")
+metadata/_custom_type_script = "uid://ce12c8rt3nki4"

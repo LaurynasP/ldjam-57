@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Items" load_steps=14 format=3 uid="uid://cnld87w5a2g8l"]
+[gd_resource type="Resource" script_class="Items" load_steps=15 format=3 uid="uid://cnld87w5a2g8l"]
 
 [ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_k2ybo"]
 [ext_resource type="Script" uid="uid://b30vvmglyrbcf" path="res://managers/item_manager/items.gd" id="2_8wjlk"]
@@ -13,8 +13,9 @@
 [ext_resource type="Resource" uid="uid://cl6g4do8aq4aj" path="res://configurations/items/plank.tres" id="10_gchrf"]
 [ext_resource type="Resource" uid="uid://c2gbxlo5mqel5" path="res://configurations/items/iron_helmet.tres" id="11_6ugtn"]
 [ext_resource type="Resource" uid="uid://brv2n4msl2ovt" path="res://configurations/items/leather.tres" id="12_oifug"]
+[ext_resource type="Resource" uid="uid://bwof5s42tnq43" path="res://configurations/items/cowl.tres" id="13_oifug"]
 
 [resource]
 script = ExtResource("2_8wjlk")
-items = Array[ExtResource("1_k2ybo")]([ExtResource("2_womr1"), ExtResource("3_i5ejd"), ExtResource("4_r1lhn"), ExtResource("5_r1lhn"), ExtResource("6_jbm81"), ExtResource("7_wdhd5"), ExtResource("8_iuxjk"), ExtResource("9_u5cdc"), ExtResource("10_gchrf"), ExtResource("11_6ugtn"), ExtResource("12_oifug")])
+items = Array[ExtResource("1_k2ybo")]([ExtResource("2_womr1"), ExtResource("3_i5ejd"), ExtResource("4_r1lhn"), ExtResource("5_r1lhn"), ExtResource("6_jbm81"), ExtResource("7_wdhd5"), ExtResource("8_iuxjk"), ExtResource("9_u5cdc"), ExtResource("10_gchrf"), ExtResource("11_6ugtn"), ExtResource("12_oifug"), ExtResource("13_oifug")])
 metadata/_custom_type_script = "uid://b30vvmglyrbcf"

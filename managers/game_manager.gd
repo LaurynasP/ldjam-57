@@ -55,3 +55,10 @@ func quit_game():
 func _get_level_instance() -> Level:
 	var levels = get_tree().get_nodes_in_group("level")
 	return levels[0] if levels.size() > 0 else null
+	
+func add_score(score: int):
+	if current_gameplay != null:
+		current_gameplay.score += score
+		
+func get_score() -> int:
+	return current_gameplay.score if current_gameplay != null else 0

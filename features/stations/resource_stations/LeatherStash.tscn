@@ -8,7 +8,7 @@
 height = 2.27832
 radius = 0.658691
 
-[node name="LogsBarrel" type="Node3D"]
+[node name="LeatherBox" type="Node3D"]
 transform = Transform3D(1.67965, 0, 0, 0, 1.67965, 0, 0, 0, 1.67965, 0, 0, 0)
 script = ExtResource("1_rk8lc")
 resource = ExtResource("2_rk8lc")
