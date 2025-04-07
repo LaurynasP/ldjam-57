@@ -919,3 +919,295 @@ skeleton = NodePath("")
 transform = Transform3D(1.19169, 0, 0.910981, 0, 1.5, 0, -0.910981, 0, 1.19169, -4.75797, 0, 1.52386)
 mesh = SubResource("ArrayMesh_iux68")
 skeleton = NodePath("")
+
+[node name="Rocks" type="Node3D" parent="."]
+
+[node name="SM_Env_Hell_Ground_Extended_01" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.999994, 0, -0.00331586, 0, 1, 0, 0.00331586, 0, 0.999994, -33.5507, 2.35886, 34.938)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Spikes_06" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.0960193, 0, 0.995379, 0, 1, 0, -0.995379, 0, 0.0960193, -41.2342, 0, -20.226)
+mesh = SubResource("ArrayMesh_aetsn")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_02" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.999971, 0, -0.0075744, 0, 1, 0, 0.0075744, 0, 0.999971, -16.2331, 2.35886, 36.1173)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_03" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.999971, 0, -0.0075744, 0, 1, 0, 0.0075744, 0, 0.999971, 1.88499, 2.35886, 35.6783)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_04" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.999971, 0, -0.0075744, 0, 1, 0, 0.0075744, 0, 0.999971, 17.4215, 2.35886, 35.6783)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_05" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.426253, 0, 0.904604, 0, 1, 0, -0.904604, 0, 0.426253, 27.5218, 2.35886, 32.4469)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_06" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.0915187, 0, 0.995803, 0, 1, 0, -0.995803, 0, 0.0915187, 30.1902, 2.35886, 20.2428)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_07" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.206631, 0, 0.978419, 0, 1, 0, -0.978419, 0, 0.206631, 29.3849, 2.35886, 1.83463)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_08" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.0915187, 0, 0.995803, 0, 1, 0, -0.995803, 0, 0.0915187, 30.1069, 2.35886, -13.1028)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_09" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.0915187, 0, 0.995803, 0, 1, 0, -0.995803, 0, 0.0915187, 30.1296, 2.35886, -24.4852)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_10" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.682011, 0, 0.731341, 0, 1, 0, -0.731341, 0, -0.682011, 28.8895, 2.35886, -39.9272)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_11" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.998561, 0, 0.0536255, 0, 1, 0, -0.0536255, 0, -0.998561, 18.5462, 2.35886, -45.4966)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_12" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.998561, 0, 0.0536255, 0, 1, 0, -0.0536255, 0, -0.998561, -5.51192, 2.35886, -45.4966)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_13" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.977172, 0, -0.212451, 0, 1, 0, 0.212451, 0, -0.977172, -23.4536, 2.35886, -40.6068)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_14" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.977172, 0, -0.212451, 0, 1, 0, 0.212451, 0, -0.977172, -36.0189, 2.35886, -39.9753)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_15" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.595257, -4.71468e-10, -0.803535, 0.00866687, 0.999942, -0.0064204, 0.803488, -0.0107859, -0.595223, -51.2599, 2.35886, -34.9723)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_16" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.595257, -4.71468e-10, -0.803535, 0.00866687, 0.999942, -0.0064204, 0.803488, -0.0107859, -0.595223, -57.5776, 2.35886, -18.7885)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_17" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.595257, -4.71468e-10, -0.803535, 0.00866687, 0.999942, -0.0064204, 0.803488, -0.0107859, -0.595223, -52.8741, 2.35886, -8.54322)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_18" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.139403, -0.00514974, -0.990222, 0.00866687, 0.999942, -0.0064204, 0.990198, -0.00947715, -0.13935, -61.1042, 2.35886, 6.03197)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_19" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.531813, -0.0100466, -0.846802, 0.00866687, 0.999942, -0.0064204, 0.846817, -0.00392466, 0.53187, -58.5528, 2.35886, 16.9994)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_20" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.531813, -0.0100466, -0.846802, 0.00866687, 0.999942, -0.0064204, 0.846817, -0.00392466, 0.53187, -53.4367, 2.35886, 28.9643)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_21" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.595257, -4.71468e-10, -0.803535, 0.00866687, 0.999942, -0.0064204, 0.803488, -0.0107859, -0.595223, -66.3279, 2.35886, -34.9723)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_22" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.595257, -4.71468e-10, -0.803535, 0.00866687, 0.999942, -0.0064204, 0.803488, -0.0107859, -0.595223, -72.6456, 2.35886, -18.7885)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_23" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.595257, -4.71468e-10, -0.803535, 0.00866687, 0.999942, -0.0064204, 0.803488, -0.0107859, -0.595223, -67.9421, 2.35886, -8.54322)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_24" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.139403, -0.00514974, -0.990222, 0.00866687, 0.999942, -0.0064204, 0.990198, -0.00947715, -0.13935, -76.1722, 2.35886, 6.03197)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_25" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.531813, -0.0100466, -0.846802, 0.00866687, 0.999942, -0.0064204, 0.846817, -0.00392466, 0.53187, -73.6208, 2.35886, 16.9994)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_26" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.531813, -0.0100466, -0.846802, 0.00866687, 0.999942, -0.0064204, 0.846817, -0.00392466, 0.53187, -69.5837, 2.35886, 28.9643)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_27" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.595257, -4.71468e-10, -0.803535, 0.00866687, 0.999942, -0.0064204, 0.803488, -0.0107859, -0.595223, -82.0727, 2.35886, -34.9723)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_28" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.595257, -4.71468e-10, -0.803535, 0.00866687, 0.999942, -0.0064204, 0.803488, -0.0107859, -0.595223, -88.3904, 2.35886, -18.7885)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_29" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.595257, -4.71468e-10, -0.803535, 0.00866687, 0.999942, -0.0064204, 0.803488, -0.0107859, -0.595223, -83.6869, 2.35886, -8.54322)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_30" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.139403, -0.00514974, -0.990222, 0.00866687, 0.999942, -0.0064204, 0.990198, -0.00947715, -0.13935, -91.917, 2.35886, 6.03197)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_31" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.531813, -0.0100466, -0.846802, 0.00866687, 0.999942, -0.0064204, 0.846817, -0.00392466, 0.53187, -89.3656, 2.35886, 16.9994)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_32" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.531813, -0.0100466, -0.846802, 0.00866687, 0.999942, -0.0064204, 0.846817, -0.00392466, 0.53187, -85.3285, 2.35886, 28.9643)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_33" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.999971, 0, -0.0075744, 0, 1, 0, 0.0075744, 0, 0.999971, -33.5507, 2.35886, 49.6273)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_34" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.999971, 0, -0.0075744, 0, 1, 0, 0.0075744, 0, 0.999971, -16.2331, 2.35886, 47.8784)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_35" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.999971, 0, -0.0075744, 0, 1, 0, 0.0075744, 0, 0.999971, 1.88499, 2.35886, 47.4393)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_36" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.426253, 0, 0.904604, 0, 1, 0, -0.904604, 0, 0.426253, 27.5218, 2.35886, 44.208)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_37" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.531813, -0.0100466, -0.846802, 0.00866687, 0.999942, -0.0064204, 0.846817, -0.00392466, 0.53187, -54.5157, 2.35886, 40.7253)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_38" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.531813, -0.0100466, -0.846802, 0.00866687, 0.999942, -0.0064204, 0.846817, -0.00392466, 0.53187, -69.5837, 2.35886, 40.7253)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_39" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.531813, -0.0100466, -0.846802, 0.00866687, 0.999942, -0.0064204, 0.846817, -0.00392466, 0.53187, -85.3285, 2.35886, 40.7253)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_40" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.998561, 0, 0.0536255, 0, 1, 0, -0.0536255, 0, -0.998561, 12.9472, 2.35886, -62.5813)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_41" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.998561, 0, 0.0536255, 0, 1, 0, -0.0536255, 0, -0.998561, -5.51193, 2.35886, -62.5813)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_42" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.977172, 0, -0.212451, 0, 1, 0, 0.212451, 0, -0.977172, -23.4536, 2.35886, -57.6915)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_43" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.977172, 0, -0.212451, 0, 1, 0, 0.212451, 0, -0.977172, -36.0189, 2.35886, -57.06)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_44" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.595257, -4.71468e-10, -0.803535, 0.00866687, 0.999942, -0.0064204, 0.803488, -0.0107859, -0.595223, -51.2599, 2.35886, -52.057)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_45" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.595257, -4.71468e-10, -0.803535, 0.00866687, 0.999942, -0.0064204, 0.803488, -0.0107859, -0.595223, -66.3279, 2.35886, -52.057)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_46" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.595257, -4.71468e-10, -0.803535, 0.00866687, 0.999942, -0.0064204, 0.803488, -0.0107859, -0.595223, -82.0727, 2.35886, -52.057)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Spikes_07" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.400109, 0, 0.916467, 0, 1, 0, -0.916467, 0, 0.400109, -69.0333, 0, -20.226)
+mesh = SubResource("ArrayMesh_aetsn")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Spikes_08" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.688759, 0, 0.72499, 0, 1, 0, -0.72499, 0, 0.688759, -44.6066, 0, -43.3824)
+mesh = SubResource("ArrayMesh_aetsn")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Spikes_09" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.688759, 0, 0.72499, 0, 1, 0, -0.72499, 0, 0.688759, 5.74607, 0, -56.6884)
+mesh = SubResource("ArrayMesh_aetsn")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Spikes_10" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.688759, 0, 0.72499, 0, 1, 0, -0.72499, 0, 0.688759, 5.74607, -224.771, 25.9332)
+mesh = SubResource("ArrayMesh_aetsn")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Spikes_11" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.688759, 0, 0.72499, 0, 1, 0, -0.72499, 0, 0.688759, 136.07, -224.771, 58.2452)
+mesh = SubResource("ArrayMesh_aetsn")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_47" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.999994, 0, -0.00331586, 0, 1, 0, 0.00331586, 0, 0.999994, -47.8936, 2.35886, 34.938)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_48" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.999971, 0, -0.0075744, 0, 1, 0, 0.0075744, 0, 0.999971, -20.2832, 2.35886, 35.8417)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_49" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.999971, 0, -0.0075744, 0, 1, 0, 0.0075744, 0, 0.999971, -7.766, 2.35886, 35.8532)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_50" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(0.923813, 0, -0.382844, 0, 1, 0, 0.382844, 0, 0.923813, 17.4215, 2.35886, 34.3363)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_51" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.998561, 0, 0.0536255, 0, 1, 0, -0.0536255, 0, -0.998561, 9.73005, 2.35886, -45.4966)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")
+
+[node name="SM_Env_Hell_Ground_Extended_52" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-0.998561, 0, 0.0536255, 0, 1, 0, -0.0536255, 0, -0.998561, 2.30972, 2.35886, -45.4966)
+mesh = SubResource("ArrayMesh_yl3k6")
+skeleton = NodePath("")

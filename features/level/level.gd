@@ -6,9 +6,9 @@ extends Node
 @export var completed_orders_to_next_level: int = 15
 @export var max_failed_orders: int = 5
 @export var score_to_constant_orders:int = 15
-@export var starting_order_interval:int = 10
+@export var starting_order_interval:int = 7
 @export var minimum_order_interval: int = 5
-@export var delay_to_first_order: int = 10
+@export var delay_to_first_order: int = 5
 
 
 func _enter_tree():

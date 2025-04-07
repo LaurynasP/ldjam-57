@@ -11,4 +11,5 @@ func _ready() -> void:
 	
 func _process(_delta: float) -> void:
 	play_button.text = "Play" if GameManager.current_level == null else "Continue"
+	quit_button.text = "Quit" if GameManager.current_level == null else "Back to Menu"
 	
