@@ -93,6 +93,7 @@ height = 2.27832
 radius = 0.702637
 
 [node name="LogsBarrel" type="Node3D"]
+transform = Transform3D(1.40824, 0, 0, 0, 1.40824, 0, 0, 0, 1.40824, 0, 0, 0)
 script = ExtResource("1_ad4g5")
 resource = ExtResource("2_i03xq")
 

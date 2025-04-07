@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://crwoxhfx787al"]
+[gd_scene load_steps=17 format=3 uid="uid://crwoxhfx787al"]
 
 [ext_resource type="Script" uid="uid://d3fg3nwvm5kku" path="res://features/level/debug_levels/vilmantas.gd" id="1_g1d7o"]
 [ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_mv3ks"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b3nt8qe4cw5po" path="res://features/stations/resource_stations/LogsBarrel.tscn" id="13_3hwcb"]
 [ext_resource type="Script" uid="uid://cqjaq18tt61cf" path="res://features/stations/resource_stations/resource_station.gd" id="13_i6aqx"]
 [ext_resource type="PackedScene" uid="uid://b4xllno8qbro" path="res://features/stations/processing_stations/anvil/anvil.tscn" id="13_n3gf4"]
+[ext_resource type="PackedScene" uid="uid://bmsjpkvyd5q5n" path="res://features/stations/resource_stations/LeatherStash.tscn" id="14_3hwcb"]
 [ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="16_n3gf4"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_x52xm"]
@@ -117,7 +118,10 @@ shape = SubResource("ConcavePolygonShape3D_i6aqx")
 transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, -5.98175, 0, 4.19217)
 
 [node name="LogsBarrel" parent="." instance=ExtResource("13_3hwcb")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.14427, -9.53674e-07, -11.4611)
+transform = Transform3D(-6.15559e-08, 0, -1.40824, 0, 1.40824, 0, 1.40824, 0, -6.15559e-08, -1.14427, -9.53674e-07, -11.4611)
+
+[node name="LogsBarrel2" parent="." instance=ExtResource("14_3hwcb")]
+transform = Transform3D(1.67965, 0, 0, 0, 1.67965, 0, 0, 0, 1.67965, 2.36857, -0.0105121, -12.0126)
 
 [editable path="gameplay"]
 [editable path="PlayerSpawner"]

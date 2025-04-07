@@ -2,7 +2,7 @@ extends Control
 
 @onready var stats_label: Label = %StatsLabel
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	stats_label.text = ''
 	if GameManager.current_gameplay != null:
 		stats_label.text += 'Score: '
