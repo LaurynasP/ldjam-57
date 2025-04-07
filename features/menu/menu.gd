@@ -40,5 +40,10 @@ func _on_controls_button_pressed():
 	controls_menu.open()
 
 func _on_quit_button_pressed():
-	GameManager.quit_game()
+	if GameManager.current_gameplay == null:
+		GameManager.quit_game()
+	else:
+		LoadingManager._exit_level()
+		
+		
 	
