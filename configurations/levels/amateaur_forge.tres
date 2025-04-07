@@ -3,14 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="1_dow83"]
 [ext_resource type="PackedScene" uid="uid://bvxs30fl25ah" path="res://features/level/levels/AmateurForge.tscn" id="2_pq6nw"]
 [ext_resource type="Script" uid="uid://3i846dludlok" path="res://managers/loading_manager/level_configuration.gd" id="3_crasi"]
-[ext_resource type="PackedScene" uid="uid://bjxatu6y03tvm" path="res://features/level/environments/default_light.tscn" id="3_kn8c4"]
+[ext_resource type="PackedScene" uid="uid://dmkcx5o7p1xto" path="res://features/level/environments/random_light.tscn" id="3_pq6nw"]
 [ext_resource type="PackedScene" uid="uid://fmb0vcjtbe0j" path="res://features/gameplay_ui/gameplay_ui.tscn" id="4_665e8"]
 
 [resource]
 script = ExtResource("3_crasi")
 name = "Amateur Forge"
 level = ExtResource("2_pq6nw")
-lighting = ExtResource("3_kn8c4")
+lighting = ExtResource("3_pq6nw")
 gameplay = ExtResource("1_dow83")
 ui = ExtResource("4_665e8")
 metadata/_custom_type_script = "uid://3i846dludlok"
