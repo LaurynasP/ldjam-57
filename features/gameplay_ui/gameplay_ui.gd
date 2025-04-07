@@ -15,10 +15,31 @@ func _ready() -> void:
 	GameManager.current_gameplay.on_recipe_screen_toggled.connect(toggle_recipe_screen)
 	OrderManager.on_new_order.connect(_handle_new_order)
 	
-	for recipe in RecipeManager.recipes.values():
+	for recipe: Recipe in RecipeManager.recipes.values():
 		var ui = RECIPE_UI.instantiate() as RecipeUI
-		ui.init(recipe	)
+		var is_placeholder = !OrderManager._available_order_items.any(func(item: Item): return item.name == recipe.product.name) and not is_recipe_required(recipe)
+		ui.init(recipe, is_placeholder)
 		recipe_container.add_child(ui)
+
+func is_recipe_required(recipe: Recipe) -> bool:
+	var product = recipe.product
+	
+	var all_orders = OrderManager._available_order_items
+	
+	var order_recipes = []
+	
+	for r: Recipe in RecipeManager.recipes.values():
+		if all_orders.any(func(item: Item): return item.name == r.product.name):
+			order_recipes.append(r)
+			
+	for order_recipe in order_recipes:
+		print(order_recipe.ingredients)
+		print(product.name)
+		if order_recipe.ingredients.any(func(x: Item): return x.name == product.name):
+			return true
+		
+	return false
+		
 
 func _handle_new_order(order: Order):
 	var order_ui = order_ui_scene.instantiate() as OrderUI
