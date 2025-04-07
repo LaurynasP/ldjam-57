@@ -22,7 +22,7 @@ next_level = ExtResource("2_g01l4")
 ordered_items = Array[ExtResource("3_g01l4")]([ExtResource("4_mlay7")])
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("3_jwm2l")]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 4.29382, 0)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -1.81004, 0.143509, 0)
 
 [node name="Map" type="Node3D" parent="."]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0)
@@ -33,22 +33,22 @@ transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="HandoffStation2" parent="Map/Stations" instance=ExtResource("10_h5nvm")]
-transform = Transform3D(-5.68248e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.68248e-08, -22.6244, 0.244991, -17.53)
+transform = Transform3D(-5.96046e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.96046e-08, -22.4728, 0.244991, -12.3045)
 
 [node name="HandoffStation3" parent="Map/Stations" instance=ExtResource("10_h5nvm")]
-transform = Transform3D(-5.68248e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.68248e-08, -17.3185, 0.244991, -17.53)
+transform = Transform3D(-5.96046e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.96046e-08, -17.1669, 0.244991, -12.3045)
 
 [node name="HandoffStation4" parent="Map/Stations" instance=ExtResource("10_h5nvm")]
-transform = Transform3D(-5.68248e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.68248e-08, -12.2048, 0.244991, -17.53)
+transform = Transform3D(-5.96046e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.96046e-08, -12.0532, 0.244991, -12.3045)
 
 [node name="HandoffStation5" parent="Map/Stations" instance=ExtResource("10_h5nvm")]
-transform = Transform3D(-5.68248e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.68248e-08, -7.24685, 0.244991, -17.53)
+transform = Transform3D(-5.96046e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.96046e-08, -7.09527, 0.244991, -12.3045)
 
 [node name="HandoffStation6" parent="Map/Stations" instance=ExtResource("10_h5nvm")]
-transform = Transform3D(-5.68248e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.68248e-08, -2.45322, 0.244991, -17.53)
+transform = Transform3D(-5.96046e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.96046e-08, -2.30163, 0.244991, -12.3045)
 
 [node name="HandoffStation7" parent="Map/Stations" instance=ExtResource("10_h5nvm")]
-transform = Transform3D(-5.68248e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.68248e-08, 2.0417, 0.244991, -17.53)
+transform = Transform3D(-5.96046e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.96046e-08, 2.19328, 0.244991, -12.3045)
 
 [node name="coal_deposit" parent="Map/Stations" instance=ExtResource("7_014fr")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.315, -0.0305386, -30.519)
@@ -66,16 +66,16 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.497
 transform = Transform3D(-0.705241, 0, -0.708968, 0, 1, 0, 0.708968, 0, -0.705241, 3.91354, 0.0421523, 0.801222)
 
 [node name="anvil" parent="Map/Stations" instance=ExtResource("11_mlay7")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.9707, 0.039859, -5.56466)
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -13.4351, 0.039859, 2.84335)
 
 [node name="anvil2" parent="Map/Stations" instance=ExtResource("11_mlay7")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.248, 0.046439, -5.62189)
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -5.99031, 0.046439, 2.42619)
 
 [node name="furnace" parent="Map/Stations" instance=ExtResource("12_u55hp")]
-transform = Transform3D(0.0446133, 0, 0.999004, 0, 1, 0, -0.999004, 0, 0.0446133, 12.2818, 0.0482979, 2.96862)
+transform = Transform3D(0.0446133, 0, 0.999004, 0, 1, 0, -0.999004, 0, 0.0446133, 10.2997, 0.0482979, -10.7803)
 
 [node name="furnace2" parent="Map/Stations" instance=ExtResource("12_u55hp")]
-transform = Transform3D(0.0446133, 0, 0.999004, 0, 1, 0, -0.999004, 0, 0.0446133, 17.7461, 0.0482998, 2.79588)
+transform = Transform3D(0.0446133, 0, 0.999004, 0, 1, 0, -0.999004, 0, 0.0446133, 26.6662, -0.765711, -12.1861)
 
 [node name="LeatherBox" parent="Map/Stations" instance=ExtResource("13_014fr")]
 transform = Transform3D(-7.34198e-08, 0, -1.67965, 0, 1.67965, 0, 1.67965, 0, -7.34198e-08, 2.39074, 0.365404, 4.48529)
@@ -99,9 +99,69 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.497
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.49712, 0.0391727, 11.6459)
 
 [node name="counter7" parent="Map/Stations" instance=ExtResource("10_mlay7")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.1091, 0.607042, -2.24245)
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 15.2405, 0.607042, 2.33419)
 
 [node name="counter8" parent="Map/Stations" instance=ExtResource("10_mlay7")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.1091, 0.607042, -4.58669)
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 12.0517, 0.607042, 2.36595)
+
+[node name="coal_deposit4" parent="Map/Stations" instance=ExtResource("7_014fr")]
+transform = Transform3D(0.874992, 0, -0.484138, 0, 1, 0, 0.484138, 0, 0.874992, 3.29579, -0.0305386, 9.70512)
+
+[node name="iron_deposit2" parent="Map/Stations" instance=ExtResource("8_vebj1")]
+transform = Transform3D(-0.410639, 0, -0.911798, 0, 1, 0, 0.911798, 0, -0.410639, 0.364125, -0.0545302, 15.9605)
+
+[node name="furnace3" parent="Map/Stations" instance=ExtResource("12_u55hp")]
+transform = Transform3D(0.0446133, 0, 0.999004, 0, 1, 0, -0.999004, 0, 0.0446133, -6.36614, 0.0482979, 17.374)
+
+[node name="furnace4" parent="Map/Stations" instance=ExtResource("12_u55hp")]
+transform = Transform3D(0.0446133, 0, 0.999004, 0, 1, 0, -0.999004, 0, 0.0446133, -11.6853, 0.0482979, 17.288)
+
+[node name="anvil3" parent="Map/Stations" instance=ExtResource("11_mlay7")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 23.0378, 0.04644, -4.67871)
+
+[node name="counter9" parent="Map/Stations" instance=ExtResource("10_mlay7")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 18.035, 0.607042, 2.26853)
+
+[node name="counter10" parent="Map/Stations" instance=ExtResource("10_mlay7")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -22.6784, 0.0391727, 12.6383)
+
+[node name="counter11" parent="Map/Stations" instance=ExtResource("10_mlay7")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -22.7432, 0.0391737, 9.73308)
+
+[node name="counter12" parent="Map/Stations" instance=ExtResource("10_mlay7")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -22.4856, 0.0391737, -3.03817)
+
+[node name="counter13" parent="Map/Stations" instance=ExtResource("10_mlay7")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -22.5061, 0.0391737, -5.81988)
+
+[node name="CraftingBench2" parent="Map/Stations" instance=ExtResource("10_g01l4")]
+transform = Transform3D(0.116289, 0, -0.993216, 0, 1, 0, 0.993216, 0, 0.116289, 32.6755, 0.0421523, -3.24183)
+
+[node name="LeatherBox2" parent="Map/Stations" instance=ExtResource("13_014fr")]
+transform = Transform3D(0, 0, -1.67965, 0, 1.67965, 0, 1.67965, 0, 0, 30.6825, 0.365405, -12.2366)
+
+[node name="LogsBarrel2" parent="Map/Stations" instance=ExtResource("14_vebj1")]
+transform = Transform3D(-5.96046e-08, 0, -1.40824, 0, 1.40824, 0, 1.40824, 0, -5.96046e-08, 32.2284, 0.0482998, 2.63205)
+
+[node name="LogsBarrel3" parent="Map/Stations" instance=ExtResource("14_vebj1")]
+transform = Transform3D(-5.96046e-08, 0, -1.40824, 0, 1.40824, 0, 1.40824, 0, -5.96046e-08, 33.2623, 0.0482998, -9.42694)
+
+[node name="LeatherBox3" parent="Map/Stations" instance=ExtResource("13_014fr")]
+transform = Transform3D(0, 0, -1.67965, 0, 1.67965, 0, 1.67965, 0, 0, 29.573, 0.365404, 3.05621)
+
+[node name="coal_deposit5" parent="Map/Stations" instance=ExtResource("7_014fr")]
+transform = Transform3D(0.874992, 0, -0.484138, 0, 1, 0, 0.484138, 0, 0.874992, 24.5703, -0.0305386, 3.82966)
+
+[node name="CraftingBench3" parent="Map/Stations" instance=ExtResource("10_g01l4")]
+transform = Transform3D(-0.00979096, 0, 0.999952, 0, 1, 0, -0.999952, 0, -0.00979096, -23.2903, 0.0421523, 1.94721)
+
+[node name="LogsBarrel4" parent="Map/Stations" instance=ExtResource("14_vebj1")]
+transform = Transform3D(0.995776, 0, -0.995776, 0, 1.40824, 0, 0.995776, 0, 0.995776, -22.7597, 0.0482998, -0.658069)
+
+[node name="anvil4" parent="Map/Stations" instance=ExtResource("11_mlay7")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 14.8005, 0.046439, -4.09151)
+
+[node name="LeatherBox" parent="Map" instance=ExtResource("13_014fr")]
+transform = Transform3D(1.18769, 0, 1.18769, 0, 1.67965, 0, -1.18769, 0, 1.18769, 5.86175, 0.374011, 23.042)
 
 [editable path="PlayerSpawner"]
