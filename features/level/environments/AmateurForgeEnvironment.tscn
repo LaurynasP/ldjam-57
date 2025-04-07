@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://cv23mhfhoyttm"]
+[gd_scene load_steps=34 format=4 uid="uid://cv23mhfhoyttm"]
 
 [ext_resource type="MeshLibrary" uid="uid://heqpp5lgphst" path="res://assets/mesh_libraries/environment.tres" id="1_8q763"]
 [ext_resource type="PackedScene" uid="uid://cvqservkdeqs6" path="res://features/level/environments/MiningCave.tscn" id="2_3fdok"]
@@ -46,6 +46,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8q763")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qnwgi"]
+points = PackedVector3Array(-0.981519, -0.845551, 6.97613, 2.831, -0.019136, -7.35025, 2.831, 0.238205, -7.35025, -7.98004, 0.495546, 1.1448, 2.05832, 7.96123, 0.889072, 7.72355, -0.276477, 4.49368, 7.19757, -1.14327, -4.60241, -5.66362, 4.87127, 1.91917, -7.68851, -1.14129, 4.07994, 4.11987, 5.90157, -3.22987, -0.772678, 6.67359, -1.94117, -1.93841, -1.0401, -5.46129, -2.41623, 5.73538, 3.97398, 4.49489, -1.17019, 6.60557, 4.37636, 5.64423, 3.20499, -4.96201, -0.647445, 7.06246, 7.20897, 1.78318, -2.4555, -1.03077, 1.52584, -5.80295, 6.1782, -0.276477, -7.09164, -5.66362, 4.61393, 3.72075, 4.63576, -1.31414, -5.98905, 4.40091, -0.101361, 6.46722, 6.34366, -1.31459, 3.5252, -2.68143, -1.30992, 6.2021, 2.57452, 2.29786, -6.32015, -2.19025, -1.30157, -4.51175, 7.95744, -0.654464, -3.61632, 5.66362, 3.06989, -5.29006, -7.66411, -1.12752, 2.08971, -2.31803, 6.41625, 3.46359, -7.50869, 0.170919, 4.46954, -6.1782, 3.58457, 1.1448)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_3fdok"]
 _surfaces = [{
@@ -424,6 +427,9 @@ mesh = SubResource("ArrayMesh_p4flo")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Blockade/SM_Env_Hell_Spikes_01"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blockade/SM_Env_Hell_Spikes_01/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_qnwgi")
 
 [node name="SM_Env_Hell_Spikes_06" type="MeshInstance3D" parent="Blockade"]
 transform = Transform3D(0.349733, 0, 0.936849, 0, 1, 0, -0.936849, 0, 0.349733, -30.5107, 0, -22.989)
