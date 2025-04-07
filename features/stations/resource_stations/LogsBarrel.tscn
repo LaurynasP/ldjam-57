@@ -93,11 +93,11 @@ height = 2.27832
 radius = 0.702637
 
 [node name="LogsBarrel" type="Node3D"]
-transform = Transform3D(1.40824, 0, 0, 0, 1.40824, 0, 0, 0, 1.40824, 0, 0, 0)
 script = ExtResource("1_ad4g5")
 resource = ExtResource("2_i03xq")
 
 [node name="model" type="Node3D" parent="."]
+transform = Transform3D(1.408, 0, 0, 0, 1.408, 0, 0, 0, 1.408, 0, 0, 0)
 
 [node name="SM_Prop_Dwarf_Weapon_Barrel_01" type="MeshInstance3D" parent="model"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
@@ -115,26 +115,27 @@ mesh = SubResource("ArrayMesh_i03xq")
 skeleton = NodePath("")
 
 [node name="SM_Prop_Camp_Plank_03" type="MeshInstance3D" parent="model"]
-transform = Transform3D(-0.162759, 0.684994, 0.710136, 0.972913, 0.231171, 2.01266e-09, -0.164163, 0.690901, -0.704064, -0.124667, 1.47021, 0.103006)
+transform = Transform3D(-0.162759, 0.684994, 0.710136, 0.972913, 0.231171, -3.05013e-07, -0.164163, 0.690901, -0.704064, -0.124667, 1.47021, 0.103006)
 mesh = SubResource("ArrayMesh_i03xq")
 skeleton = NodePath("")
 
 [node name="SM_Prop_Camp_Plank_06" type="MeshInstance3D" parent="model"]
-transform = Transform3D(-0.13089, 0.550868, -0.824265, 0.972913, 0.231171, 1.45167e-08, 0.190546, -0.801938, -0.566205, -0.220256, 1.47021, 0.360365)
+transform = Transform3D(-0.13089, 0.550868, -0.824265, 0.972913, 0.231171, 3.08109e-08, 0.190546, -0.801938, -0.566205, -0.220256, 1.47021, 0.360365)
 mesh = SubResource("ArrayMesh_i03xq")
 skeleton = NodePath("")
 
 [node name="SM_Prop_Camp_Plank_04" type="MeshInstance3D" parent="model"]
-transform = Transform3D(-0.0497233, 0.209267, 0.976593, 0.972913, 0.231171, 1.45167e-08, -0.22576, 0.950141, -0.215093, -0.14208, 1.47021, -0.326971)
+transform = Transform3D(-0.0497233, 0.209267, 0.976593, 0.972913, 0.231171, 2.91939e-08, -0.22576, 0.950141, -0.215093, -0.14208, 1.47021, -0.326971)
 mesh = SubResource("ArrayMesh_i03xq")
 skeleton = NodePath("")
 
 [node name="SM_Prop_Camp_Plank_05" type="MeshInstance3D" parent="model"]
-transform = Transform3D(0.17358, -0.730534, 0.660447, 0.972913, 0.231171, 1.4481e-08, -0.152676, 0.642558, 0.750872, 0.327002, 1.47021, -0.118684)
+transform = Transform3D(0.17358, -0.730534, 0.660447, 0.972913, 0.231171, -1.98608e-07, -0.152676, 0.642558, 0.750872, 0.327002, 1.47021, -0.118684)
 mesh = SubResource("ArrayMesh_i03xq")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1.408, 0, 0, 0, 1.408, 0, 0, 0, 1.408, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13916, 0)
