@@ -3,7 +3,6 @@ extends Node
 var rng = RandomNumberGenerator.new()
 var _available_order_items: Array[Item] = []
 var _order_item_recipes: Dictionary[Item, Recipe] = {}
-var _max_items_per_order: int = 2
 var _completed_orders = 0
 var _failed_orders = 0
 var _score_to_constant_orders:int = 15

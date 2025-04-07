@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://d2yhgvkeyqcn2"]
+
+[ext_resource type="Texture2D" uid="uid://b46xyrvll7ru0" path="res://assets/images/icons/products/armor/steel_plate_armor.png" id="1_8lu1y"]
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="2_v0uvf"]
+
+[resource]
+script = ExtResource("2_v0uvf")
+name = "steel_plate_body"
+display_name = "Steel Plate Body"
+icon = ExtResource("1_8lu1y")
+metadata/_custom_type_script = "uid://ce12c8rt3nki4"

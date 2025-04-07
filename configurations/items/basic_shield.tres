@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dhurvb0tv8w4n"]
+
+[ext_resource type="Texture2D" uid="uid://dlaei2feidh2j" path="res://assets/images/icons/products/armor/basic_shield.png" id="1_xfsvh"]
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="2_qgw56"]
+
+[resource]
+script = ExtResource("2_qgw56")
+name = "basic_shield"
+display_name = "Basic Shield"
+icon = ExtResource("1_xfsvh")
+metadata/_custom_type_script = "uid://ce12c8rt3nki4"
