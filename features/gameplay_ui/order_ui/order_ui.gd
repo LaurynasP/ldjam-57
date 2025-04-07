@@ -28,5 +28,5 @@ func init(_order: Order) -> void:
 	order.order_completed.connect(_on_order_deleted)
 	order.order_failed.connect(_on_order_deleted)
 
-func _on_order_deleted(order: Order):
+func _on_order_deleted(_order: Order):
 	queue_free()

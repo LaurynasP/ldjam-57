@@ -16,7 +16,7 @@ func update_ui(items: Array[Item]):
 		
 	visible = true
 	
-	icon_container.columns = 1 if items.size() <= 2 else 2
+	icon_container.columns = 1 if items.size() <= 1 else 2
 	for item in items:
 		if item == null:
 			continue

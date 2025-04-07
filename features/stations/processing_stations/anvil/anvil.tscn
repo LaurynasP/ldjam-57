@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bh2drec2l4a6u" path="res://assets/prefabs/anvil.tscn" id="2_px4ea"]
 [ext_resource type="Resource" uid="uid://dpwddw05bl2sl" path="res://configurations/recipes/iron_pickaxe.tres" id="3_f5o1g"]
 [ext_resource type="Resource" uid="uid://cprw5synye7uq" path="res://configurations/recipes/iron_sword.tres" id="4_2pcri"]
-[ext_resource type="Resource" path="res://configurations/recipes/steel_sword.tres" id="5_45etq"]
+[ext_resource type="Resource" uid="uid://doe11uec4fmgg" path="res://configurations/recipes/steel_sword.tres" id="5_45etq"]
 [ext_resource type="AudioStream" uid="uid://bqj3jyp3vr77f" path="res://assets/sound/sound_effects/anvil.mp3" id="5_wkc21"]
 [ext_resource type="AudioStream" uid="uid://choscvebbh0r2" path="res://assets/sound/sound_effects/bell.mp3" id="6_ydxrt"]
 [ext_resource type="AudioStream" uid="uid://clgfwc60dscc0" path="res://assets/sound/sound_effects/pop.mp3" id="7_f5o1g"]

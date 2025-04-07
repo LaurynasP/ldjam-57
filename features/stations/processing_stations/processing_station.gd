@@ -19,7 +19,7 @@ func _ready() -> void:
 	reset_station()
 	super()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var items = inventory.duplicate()
 	
 	if prepared_item != null:

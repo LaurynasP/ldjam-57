@@ -5,17 +5,14 @@ var players: Dictionary[int, Player] = {}
 
 @onready var camera: PhantomCamera3D  = $PhantomCamera3D
 
-var score: int = 0;
-
 func _ready() -> void:
 	GameManager.current_gameplay = self
-	OrderManager.setup(GameManager.current_level)
+	OrderManager.reset()
+	OrderManager.set_available_items(GameManager.current_level.ordered_items)
 	_spawn_players()
-	OrderManager.start_generating_orders()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if _is_level_completed() and GameManager.current_level.next_level != null:
-		OrderManager.stop_generating_orders()
 		LoadingManager._load_level(GameManager.current_level.next_level)
 
 func _is_level_completed() -> bool:

@@ -15,7 +15,7 @@ func _ready() -> void:
 	super()
 	ui.visible = false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if current_order == null:
 		find_new_order()
 		

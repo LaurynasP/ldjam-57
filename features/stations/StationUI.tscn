@@ -44,7 +44,7 @@ offset_right = -0.0920105
 offset_bottom = 0.00799561
 grow_horizontal = 2
 grow_vertical = 2
-columns = 4
+columns = 2
 
 [node name="Control" type="Control" parent="Panel"]
 layout_mode = 1

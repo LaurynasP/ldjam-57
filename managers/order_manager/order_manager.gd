@@ -88,7 +88,6 @@ func _handle_failed_order(order:Order):
 	_erase_order(order)
 	
 func _erase_order(order: Order):
-	var old_len = order_list.size()
 	order_list.erase(order)
 	order.remove_order()
 	

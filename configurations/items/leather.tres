@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://brv2n4msl2ovt"]
+
+[ext_resource type="Texture2D" uid="uid://dvglyjs0ck1lp" path="res://assets/images/icons/base_materials/leather.png" id="1_h57qj"]
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="2_xo35b"]
+
+[resource]
+script = ExtResource("2_xo35b")
+name = "leather"
+display_name = "Leather"
+icon = ExtResource("1_h57qj")
+metadata/_custom_type_script = "uid://ce12c8rt3nki4"

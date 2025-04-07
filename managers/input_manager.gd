@@ -15,7 +15,7 @@ func _ready() -> void:
 	available_devices.append(KEYBOARD_ID)
 	Input.joy_connection_changed.connect(_on_joy_connection_changed)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	_track_joy_buttons()
 	
 

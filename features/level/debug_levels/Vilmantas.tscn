@@ -86,22 +86,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.25058, 9.53674e-07, -7.9295
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.61036, 0, -10.6375)
 
 [node name="counter" parent="." instance=ExtResource("12_x52xm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 6.75)
 
 [node name="counter2" parent="." instance=ExtResource("12_x52xm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, -0.75)
 
 [node name="counter3" parent="." instance=ExtResource("12_x52xm")]
-transform = Transform3D(0.996474, 0, 0, 0, 0.996474, 0, 0, 0, 0.996474, 8.5, 0, 3)
+transform = Transform3D(0.996474, 0, 0, 0, 0.996474, 0, 0, 0, 0.996474, 12.5, 0, 3)
 
 [node name="counter4" parent="." instance=ExtResource("12_x52xm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 4.5)
-
-[node name="counter5" parent="." instance=ExtResource("12_x52xm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 6)
 
+[node name="counter5" parent="." instance=ExtResource("12_x52xm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 9)
+
 [node name="counter6" parent="." instance=ExtResource("12_x52xm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, -1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, -2.75)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.98233, 0.903275, 5.73071)

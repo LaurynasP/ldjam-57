@@ -49,10 +49,10 @@ func can_complete_recipe(recipe: Recipe, items: Array[Item]) -> bool:
 			
 	return result
 
-func get_completable_recipe(recipes: Array[Recipe], items: Array[Item]) -> Recipe:
+func get_completable_recipe(available_recipes: Array[Recipe], items: Array[Item]) -> Recipe:
 	var result: Recipe
 	
-	for recipe in recipes:
+	for recipe in available_recipes:
 		if can_complete_recipe(recipe, items):
 			result = recipe
 			break

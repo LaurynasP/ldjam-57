@@ -10,7 +10,7 @@ extends Level
 
 @export var inventory: Array[Item] = []
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	_debug_player_focus()
 	_debug_player_item()
 

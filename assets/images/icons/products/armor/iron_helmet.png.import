@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c280y3w62xlvq"
-path.s3tc="res://.godot/imported/Dungeons_2_Texture_02_A.png-bdf2a289a3bd5810c4e5843148ded124.s3tc.ctex"
+uid="uid://ceosirm6n8a2x"
+path="res://.godot/imported/iron_helmet.png-aa2c085f6b5d5f3fa65720f56ede3c1e.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://imports/Textures/Dungeons_2_Texture_02_A.png"
-dest_files=["res://.godot/imported/Dungeons_2_Texture_02_A.png-bdf2a289a3bd5810c4e5843148ded124.s3tc.ctex"]
+source_file="res://assets/images/icons/products/armor/iron_helmet.png"
+dest_files=["res://.godot/imported/iron_helmet.png-aa2c085f6b5d5f3fa65720f56ede3c1e.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -32,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

@@ -14,11 +14,12 @@ var dash_cooldown_timer := 0.0
 var dash_sound_effect: AudioStream = preload("res://assets/sound/sound_effects/dash.mp3")
 @onready var interact_area: Area3D = $InteractArea
 
-@onready var anim_tree := $dwarf_mixamo_mesh/AnimationTree
+@onready var anim_tree := $W/AnimationTree
+@onready var anim_player := $W/AnimationPlayer
 @onready var billboard = $StationUiBillboard
 @onready var ui = %StationUI
 var item:Item
-var stations_in_hit_area: Array[Station] = []
+var stations_in_hit_area: Station
 var focused_station: Station
 
 func _ready():
@@ -29,7 +30,7 @@ func _ready():
 func _physics_process(delta: float):
 	_handle_movement(delta)
 		
-func _process(delta: float) -> void:
+func _process(_delta: float):
 	if item != null: 
 		if not billboard.visible:
 			var input: Array[Item] = [item]
@@ -66,9 +67,13 @@ func _on_interact_area_entered(body):
 	
 	if station == null:
 		return
-		
-	stations_in_hit_area.append(station)
-	focused_station = stations_in_hit_area[0]
+	
+	if stations_in_hit_area != null: 
+		stations_in_hit_area.highlight(false)
+	
+	stations_in_hit_area = station
+	stations_in_hit_area.highlight(true)
+	focused_station = stations_in_hit_area
 		
 func _on_interact_area_exited(body):
 	var station = body as Station
@@ -91,20 +96,19 @@ func _on_interact_area_exited(body):
 	if station == null:
 		return
 	
-	stations_in_hit_area.erase(station)
-	focused_station = null if stations_in_hit_area.size() == 0 else stations_in_hit_area[0]
+	if focused_station == station:
+		station.highlight(false)
+		focused_station = null
+		stations_in_hit_area = null
 
-	
 func _handle_movement(delta: float):
 	var dir = InputManager.get_input_vector(device_id)
 	var move_speed = dash_speed if is_dashing else speed
 	
 	if dir.is_zero_approx():
-		anim_tree["parameters/conditions/idle"] = true
-		anim_tree["parameters/conditions/moving"] = false
+		anim_tree.set("parameters/Transition/transition_request", "idle")
 	else:
-		anim_tree["parameters/conditions/idle"] = false
-		anim_tree["parameters/conditions/moving"] = true
+		anim_tree.set("parameters/Transition/transition_request", "walk")
 	
 	if not is_on_floor():
 		velocity.y -= ProjectSettings.get_setting("physics/3d/default_gravity") * delta
@@ -130,7 +134,7 @@ func _handle_movement(delta: float):
 	if dir.length() > 0.01:
 		var target_dir = Vector3(dir.x, 0, dir.y).normalized()
 		var current_dir = -global_transform.basis.z.normalized()
-		var new_dir = current_dir.slerp(target_dir, delta * 5.0)
+		var new_dir = current_dir.slerp(target_dir, delta * 10.0)
 		look_at(global_position + new_dir, Vector3.UP)
 
 	move_and_slide()

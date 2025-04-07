@@ -6,7 +6,7 @@ func _process(delta: float) -> void:
 	stats_label.text = ''
 	if GameManager.current_gameplay != null:
 		stats_label.text += 'Score: '
-		stats_label.text += str(GameManager.current_gameplay.score)
+		stats_label.text += '' #str(GameManager.current_gameplay.score)
 		stats_label.text += '\n'
 		
 	stats_label.text += 'Completed Orders: '

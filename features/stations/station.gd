@@ -56,3 +56,31 @@ func play_crafted_sound_effect():
 		
 func play_add_remove_sound_effect():
 	SoundManager.play_sfx(add_remove_sound_effect)
+
+var _original_materials := {}
+
+func highlight(enable: bool):
+	for mesh in get_children_recursive(self):
+		if mesh is MeshInstance3D:
+			if enable:
+				if not _original_materials.has(mesh):
+					_original_materials[mesh] = mesh.material_override
+
+				if mesh.material_override == null:
+					mesh.material_override = mesh.get_active_material(0).duplicate()
+				else:
+					mesh.material_override = mesh.material_override.duplicate()
+
+				var mat = mesh.material_override as StandardMaterial3D
+				mat.albedo_color = Color(1.2, 1.2, 1.2)
+			else:
+				if _original_materials.has(mesh):
+					mesh.material_override = _original_materials[mesh]
+
+
+func get_children_recursive(node):
+	var list = []
+	for child in node.get_children():
+		list.append(child)
+		list += get_children_recursive(child)
+	return list
