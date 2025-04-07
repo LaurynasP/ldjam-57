@@ -90,7 +90,7 @@ func _handle_completed_order(order: Order):
 	var score = 0
 	for i in order.items:
 		var r = RecipeManager.get_recipe_by_product(i)
-		score = r.tier * 10
+		score += r.tier * 10
 		
 	GameManager.add_score(score)
 	_erase_order(order)

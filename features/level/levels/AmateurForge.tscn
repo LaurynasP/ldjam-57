@@ -9,7 +9,7 @@
 [ext_resource type="Resource" uid="uid://c2gbxlo5mqel5" path="res://configurations/items/iron_helmet.tres" id="6_cty7o"]
 [ext_resource type="PackedScene" uid="uid://cv23mhfhoyttm" path="res://features/level/environments/AmateurForgeEnvironment.tscn" id="6_s2jqq"]
 [ext_resource type="PackedScene" uid="uid://ba5cnj4j2pco6" path="res://features/stations/resource_stations/CoalDeposit.tscn" id="7_014fr"]
-[ext_resource type="Resource" path="res://configurations/items/iron_pickaxe.tres" id="7_q35qs"]
+[ext_resource type="Resource" uid="uid://dehwd1cc640kf" path="res://configurations/items/iron_pickaxe.tres" id="7_q35qs"]
 [ext_resource type="Resource" uid="uid://bbdbvj3mfxl4s" path="res://configurations/items/iron_chainbody.tres" id="8_4ah3l"]
 [ext_resource type="PackedScene" uid="uid://cvkfp72qyp7gw" path="res://features/stations/resource_stations/IronDeposit.tscn" id="8_vebj1"]
 [ext_resource type="PackedScene" uid="uid://bvcjo04uthud7" path="res://features/stations/processing_stations/crafting_bench/CraftingBench.tscn" id="10_g01l4"]
