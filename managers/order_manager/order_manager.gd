@@ -75,7 +75,7 @@ func _create_order() -> Order:
 	
 	var order_duration = number_of_items * seconds_per_item
 	var next_order_interval = get_current_order_interval() * tier_delay_multiplier
-	_time_since_last_order = -next_order_interval  # start delay now
+	_time_since_last_order = -next_order_interval + (get_current_order_interval() / 2)
 
 	var order = Order.new(order_duration, items)
 	order.order_completed.connect(_handle_completed_order)
@@ -87,7 +87,12 @@ func _create_order() -> Order:
 
 func _handle_completed_order(order: Order):
 	_completed_orders += 1
-	GameManager.add_score(order.items.size())
+	var score = 0
+	for i in order.items:
+		var r = RecipeManager.get_recipe_by_product(i)
+		score = r.tier * 10
+		
+	GameManager.add_score(score)
 	_erase_order(order)
 	
 func _handle_failed_order(order:Order):

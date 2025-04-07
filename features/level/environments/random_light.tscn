@@ -3,12 +3,6 @@
 [sub_resource type="Environment" id="Environment_am5gx"]
 background_mode = 1
 background_color = Color(0.376471, 0.239216, 0, 1)
-ssr_enabled = true
-ssao_enabled = true
-ssil_enabled = true
-sdfgi_enabled = true
-glow_enabled = true
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.0192
 
 [node name="environment" type="Node3D"]
