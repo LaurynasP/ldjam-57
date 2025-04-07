@@ -105,6 +105,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, -2.75)
 [node name="CraftingBench" parent="." instance=ExtResource("12_i6aqx")]
 transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, -5.98175, 0, 4.19217)
 recipes = Array[ExtResource("15_4xa5m")]([ExtResource("16_x1vrl"), ExtResource("17_nyctp"), ExtResource("18_vc5cq")])
+interact_sound_effect = null
+crafted_sound_effect = null
 
 [node name="LogsBarrel" parent="." instance=ExtResource("13_3hwcb")]
 transform = Transform3D(-6.15559e-08, 0, -1.40824, 0, 1.40824, 0, 1.40824, 0, -6.15559e-08, -1.14427, -9.53674e-07, -11.4611)
