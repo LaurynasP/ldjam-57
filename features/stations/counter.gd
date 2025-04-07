@@ -6,4 +6,3 @@ func _ready() -> void:
 	
 func _process(_delta: float) -> void:
 	ui.station_ui.timer_bar.get_parent().visible = false
-	ui.station_ui.update_ui(inventory)

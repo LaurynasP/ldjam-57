@@ -48,6 +48,7 @@ func _handle_current_order():
 	for order_item in current_order.items:
 		inventory.erase(order_item)
 	
+	ui.station_ui.update_ui(inventory)
 	current_order.complete()
 	
 	
