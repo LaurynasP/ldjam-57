@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b1bcxicj4m1qr"]
+[gd_scene load_steps=18 format=3 uid="uid://b1bcxicj4m1qr"]
 
 [ext_resource type="Script" uid="uid://jcyuj2h3gtq6" path="res://features/level/level.gd" id="1_w1r02"]
 [ext_resource type="Resource" uid="uid://bk5gfvqqns5ot" path="res://configurations/levels/amateaur_forge.tres" id="2_a5ygj"]
@@ -17,9 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://b3nt8qe4cw5po" path="res://features/stations/resource_stations/LogsBarrel.tscn" id="11_a5ygj"]
 [ext_resource type="PackedScene" uid="uid://dluludjqopthn" path="res://features/stations/counter.tscn" id="11_no3u5"]
 [ext_resource type="PackedScene" uid="uid://bmsjpkvyd5q5n" path="res://features/stations/resource_stations/LeatherStash.tscn" id="13_anaqb"]
-[ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="13_no3u5"]
-[ext_resource type="Resource" path="res://configurations/recipes/shaft.tres" id="14_vele0"]
-[ext_resource type="Resource" uid="uid://yv68wg0b4gkl" path="res://configurations/recipes/iron_helmet.tres" id="15_hdpwl"]
 
 [node name="BasicForge" type="Node3D"]
 script = ExtResource("1_w1r02")
@@ -64,7 +61,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8454, 0, -7.54724)
 
 [node name="CraftingBench" parent="Map/Stations" instance=ExtResource("10_am5gx")]
 transform = Transform3D(-0.79789, 0, -0.602804, 0, 1, 0, 0.602804, 0, -0.79789, 22.0087, 0.0487995, -0.386952)
-recipes = Array[ExtResource("13_no3u5")]([ExtResource("14_vele0"), ExtResource("15_hdpwl")])
 interact_sound_effect = null
 crafted_sound_effect = null
 

@@ -14,10 +14,10 @@ func update_ui(items: Array[Item]):
 		visible = false
 		return
 	
-	if visible && items == prev_items:
+	if visible && items.size() == prev_items.size():
 		return
 	
-	prev_items = items
+	prev_items = items.duplicate()
 	
 	cleanup_ui()
 		

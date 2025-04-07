@@ -61,7 +61,9 @@ func get_current_order_interval() -> int:
 	return max(interval, _minimum_order_interval)
 
 func _create_order() -> Order:
-	var number_of_items: int = rng.randi_range(1, _max_items_per_order)
+	var roll = rng.randf()
+	var number_of_items = 1 if roll < 0.7 else 2	
+	
 	var items = get_random_items(number_of_items)
 
 	var total_tier = 0.0
