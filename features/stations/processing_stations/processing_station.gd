@@ -19,7 +19,7 @@ func _ready() -> void:
 	reset_station()
 	super()
 	
-func _process(_delta: float) -> void:
+func _update_ui():
 	var items = inventory.duplicate()
 	
 	if prepared_item != null:
@@ -55,6 +55,7 @@ func add_item(item: Item) -> bool:
 	inventory.append(item)
 	progress = max(0, progress - 40)
 	on_resource_added.emit(item)
+	_update_ui()
 	play_add_remove_sound_effect()
 	return true
 
@@ -67,6 +68,7 @@ func remove_item() -> Item:
 		if result != null:
 			available_recipes = RecipeManager.get_inventory_related_recipes(inventory, loaded_recipes.values())
 			play_add_remove_sound_effect()
+			_update_ui()
 		return result
 	
 	return null
@@ -87,7 +89,7 @@ func do_processing(increment: int = 5):
 		return
 	
 	on_progress_tick.emit(progress)
-	pass
+	_update_ui()
 	
 func complete_product():
 	var recipe = RecipeManager.get_completable_recipe(available_recipes.values(), inventory)
@@ -100,12 +102,16 @@ func complete_product():
 	reset_station()
 	play_crafted_sound_effect()
 	on_processing_completed.emit(prepared_item)
+	_update_ui()
+	
 	
 func retrieve_product() -> Item:
 	var product = prepared_item
 	prepared_item = null
 	
 	on_product_removed.emit(product)
+	_update_ui()
+	
 	return product
 	
 func reset_station():
