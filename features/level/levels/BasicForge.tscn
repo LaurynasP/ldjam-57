@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b1bcxicj4m1qr"]
+[gd_scene load_steps=21 format=3 uid="uid://b1bcxicj4m1qr"]
 
 [ext_resource type="Script" uid="uid://jcyuj2h3gtq6" path="res://features/level/level.gd" id="1_w1r02"]
 [ext_resource type="Resource" uid="uid://bk5gfvqqns5ot" path="res://configurations/levels/amateaur_forge.tres" id="2_a5ygj"]
@@ -17,6 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://b3nt8qe4cw5po" path="res://features/stations/resource_stations/LogsBarrel.tscn" id="11_a5ygj"]
 [ext_resource type="PackedScene" uid="uid://dluludjqopthn" path="res://features/stations/counter.tscn" id="11_no3u5"]
 [ext_resource type="PackedScene" uid="uid://bmsjpkvyd5q5n" path="res://features/stations/resource_stations/LeatherStash.tscn" id="13_anaqb"]
+[ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="13_no3u5"]
+[ext_resource type="Resource" path="res://configurations/recipes/shaft.tres" id="14_vele0"]
+[ext_resource type="Resource" uid="uid://yv68wg0b4gkl" path="res://configurations/recipes/iron_helmet.tres" id="15_hdpwl"]
 
 [node name="BasicForge" type="Node3D"]
 script = ExtResource("1_w1r02")
@@ -39,43 +42,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0905, 0.276313, -21.8038)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2601, 0.178623, -28.5282)
 
 [node name="HandoffStation" parent="Map/Stations" instance=ExtResource("10_wc4j5")]
-transform = Transform3D(-5.68248e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.68248e-08, -22.1764, 0.244991, -17.53)
+transform = Transform3D(-1.29799, 0, 0.0722961, 0, 1.3, 0, -0.0722961, 0, -1.29799, -1.59719, 0.244991, -1.85102)
 
 [node name="HandoffStation2" parent="Map/Stations" instance=ExtResource("10_wc4j5")]
-transform = Transform3D(-5.68248e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.68248e-08, -17.4132, 0.244991, -17.53)
+transform = Transform3D(-1.29799, 0, 0.0722961, 0, 1.3, 0, -0.0722961, 0, -1.29799, -1.3323, 0.244991, -6.60685)
 
 [node name="HandoffStation3" parent="Map/Stations" instance=ExtResource("10_wc4j5")]
-transform = Transform3D(-5.68248e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.68248e-08, -12.1073, 0.244991, -17.53)
-
-[node name="HandoffStation4" parent="Map/Stations" instance=ExtResource("10_wc4j5")]
-transform = Transform3D(-5.68248e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.68248e-08, -6.99363, 0.244991, -17.53)
-
-[node name="HandoffStation5" parent="Map/Stations" instance=ExtResource("10_wc4j5")]
-transform = Transform3D(-5.68248e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.68248e-08, -2.0357, 0.244991, -17.53)
-
-[node name="HandoffStation6" parent="Map/Stations" instance=ExtResource("10_wc4j5")]
-transform = Transform3D(-5.68248e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.68248e-08, 2.75793, 0.244991, -17.53)
+transform = Transform3D(-1.29799, 0, 0.0722961, 0, 1.3, 0, -0.0722961, 0, -1.29799, -1.03722, 0.244991, -11.9045)
 
 [node name="counter5" parent="Map/Stations" instance=ExtResource("11_no3u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.8208, 0, -10.1479)
-
-[node name="counter6" parent="Map/Stations" instance=ExtResource("11_no3u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.28609, 0, -10.628)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2785, 0, -11.057)
 
 [node name="counter7" parent="Map/Stations" instance=ExtResource("11_no3u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.43707, 0, -10.6965)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.77262, 0, -12.8653)
 
 [node name="counter8" parent="Map/Stations" instance=ExtResource("11_no3u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.57016, 0, -1.92538)
-
-[node name="counter9" parent="Map/Stations" instance=ExtResource("11_no3u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.18798, 0, -2.052)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.81763, 0, -1.04479)
 
 [node name="counter10" parent="Map/Stations" instance=ExtResource("11_no3u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8502, 0, -7.24705)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8454, 0, -7.54724)
 
 [node name="CraftingBench" parent="Map/Stations" instance=ExtResource("10_am5gx")]
-transform = Transform3D(-0.79789, 0, -0.602804, 0, 1, 0, 0.602804, 0, -0.79789, 22.6353, 0.0487995, -0.453625)
+transform = Transform3D(-0.79789, 0, -0.602804, 0, 1, 0, 0.602804, 0, -0.79789, 22.0087, 0.0487995, -0.386952)
+recipes = Array[ExtResource("13_no3u5")]([ExtResource("14_vele0"), ExtResource("15_hdpwl")])
 interact_sound_effect = null
 crafted_sound_effect = null
 
@@ -83,10 +72,10 @@ crafted_sound_effect = null
 transform = Transform3D(0.995776, 0, -0.995776, 0, 1.40824, 0, 0.995776, 0, 0.995776, 17.4538, 0.0487986, 0.0543003)
 
 [node name="anvil" parent="Map/Stations" instance=ExtResource("9_crbgj")]
-transform = Transform3D(0.00056693, 0.000433414, -1, 0.000615488, 1, 0.000433742, 1, -0.000615718, 0.000566721, 26.6685, 0, -4.22986)
+transform = Transform3D(-0.620703, 0.000722116, -0.784045, 0.000615488, 1, 0.000433742, 0.784046, -0.00021332, -0.620704, 26.0981, 0, -3.44495)
 
 [node name="PlayerSpawner" parent="Map" instance=ExtResource("3_am5gx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20681, 0, -8.21613)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1968, 0, -8.20435)
 
 [node name="BasicForgeEnvironment" parent="Map" instance=ExtResource("5_a5ygj")]
 
