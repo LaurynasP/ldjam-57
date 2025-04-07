@@ -75,8 +75,8 @@ func _create_order() -> Order:
 	
 	var order_duration = number_of_items * seconds_per_item
 	var next_order_interval = get_current_order_interval() * tier_delay_multiplier
-	_time_since_last_order = -next_order_interval + (get_current_order_interval() / 2)
-
+	_time_since_last_order = -next_order_interval
+	print(_time_since_last_order)
 	var order = Order.new(order_duration, items)
 	order.order_completed.connect(_handle_completed_order)
 	order.order_failed.connect(_handle_failed_order)

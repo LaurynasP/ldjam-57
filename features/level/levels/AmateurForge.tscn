@@ -25,6 +25,9 @@
 script = ExtResource("1_t1qsc")
 next_level = ExtResource("2_g01l4")
 ordered_items = Array[ExtResource("3_g01l4")]([ExtResource("4_c35ik"), ExtResource("5_h5nvm"), ExtResource("6_cty7o"), ExtResource("7_q35qs"), ExtResource("8_4ah3l")])
+completed_orders_to_next_level = 10
+score_to_constant_orders = 150
+delay_to_first_order = 3
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("3_jwm2l")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -1.81004, 0.143509, 0)

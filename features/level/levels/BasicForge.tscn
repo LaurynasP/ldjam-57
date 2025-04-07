@@ -23,6 +23,8 @@
 script = ExtResource("1_w1r02")
 next_level = ExtResource("2_a5ygj")
 ordered_items = Array[ExtResource("3_a5ygj")]([ExtResource("4_a5ygj"), ExtResource("5_2u7wp"), ExtResource("6_rsogl")])
+completed_orders_to_next_level = 7
+score_to_constant_orders = 50
 
 [node name="Map" type="Node3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
