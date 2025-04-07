@@ -38,14 +38,20 @@ func _process(_delta: float) -> void:
 func add_item(item: Item) -> bool:
 	if prepared_item != null:
 		return false
-		
-	if ItemManager.is_item_already_in_inventory(item, inventory):
+
+	var item_count = _count_item_by_name(item, inventory)
+
+	# Check if item is still needed in any available recipe
+	var matching_recipes: Dictionary[String, Recipe] = {}
+	for recipe in available_recipes.values():
+		var recipe_count = _count_item_by_name(item, recipe.ingredients)
+		if item_count < recipe_count:
+			matching_recipes[recipe.name] = recipe
+
+	if matching_recipes.is_empty():
 		return false
-	
-	if not RecipeManager.is_resource_in_recipes(item, available_recipes.values()):
-		return false
-	
-	available_recipes = RecipeManager.get_related_recipes(item, available_recipes.values())
+
+	available_recipes = matching_recipes
 	inventory.append(item)
 	progress = max(0, progress - 40)
 	on_resource_added.emit(item)
@@ -106,3 +112,10 @@ func reset_station():
 	available_recipes = loaded_recipes.duplicate()
 	inventory = []
 	progress = 0
+
+func _count_item_by_name(item: Item, list: Array) -> int:
+	var count := 0
+	for i in list:
+		if i.name == item.name:
+			count += 1
+	return count

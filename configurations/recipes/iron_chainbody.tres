@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://cpl3fkavj42au"]
+
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_bk55h"]
+[ext_resource type="Resource" uid="uid://btu28liqn3sai" path="res://configurations/items/iron_bar.tres" id="2_wvths"]
+[ext_resource type="Resource" uid="uid://bbdbvj3mfxl4s" path="res://configurations/items/iron_chainbody.tres" id="3_bk55h"]
+[ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="4_nv7ni"]
+
+[resource]
+script = ExtResource("4_nv7ni")
+name = "iron_chainbody"
+product = ExtResource("3_bk55h")
+ingredients = Array[ExtResource("1_bk55h")]([ExtResource("2_wvths"), ExtResource("2_wvths")])
+metadata/_custom_type_script = "uid://bkkb1mtbo8xh5"
