@@ -1,7 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0d5c4pildqpp"]
+[gd_scene load_steps=17 format=3 uid="uid://b0d5c4pildqpp"]
 
 [ext_resource type="Script" uid="uid://dhm3bj6istc0a" path="res://features/menu/controls_menu/controls_menu.gd" id="1_05885"]
 [ext_resource type="PackedScene" uid="uid://n73bp8x5og60" path="res://features/menu/general/MenuPanel.tscn" id="2_g5byw"]
+[ext_resource type="Texture2D" uid="uid://b46s1bevxvpmd" path="res://assets/images/icons/keyboard_w.png" id="3_qgyfq"]
+[ext_resource type="Texture2D" uid="uid://bdewf5ym72u4j" path="res://assets/images/icons/keyboard_a.png" id="4_jgaii"]
+[ext_resource type="Texture2D" uid="uid://sinbgi5x73ma" path="res://assets/images/icons/keyboard_s.png" id="5_htjcv"]
+[ext_resource type="Texture2D" uid="uid://wwnby6nhle80" path="res://assets/images/icons/keyboard_d.png" id="6_iw2q5"]
+[ext_resource type="Texture2D" uid="uid://ds0gko7md8wkb" path="res://assets/images/icons/keyboard_space.png" id="7_gj7dp"]
+[ext_resource type="Texture2D" uid="uid://h5i8e4lfbw0" path="res://assets/images/icons/keyboard_f.png" id="8_quwc1"]
+[ext_resource type="Texture2D" uid="uid://2fpruoejgm7t" path="res://assets/images/icons/keyboard_e.png" id="9_8ca1w"]
+[ext_resource type="Texture2D" uid="uid://bm2ofca5tt7to" path="res://assets/images/icons/keyboard_tab.png" id="10_iye1k"]
+[ext_resource type="Texture2D" uid="uid://bxvrlx2iial83" path="res://assets/images/icons/xbox_stick_l.png" id="11_f1483"]
+[ext_resource type="Texture2D" uid="uid://oepmteh136q5" path="res://assets/images/icons/xbox_button_color_y.png" id="12_wd201"]
+[ext_resource type="Texture2D" uid="uid://csguwp3oqmxto" path="res://assets/images/icons/steam_button_color_a.png" id="13_8jatb"]
+[ext_resource type="Texture2D" uid="uid://jrgklwicqt85" path="res://assets/images/icons/products/xbox_button_color_b.png" id="14_672g6"]
+[ext_resource type="Texture2D" uid="uid://bkcla2iav314r" path="res://assets/images/icons/xbox_rb.png" id="15_3drwv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4oyk8"]
+font_size = 30
 
 [node name="ControlsMenu" type="Control"]
 layout_mode = 3
@@ -12,34 +28,342 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_05885")
 
-[node name="HSplitContainer" type="HSplitContainer" parent="."]
+[node name="MenuPanel" parent="." instance=ExtResource("2_g5byw")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MenuPanel" parent="HSplitContainer" instance=ExtResource("2_g5byw")]
-layout_mode = 2
+anchors_preset = -1
+anchor_right = 0.497
+offset_right = -0.23999
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="HSplitContainer/MenuPanel"]
+[node name="Label" type="Label" parent="MenuPanel"]
 layout_mode = 2
-offset_right = 954.0
-offset_bottom = 42.0
-theme_override_font_sizes/font_size = 30
+anchor_top = 0.021
+anchor_right = 1.0
+anchor_bottom = 0.071
+offset_top = 0.319998
+offset_bottom = 0.32
+theme_override_font_sizes/font_size = 60
 text = "Keyboard"
 horizontal_alignment = 1
 
-[node name="MenuPanel2" parent="HSplitContainer" instance=ExtResource("2_g5byw")]
+[node name="Label2" type="Label" parent="MenuPanel"]
 layout_mode = 2
+anchor_left = 0.051
+anchor_top = 0.211
+anchor_right = 0.378
+anchor_bottom = 0.275
+offset_left = 0.345997
+offset_top = 0.119995
+offset_right = 0.38797
+text = "Movement    "
+label_settings = SubResource("LabelSettings_4oyk8")
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MenuPanel"]
+layout_mode = 2
+anchor_left = 0.391
+anchor_top = 0.184
+anchor_right = 0.517
+anchor_bottom = 0.303
+offset_left = -8.01404
+offset_top = 0.279984
+offset_right = -0.218018
+offset_bottom = -0.23999
+texture = ExtResource("3_qgyfq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="MenuPanel"]
+layout_mode = 2
+anchor_left = 0.525
+anchor_top = 0.184
+anchor_right = 0.659
+anchor_bottom = 0.306
+offset_left = -3.85004
+offset_top = 0.279984
+offset_right = -3.68604
+offset_bottom = -3.48001
+texture = ExtResource("4_jgaii")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="MenuPanel"]
+layout_mode = 2
+anchor_left = 0.659
+anchor_top = 0.184
+anchor_right = 0.798
+anchor_bottom = 0.303
+offset_left = 0.313965
+offset_top = 0.279984
+offset_right = -4.29205
+offset_bottom = -0.23999
+texture = ExtResource("5_htjcv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="MenuPanel"]
+layout_mode = 2
+anchor_left = 0.798
+anchor_top = 0.184
+anchor_right = 0.932
+anchor_bottom = 0.306
+offset_left = -0.292053
+offset_top = 0.279984
+offset_right = -0.128052
+offset_bottom = -3.48001
+texture = ExtResource("6_iw2q5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label3" type="Label" parent="MenuPanel"]
+layout_mode = 2
+anchor_left = 0.051
+anchor_top = 0.333
+anchor_right = 0.383
+anchor_bottom = 0.398
+offset_left = 0.345997
+offset_top = 0.359985
+offset_right = 0.617981
+offset_bottom = -0.840027
+text = "Dash               "
+label_settings = SubResource("LabelSettings_4oyk8")
+vertical_alignment = 1
+
+[node name="TextureRect5" type="TextureRect" parent="MenuPanel"]
+layout_mode = 2
+anchor_left = 0.388
+anchor_top = 0.306
+anchor_right = 0.522
+anchor_bottom = 0.425
+offset_left = -0.152008
+offset_top = 0.519989
+offset_right = 0.0119934
+texture = ExtResource("7_gj7dp")
+stretch_mode = 5
+
+[node name="Label4" type="Label" parent="MenuPanel"]
+layout_mode = 2
+anchor_left = 0.051
+anchor_top = 0.456
+anchor_right = 0.384
+anchor_bottom = 0.519
+offset_left = 0.345997
+offset_top = -0.480042
+offset_right = 2.664
+offset_bottom = 0.479919
+text = "Interact          "
+label_settings = SubResource("LabelSettings_4oyk8")
+vertical_alignment = 1
+
+[node name="TextureRect6" type="TextureRect" parent="MenuPanel"]
+layout_mode = 2
+anchor_left = 0.397
+anchor_top = 0.429
+anchor_right = 0.534
+anchor_bottom = 0.551
+offset_left = -5.73801
+offset_top = -0.320007
+offset_right = -8.43604
+offset_bottom = -4.08002
+texture = ExtResource("8_quwc1")
+stretch_mode = 5
+
+[node name="Label5" type="Label" parent="MenuPanel"]
+layout_mode = 2
+anchor_left = 0.051
+anchor_top = 0.578
+anchor_right = 0.399
+anchor_bottom = 0.643
+offset_left = 0.345997
+offset_top = -0.23999
+offset_right = -5.64603
+offset_bottom = -1.44
+text = "Pickup / Drop"
+label_settings = SubResource("LabelSettings_4oyk8")
+vertical_alignment = 1
+
+[node name="TextureRect7" type="TextureRect" parent="MenuPanel"]
+layout_mode = 2
+anchor_left = 0.399
+anchor_top = 0.551
+anchor_right = 0.534
+anchor_bottom = 0.669
+offset_left = -1.64603
+offset_top = -0.0800171
+offset_right = -2.43604
+offset_bottom = 0.47998
+texture = ExtResource("9_8ca1w")
+stretch_mode = 5
+
+[node name="Label6" type="Label" parent="MenuPanel"]
+layout_mode = 2
+anchor_left = 0.051
+anchor_top = 0.7
+anchor_right = 0.399
+anchor_bottom = 0.765
+offset_left = 0.345997
+offset_top = -6.10352e-05
+offset_right = -3.64603
+offset_bottom = -1.20007
+text = "Show Recipes"
+label_settings = SubResource("LabelSettings_4oyk8")
+vertical_alignment = 1
+
+[node name="TextureRect8" type="TextureRect" parent="MenuPanel"]
+layout_mode = 2
+anchor_left = 0.399
+anchor_top = 0.673
+anchor_right = 0.534
+anchor_bottom = 0.792
+offset_left = 0.353973
+offset_top = 0.159973
+offset_right = -0.436035
+offset_bottom = -0.360046
+texture = ExtResource("10_iye1k")
+stretch_mode = 5
+
+[node name="MenuPanel2" parent="." instance=ExtResource("2_g5byw")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.503
+offset_left = 0.23999
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="HSplitContainer/MenuPanel2"]
-layout_mode = 0
-offset_right = 954.0
-offset_bottom = 42.0
-theme_override_font_sizes/font_size = 30
+[node name="Label" type="Label" parent="MenuPanel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.077
+offset_bottom = -41.16
+theme_override_font_sizes/font_size = 60
 text = "Controller"
 horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MenuPanel2"]
+layout_mode = 2
+anchor_left = 0.051
+anchor_top = 0.197
+anchor_right = 0.248
+anchor_bottom = 0.236
+offset_left = 0.345997
+offset_top = 0.23999
+offset_right = 0.40799
+offset_bottom = 0.11998
+text = "Movement    "
+label_settings = SubResource("LabelSettings_4oyk8")
+
+[node name="TextureRect" type="TextureRect" parent="MenuPanel2"]
+layout_mode = 2
+anchor_left = 0.406
+anchor_top = 0.156
+anchor_right = 0.54
+anchor_bottom = 0.279
+offset_left = -0.324005
+offset_top = 4.51999
+offset_right = -0.160034
+offset_bottom = -0.320007
+texture = ExtResource("11_f1483")
+stretch_mode = 5
+
+[node name="Label3" type="Label" parent="MenuPanel2"]
+layout_mode = 2
+anchor_left = 0.051
+anchor_top = 0.319
+anchor_right = 0.262
+anchor_bottom = 0.358
+offset_left = 0.345997
+offset_top = 0.47998
+offset_right = -7.94803
+offset_bottom = 0.359985
+text = "Dash               "
+label_settings = SubResource("LabelSettings_4oyk8")
+
+[node name="TextureRect2" type="TextureRect" parent="MenuPanel2"]
+layout_mode = 2
+anchor_left = 0.406
+anchor_top = 0.28
+anchor_right = 0.54
+anchor_bottom = 0.397
+offset_left = -0.324005
+offset_top = -5.39999
+offset_right = -0.160034
+offset_bottom = -3.76001
+texture = ExtResource("12_wd201")
+stretch_mode = 5
+
+[node name="Label4" type="Label" parent="MenuPanel2"]
+layout_mode = 2
+anchor_left = 0.051
+anchor_top = 0.442
+anchor_right = 0.262
+anchor_bottom = 0.481
+offset_left = 0.345997
+offset_top = -0.360046
+offset_right = -6.94803
+offset_bottom = -0.480042
+text = "Interact          "
+label_settings = SubResource("LabelSettings_4oyk8")
+
+[node name="TextureRect3" type="TextureRect" parent="MenuPanel2"]
+layout_mode = 2
+anchor_left = 0.406
+anchor_top = 0.401
+anchor_right = 0.54
+anchor_bottom = 0.519
+offset_left = -0.324005
+offset_top = -4.08002
+offset_right = -0.160034
+offset_bottom = -3.52008
+texture = ExtResource("13_8jatb")
+stretch_mode = 5
+
+[node name="Label5" type="Label" parent="MenuPanel2"]
+layout_mode = 2
+anchor_left = 0.051
+anchor_top = 0.564
+anchor_right = 0.262
+anchor_bottom = 0.603
+offset_left = 0.345997
+offset_top = -0.119995
+offset_right = -3.94803
+offset_bottom = -0.240051
+text = "Pickup / Drop"
+label_settings = SubResource("LabelSettings_4oyk8")
+
+[node name="TextureRect4" type="TextureRect" parent="MenuPanel2"]
+layout_mode = 2
+anchor_left = 0.406
+anchor_top = 0.524
+anchor_right = 0.54
+anchor_bottom = 0.638
+offset_left = -0.324005
+offset_top = -4.92004
+offset_right = -0.160034
+offset_bottom = -0.0400391
+texture = ExtResource("14_672g6")
+stretch_mode = 5
+
+[node name="Label6" type="Label" parent="MenuPanel2"]
+layout_mode = 2
+anchor_left = 0.051
+anchor_top = 0.686
+anchor_right = 0.262
+anchor_bottom = 0.725
+offset_left = 0.345997
+offset_top = 0.119934
+offset_right = -4.94803
+text = "Show Recipes"
+label_settings = SubResource("LabelSettings_4oyk8")
+
+[node name="TextureRect5" type="TextureRect" parent="MenuPanel2"]
+layout_mode = 2
+anchor_left = 0.406
+anchor_top = 0.646
+anchor_right = 0.54
+anchor_bottom = 0.764
+offset_left = -0.324005
+offset_top = -0.680054
+offset_right = -0.160034
+offset_bottom = -0.120056
+texture = ExtResource("15_3drwv")
+stretch_mode = 5
