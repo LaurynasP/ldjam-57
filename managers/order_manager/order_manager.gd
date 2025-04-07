@@ -27,15 +27,11 @@ func _process(delta: float) -> void:
 		return
 		
 	_time_since_last_order += delta
-	#
 		
 	var current_order_interval = get_current_order_interval()
 	
 	if _time_since_last_order >= current_order_interval:
 		_create_order()
-	
-	
-
 	
 func setup(level: Level):
 	reset()
@@ -43,16 +39,12 @@ func setup(level: Level):
 	_score_to_constant_orders = level.score_to_constant_orders
 	_time_since_last_order = 0 - level.delay_to_first_order
 	_starting_order_interval = level.starting_order_interval
-
-	
-	
 	
 func reset():
 	_completed_orders = 0
 	_failed_orders = 0
 	for order in order_list:
 		_erase_order(order)
-
 
 	order_list = []
 	

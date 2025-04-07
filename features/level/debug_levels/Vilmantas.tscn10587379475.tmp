@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://crwoxhfx787al"]
+[gd_scene load_steps=19 format=3 uid="uid://crwoxhfx787al"]
 
 [ext_resource type="Script" uid="uid://d3fg3nwvm5kku" path="res://features/level/debug_levels/vilmantas.gd" id="1_g1d7o"]
 [ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_mv3ks"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://b3nt8qe4cw5po" path="res://features/stations/resource_stations/LogsBarrel.tscn" id="13_3hwcb"]
 [ext_resource type="PackedScene" uid="uid://b4xllno8qbro" path="res://features/stations/processing_stations/anvil/anvil.tscn" id="13_n3gf4"]
 [ext_resource type="PackedScene" uid="uid://bmsjpkvyd5q5n" path="res://features/stations/resource_stations/LeatherStash.tscn" id="14_3hwcb"]
+[ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="16_n3gf4"]
 [ext_resource type="PackedScene" uid="uid://b88kbpsdnbm2j" path="res://features/stations/handoff_station/HandoffStation.tscn" id="18_2x1v2"]
 
 [node name="Vilmantas" type="Node3D"]
@@ -110,7 +111,10 @@ transform = Transform3D(1.67965, 0, 0, 0, 1.67965, 0, 0, 0, 1.67965, 2.36857, -0
 [node name="HandoffStation" parent="." instance=ExtResource("18_2x1v2")]
 transform = Transform3D(0.734363, 0, 1.07271, 0, 1.3, 0, -1.07271, 0, 0.734363, -11.1308, 2.88075e-17, 12.6812)
 
+[node name="gameplay" parent="." instance=ExtResource("16_n3gf4")]
+
 [editable path="PlayerSpawner"]
 [editable path="environment"]
 [editable path="furnace"]
 [editable path="anvil"]
+[editable path="gameplay"]

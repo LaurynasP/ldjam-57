@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="LevelConfiguration" load_steps=6 format=3 uid="uid://bdusyiis2ij2p"]
+
+[ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="1_4lkca"]
+[ext_resource type="PackedScene" uid="uid://crwoxhfx787al" path="res://features/level/debug_levels/Vilmantas.tscn" id="2_q4msx"]
+[ext_resource type="PackedScene" uid="uid://dmkcx5o7p1xto" path="res://features/level/environments/random_light.tscn" id="3_12fc4"]
+[ext_resource type="Script" uid="uid://3i846dludlok" path="res://managers/loading_manager/level_configuration.gd" id="4_6avhf"]
+[ext_resource type="PackedScene" uid="uid://fmb0vcjtbe0j" path="res://features/gameplay_ui/gameplay_ui.tscn" id="5_se1k8"]
+
+[resource]
+script = ExtResource("4_6avhf")
+name = "Vilmantas Debug"
+level = ExtResource("2_q4msx")
+lighting = ExtResource("3_12fc4")
+gameplay = ExtResource("1_4lkca")
+ui = ExtResource("5_se1k8")
+metadata/_custom_type_script = "uid://3i846dludlok"

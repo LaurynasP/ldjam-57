@@ -9,6 +9,6 @@ class_name MainMenu
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	play_button.text = "Play" if GameManager.current_level == null else "Continue"
 	
