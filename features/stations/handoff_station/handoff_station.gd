@@ -5,28 +5,37 @@ var current_order: Order
 
 @onready var order_billboard: Sprite3D = %OrderBillboard
 @onready var order_billboard_vieport: SubViewport = %OrderBillboardVieport
+
 var order_ui_scene: PackedScene = load("res://features/gameplay_ui/order_ui/OrderUI.tscn")
 
 var new_order_timeout = 5
 var current_new_order_timeout = 0
-
+var cleanup_called = false
 func _ready() -> void:
 	super()
 	ui.visible = false
 
 func _process(delta: float) -> void:
-	if not current_order:
-		current_new_order_timeout -= delta
+	if current_order == null:
+		find_new_order()
 		
-	if not current_order and current_new_order_timeout <= 0:
-		get_new_order()
 	_handle_current_order()
 
 	
-func get_new_order():
-	current_order = OrderManager.create_order()
-	current_order.order_completed.connect(_handle_completed_or_failed_order)
-	current_order.order_failed.connect(_handle_completed_or_failed_order)
+func find_new_order():
+	for order in OrderManager.order_list:
+		if order == null:
+			return
+		if order.handoff_station == null:
+			on_order_found(order)
+			return
+
+func on_order_found(order: Order):
+	current_order = order
+	order.handoff_station = self
+	#current_order.order_completed.connect(_handle_completed_or_failed_order)
+	#current_order.order_failed.connect(_handle_completed_or_failed_order)
+	
 	add_order_ui()
 	_update_ui()
 
@@ -50,9 +59,12 @@ func _handle_current_order():
 	current_order.complete()
 	
 	
-func _handle_completed_or_failed_order(order: Order):
-	current_new_order_timeout = new_order_timeout
+#func _handle_completed_or_failed_order(order: Order):
+	#
+	
+func cleanup():
 	current_order = null
+	cleanup_called = true
 	_update_ui()
 	
 func add_order_ui():

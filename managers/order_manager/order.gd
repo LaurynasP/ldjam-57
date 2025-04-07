@@ -4,9 +4,11 @@ class_name Order
 var duration: float
 var remaining_duration: float
 var items: Array[Item]
+var handoff_station: HandoffStation
 
 signal order_completed(order: Order)
 signal order_failed(order: Order)
+	
 
 func _init(_duration: float, _items: Array[Item]) -> void:
 	duration = _duration
@@ -25,4 +27,8 @@ func complete() -> void:
 func fail() -> void:
 	order_failed.emit(self)
 	
+func remove_order() -> void:
+	if handoff_station != null:
+		handoff_station.cleanup()
+	queue_free()
 	

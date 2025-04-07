@@ -8,6 +8,11 @@ var order: Order
 
 	
 func init(_order: Order) -> void:
+	# TODO figure out why OrderUI is crashing without this
+	if _order == null or timer_bar == null:
+		queue_free()
+		return
+		
 	order = _order
 	timer_bar.start_timer(order.duration)
 	icon_container.columns = order.items.size()
