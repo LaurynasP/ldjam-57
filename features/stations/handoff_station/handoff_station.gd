@@ -8,14 +8,9 @@ var current_order: Order
 
 var order_ui_scene: PackedScene = load("res://features/gameplay_ui/order_ui/OrderUI.tscn")
 
-var new_order_timeout = 5
-var current_new_order_timeout = 0
-var cleanup_called = false
-func _ready() -> void:
-	super()
-	ui.visible = false
 
 func _process(_delta: float) -> void:
+	ui.station_ui.update_ui(inventory)
 	if current_order == null:
 		find_new_order()
 		
@@ -64,7 +59,6 @@ func _handle_current_order():
 	
 func cleanup():
 	current_order = null
-	cleanup_called = true
 	_update_ui()
 	
 func add_order_ui():
