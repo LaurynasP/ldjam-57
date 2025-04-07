@@ -8,14 +8,11 @@ var current_order: Order
 
 var order_ui_scene: PackedScene = load("res://features/gameplay_ui/order_ui/OrderUI.tscn")
 
-
 func _process(_delta: float) -> void:
-	ui.station_ui.update_ui(inventory)
 	if current_order == null:
 		find_new_order()
 		
 	_handle_current_order()
-
 	
 func find_new_order():
 	for order in OrderManager.order_list:
@@ -51,6 +48,7 @@ func _handle_current_order():
 	for order_item in current_order.items:
 		inventory.erase(order_item)
 	
+	ui.station_ui.update_ui(inventory)
 	current_order.complete()
 	
 	

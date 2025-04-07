@@ -14,10 +14,12 @@ func update_ui(items: Array[Item]):
 		visible = false
 		return
 	
-	if visible && items == prev_items:
+	var same_items = items.all(func(i: Item): return prev_items.any(func(ii: Item): return ii.name == i.name)) and items.size() == prev_items.size()
+	
+	if visible && same_items:
 		return
 	
-	prev_items = items
+	prev_items = items.duplicate()
 	
 	cleanup_ui()
 		

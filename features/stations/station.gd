@@ -30,6 +30,7 @@ func add_item(item: Item) -> bool:
 		
 	inventory.append(item)
 	on_resource_added.emit(item)
+	ui.station_ui.update_ui(inventory)
 	play_add_remove_sound_effect()
 	return true
 	
@@ -40,6 +41,7 @@ func interact():
 func remove_item() -> Item:
 	var item = inventory.pop_back()
 	if item != null:
+		ui.station_ui.update_ui(inventory)
 		play_add_remove_sound_effect()
 	return item
 

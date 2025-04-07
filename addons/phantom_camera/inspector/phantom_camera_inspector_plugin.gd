@@ -38,7 +38,6 @@ func _parse_category(object: Object, category: String) -> void:
 
 
 func _align_camera_with_view(object: Object) -> void:
-	print("Aligning camera with view")
 	print(object)
 
 func _preview_camera(object: Object) -> void:

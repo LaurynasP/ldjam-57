@@ -19,3 +19,4 @@ texture = SubResource("ViewportTexture_t5ic0")
 transparent_bg = true
 
 [node name="StationUI" parent="Billboard/SubViewport" instance=ExtResource("1_6pqf0")]
+visible = false

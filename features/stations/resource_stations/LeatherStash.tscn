@@ -9,13 +9,14 @@ height = 2.27832
 radius = 0.658691
 
 [node name="LeatherBox" type="Node3D"]
-transform = Transform3D(1.67965, 0, 0, 0, 1.67965, 0, 0, 0, 1.67965, 0, 0, 0)
 script = ExtResource("1_rk8lc")
 resource = ExtResource("2_rk8lc")
 
 [node name="Crate" parent="." instance=ExtResource("3_b0qmn")]
+transform = Transform3D(1.68, 0, 0, 0, 1.68, 0, 0, 0, 1.68, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1.68, 0, 0, 0, 1.68, 0, 0, 0, 1.68, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13916, 0)
