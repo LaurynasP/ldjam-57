@@ -1,10 +1,12 @@
-[gd_scene load_steps=19 format=4 uid="uid://bvcjo04uthud7"]
+[gd_scene load_steps=21 format=4 uid="uid://bvcjo04uthud7"]
 
 [ext_resource type="Script" uid="uid://ckkpkgjsjhr4i" path="res://features/stations/processing_stations/crafting_bench/crafting_bench.gd" id="1_h381n"]
 [ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="2_crqcg"]
 [ext_resource type="Texture2D" uid="uid://b71gi3gdksgtu" path="res://imports/Textures/Dungeons_2_Texture_01_A.png" id="2_j2ohs"]
-[ext_resource type="Resource" uid="uid://qyeagt8atlas" path="res://configurations/recipes/shaft.tres" id="3_xft0q"]
+[ext_resource type="Resource" path="res://configurations/recipes/shaft.tres" id="3_xft0q"]
 [ext_resource type="Resource" uid="uid://yv68wg0b4gkl" path="res://configurations/recipes/iron_helmet.tres" id="4_r2l6x"]
+[ext_resource type="AudioStream" uid="uid://c3mf6mirhtji8" path="res://assets/sound/sound_effects/crafting.mp3" id="5_8lmon"]
+[ext_resource type="AudioStream" uid="uid://mly50xicpc7v" path="res://assets/sound/sound_effects/chop_wood.mp3" id="6_252j8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dgdhg"]
 resource_name = "PolygonDungeonRealms_Mat_01_A"
@@ -198,6 +200,8 @@ shadow_mesh = SubResource("ArrayMesh_acd87")
 [node name="CraftingBench" type="Node3D"]
 script = ExtResource("1_h381n")
 recipes = Array[ExtResource("2_crqcg")]([ExtResource("3_xft0q"), ExtResource("4_r2l6x")])
+interact_sound_effect = ExtResource("5_8lmon")
+crafted_sound_effect = ExtResource("6_252j8")
 
 [node name="model" type="Node3D" parent="."]
 
