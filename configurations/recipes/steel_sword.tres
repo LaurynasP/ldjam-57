@@ -8,6 +8,7 @@
 [resource]
 script = ExtResource("4_5nyq8")
 name = "steel_sword"
+tier = 1.5
 product = ExtResource("3_0yeig")
 ingredients = Array[ExtResource("1_0yeig")]([ExtResource("2_0yeig")])
 metadata/_custom_type_script = "uid://bkkb1mtbo8xh5"
