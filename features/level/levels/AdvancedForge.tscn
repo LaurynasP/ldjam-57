@@ -225,7 +225,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15.38
 [node name="AdvancedForgeEnvironment" parent="Map" instance=ExtResource("12_gq28n")]
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("3_6s66l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.79106, 0.0435435, 1.49909)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.52805, 0.0435435, -0.0467849)
 
 [node name="DisposalBin" parent="." instance=ExtResource("20_kfkua")]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -0.814837, 0.336764, 5.73027)
