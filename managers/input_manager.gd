@@ -61,6 +61,20 @@ func is_add_remove_item_just_pressed(device_id: int) -> bool:
 	else:
 		return _is_joy_button_just_pressed(device_id, JOY_BUTTON_B)
 		
+func is_context_menu_just_pressed(device_id: int) -> bool:
+	if device_id == KEYBOARD_ID:
+		return Input.is_action_just_pressed("keyboard_tab")
+	else:
+		return _is_joy_button_just_pressed(device_id, JOY_BUTTON_MISC1)
+		
+func is_context_menu_just_released(device_id: int) -> bool:
+	if device_id == KEYBOARD_ID:
+		return Input.is_action_just_released("keyboard_tab")
+	else:
+		# TODO: Track joy button release properly
+		return _is_joy_button_just_pressed(device_id, JOY_BUTTON_MISC1)
+		
+		
 func _track_joy_buttons():
 	for device_id in InputManager.available_devices:
 		if not _joy_button_states.has(device_id):
@@ -74,8 +88,6 @@ func _is_joy_button_just_pressed(device_id: int, button: int) -> bool:
 	var was_pressed = _joy_button_states.get(device_id, {}).get(button, false)
 	var is_pressed = Input.is_joy_button_pressed(device_id, button)
 	return is_pressed and not was_pressed
-
-
 	
 func _on_joy_connection_changed(_device_id: int, _connected: bool):
 	if _connected:

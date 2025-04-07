@@ -112,10 +112,3 @@ func reset_station():
 	available_recipes = loaded_recipes.duplicate()
 	inventory = []
 	progress = 0
-
-func _count_item_by_name(item: Item, list: Array) -> int:
-	var count := 0
-	for i in list:
-		if i.name == item.name:
-			count += 1
-	return count

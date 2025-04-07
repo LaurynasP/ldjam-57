@@ -7,6 +7,8 @@ var players: Dictionary[int, Player] = {}
 
 var score: int = 0;
 
+signal on_recipe_screen_toggled(show: bool)
+
 func _ready() -> void:
 	GameManager.current_gameplay = self
 	OrderManager.setup(GameManager.current_level)
@@ -27,7 +29,6 @@ func _is_level_completed() -> bool:
 	
 	return true
 	
-
 func _add_player(device_id: int, player: Player) -> void:
 	players[device_id] = player
 	var something: Array[Node3D] = []
@@ -40,3 +41,6 @@ func _add_player(device_id: int, player: Player) -> void:
 func _spawn_players():
 	var spawner = get_tree().get_first_node_in_group("player_spawner") as PlayerSpawner
 	spawner.spawn_all_players()
+
+func toggle_recipe_screen(show: bool):
+	on_recipe_screen_toggled.emit(show)

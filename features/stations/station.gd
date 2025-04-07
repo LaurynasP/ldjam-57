@@ -84,3 +84,10 @@ func get_children_recursive(node):
 		list.append(child)
 		list += get_children_recursive(child)
 	return list
+
+func _count_item_by_name(item: Item, list: Array) -> int:
+	var count := 0
+	for i in list:
+		if i.name == item.name:
+			count += 1
+	return count
