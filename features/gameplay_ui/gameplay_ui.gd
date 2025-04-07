@@ -16,8 +16,12 @@ func _ready() -> void:
 	OrderManager.on_new_order.connect(_handle_new_order)
 	
 	for recipe: Recipe in RecipeManager.recipes.values():
-		var ui = RECIPE_UI.instantiate() as RecipeUI
 		var is_placeholder = !OrderManager._available_order_items.any(func(item: Item): return item.name == recipe.product.name) and not is_recipe_required(recipe)
+		
+		if is_placeholder:
+			continue
+			
+		var ui = RECIPE_UI.instantiate() as RecipeUI
 		ui.init(recipe, is_placeholder)
 		recipe_container.add_child(ui)
 
@@ -33,8 +37,6 @@ func is_recipe_required(recipe: Recipe) -> bool:
 			order_recipes.append(r)
 			
 	for order_recipe in order_recipes:
-		print(order_recipe.ingredients)
-		print(product.name)
 		if order_recipe.ingredients.any(func(x: Item): return x.name == product.name):
 			return true
 		
