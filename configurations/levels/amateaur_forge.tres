@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b1scr3x8f74a5" path="res://features/gameplay/gameplay.tscn" id="1_dow83"]
 [ext_resource type="PackedScene" uid="uid://bvxs30fl25ah" path="res://features/level/levels/AmateurForge.tscn" id="2_pq6nw"]
 [ext_resource type="Script" uid="uid://3i846dludlok" path="res://managers/loading_manager/level_configuration.gd" id="3_crasi"]
-[ext_resource type="PackedScene" uid="uid://dmkcx5o7p1xto" path="res://features/level/environments/random_light.tscn" id="3_pq6nw"]
+[ext_resource type="PackedScene" uid="uid://d26gyf7oukyei" path="res://features/level/environments/AmateurLight.tscn" id="3_pq6nw"]
 [ext_resource type="PackedScene" uid="uid://fmb0vcjtbe0j" path="res://features/gameplay_ui/gameplay_ui.tscn" id="4_665e8"]
 
 [resource]
