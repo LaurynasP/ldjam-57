@@ -75,6 +75,8 @@ func highlight(enable: bool):
 
 				var mat = mesh.material_override as StandardMaterial3D
 				mat.albedo_color = Color(1.2, 1.2, 1.2)
+				mat.emission_enabled = true
+				mat.emission = Color(0.8, 0.8, 0.8)
 			else:
 				if _original_materials.has(mesh):
 					mesh.material_override = _original_materials[mesh]

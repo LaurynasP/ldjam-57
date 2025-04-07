@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b5r2eup5bxft3"]
+[gd_scene load_steps=23 format=3 uid="uid://b5r2eup5bxft3"]
 
 [ext_resource type="Script" uid="uid://jcyuj2h3gtq6" path="res://features/level/level.gd" id="1_d6dgg"]
 [ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="2_syka0"]
@@ -13,7 +13,9 @@
 [ext_resource type="Resource" uid="uid://bbdbvj3mfxl4s" path="res://configurations/items/iron_chainbody.tres" id="7_rh7d4"]
 [ext_resource type="PackedScene" uid="uid://cvkfp72qyp7gw" path="res://features/stations/resource_stations/IronDeposit.tscn" id="8_ow0ei"]
 [ext_resource type="PackedScene" uid="uid://b4xllno8qbro" path="res://features/stations/processing_stations/anvil/anvil.tscn" id="9_qb4lw"]
+[ext_resource type="Resource" uid="uid://dhurvb0tv8w4n" path="res://configurations/items/basic_shield.tres" id="9_rh7d4"]
 [ext_resource type="PackedScene" uid="uid://b88kbpsdnbm2j" path="res://features/stations/handoff_station/HandoffStation.tscn" id="10_kfkua"]
+[ext_resource type="Resource" uid="uid://d2yhgvkeyqcn2" path="res://configurations/items/steel_plate_body.tres" id="10_py7sc"]
 [ext_resource type="PackedScene" uid="uid://dluludjqopthn" path="res://features/stations/counter.tscn" id="11_os3fe"]
 [ext_resource type="PackedScene" path="res://features/level/environments/AdvancedForgeEnvironment.tscn" id="12_gq28n"]
 [ext_resource type="PackedScene" uid="uid://bvcjo04uthud7" path="res://features/stations/processing_stations/crafting_bench/CraftingBench.tscn" id="13_iuxs3"]
@@ -23,7 +25,7 @@
 
 [node name="AdvancedForge" type="Node3D"]
 script = ExtResource("1_d6dgg")
-ordered_items = Array[ExtResource("2_syka0")]([ExtResource("3_iuxs3"), ExtResource("4_qb4lw"), ExtResource("5_kfkua"), ExtResource("6_os3fe"), ExtResource("7_rh7d4"), ExtResource("4_o7mee")])
+ordered_items = Array[ExtResource("2_syka0")]([ExtResource("3_iuxs3"), ExtResource("4_qb4lw"), ExtResource("5_kfkua"), ExtResource("6_os3fe"), ExtResource("7_rh7d4"), ExtResource("4_o7mee"), ExtResource("9_rh7d4"), ExtResource("10_py7sc")])
 
 [node name="Map" type="Node3D" parent="."]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0)
@@ -143,7 +145,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20.069
 transform = Transform3D(-0.0309743, 0, -0.99952, 0, 1, 0, 0.99952, 0, -0.0309743, 3.38277, 0.0426682, -7.87848)
 
 [node name="LogsBarrel" parent="Map/Stations" instance=ExtResource("14_o7mee")]
-transform = Transform3D(0.995776, 0, -0.995776, 0, 1.40824, 0, 0.995776, 0, 0.995776, -0.955004, 0.0403394, 3.41744)
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -0.955004, 0.0403394, 3.41744)
 
 [node name="LeatherBox" parent="Map/Stations" instance=ExtResource("15_c77yc")]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 2.88684, 0.363932, 2.87485)

@@ -1,6 +1,6 @@
 extends ResourceStation
 
-func add_item(item: Item) -> bool:
+func add_item(_item: Item) -> bool:
 	play_add_remove_sound_effect()
 	return true
 

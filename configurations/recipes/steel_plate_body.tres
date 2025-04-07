@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://7latfdfogoal"]
+
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_1w851"]
+[ext_resource type="Resource" uid="uid://b0vqfs1by8fnb" path="res://configurations/items/steel_bar.tres" id="2_lrx7s"]
+[ext_resource type="Resource" uid="uid://d2yhgvkeyqcn2" path="res://configurations/items/steel_plate_body.tres" id="3_1w851"]
+[ext_resource type="Resource" uid="uid://brv2n4msl2ovt" path="res://configurations/items/leather.tres" id="3_lrx7s"]
+[ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="4_h5st5"]
+
+[resource]
+script = ExtResource("4_h5st5")
+name = "steel_plate_body"
+tier = 3.0
+product = ExtResource("3_1w851")
+ingredients = Array[ExtResource("1_1w851")]([ExtResource("2_lrx7s"), ExtResource("2_lrx7s"), ExtResource("3_lrx7s")])
+metadata/_custom_type_script = "uid://bkkb1mtbo8xh5"

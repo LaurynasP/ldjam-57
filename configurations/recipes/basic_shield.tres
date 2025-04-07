@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://crqnm624r23qu"]
+
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="1_wrv0s"]
+[ext_resource type="Resource" uid="uid://btu28liqn3sai" path="res://configurations/items/iron_bar.tres" id="2_dktaa"]
+[ext_resource type="Resource" uid="uid://cl6g4do8aq4aj" path="res://configurations/items/plank.tres" id="3_lw1vy"]
+[ext_resource type="Resource" uid="uid://dhurvb0tv8w4n" path="res://configurations/items/basic_shield.tres" id="3_wrv0s"]
+[ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="4_48llb"]
+
+[resource]
+script = ExtResource("4_48llb")
+name = "basic_shield"
+tier = 2.0
+product = ExtResource("3_wrv0s")
+ingredients = Array[ExtResource("1_wrv0s")]([ExtResource("2_dktaa"), ExtResource("2_dktaa"), ExtResource("3_lw1vy")])
+metadata/_custom_type_script = "uid://bkkb1mtbo8xh5"
