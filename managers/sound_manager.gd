@@ -3,7 +3,6 @@ extends Node
 var _music_players: Array[AudioStreamPlayer] = []
 var _sfx_players: Array[AudioStreamPlayer] = []
 
-
 var music_path: String = "res://assets/sound/music/"
 var music_tracks: Array[AudioStream] = []
 var play_random_songs = true
@@ -13,19 +12,18 @@ func _ready():
 	_load_tracks()
 	
 func _load_tracks():
-	var dir = DirAccess.open(music_path)
-	if dir == null:
-		return
-	dir.list_dir_begin()
-	var file = dir.get_next()
-	while file != "":
-		if not dir.current_is_dir() and file.get_extension() in ["ogg", "wav", "mp3"]:
-			var path = music_path + file
-			var stream = load(path)
-			if stream is AudioStream:
-				music_tracks.append(stream)
-		file = dir.get_next()
-	dir.list_dir_end()
+	var song1 = load("res://assets/sound/music/song1.mp3")
+	music_tracks.append(song1)
+	var song2 = load("res://assets/sound/music/song2.mp3")
+	music_tracks.append(song2)
+	var song3 = load("res://assets/sound/music/song3.mp3")
+	music_tracks.append(song3)
+	var song4 = load("res://assets/sound/music/song4.mp3")
+	music_tracks.append(song4)
+	var song5 = load("res://assets/sound/music/song5.mp3")
+	music_tracks.append(song5)
+	var song6 = load("res://assets/sound/music/song6.mp3")
+	music_tracks.append(song6)
 	
 func _process(_delta: float) -> void:
 	if play_random_songs and _music_players.size() == 0:
