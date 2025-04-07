@@ -9,7 +9,7 @@
 [ext_resource type="Resource" uid="uid://c2gbxlo5mqel5" path="res://configurations/items/iron_helmet.tres" id="6_cty7o"]
 [ext_resource type="PackedScene" uid="uid://cv23mhfhoyttm" path="res://features/level/environments/AmateurForgeEnvironment.tscn" id="6_s2jqq"]
 [ext_resource type="PackedScene" uid="uid://ba5cnj4j2pco6" path="res://features/stations/resource_stations/CoalDeposit.tscn" id="7_014fr"]
-[ext_resource type="Resource" path="res://configurations/items/iron_pickaxe.tres" id="7_q35qs"]
+[ext_resource type="Resource" uid="uid://dehwd1cc640kf" path="res://configurations/items/iron_pickaxe.tres" id="7_q35qs"]
 [ext_resource type="Resource" uid="uid://bbdbvj3mfxl4s" path="res://configurations/items/iron_chainbody.tres" id="8_4ah3l"]
 [ext_resource type="PackedScene" uid="uid://cvkfp72qyp7gw" path="res://features/stations/resource_stations/IronDeposit.tscn" id="8_vebj1"]
 [ext_resource type="PackedScene" uid="uid://bvcjo04uthud7" path="res://features/stations/processing_stations/crafting_bench/CraftingBench.tscn" id="10_g01l4"]
@@ -25,6 +25,9 @@
 script = ExtResource("1_t1qsc")
 next_level = ExtResource("2_g01l4")
 ordered_items = Array[ExtResource("3_g01l4")]([ExtResource("4_c35ik"), ExtResource("5_h5nvm"), ExtResource("6_cty7o"), ExtResource("7_q35qs"), ExtResource("8_4ah3l")])
+completed_orders_to_next_level = 10
+score_to_constant_orders = 150
+delay_to_first_order = 3
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("3_jwm2l")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -1.81004, 0.143509, 0)

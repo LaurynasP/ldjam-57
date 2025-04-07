@@ -1,6 +1,5 @@
-[gd_scene load_steps=14 format=4 uid="uid://cju4ghmvgcj40"]
+[gd_scene load_steps=13 format=4 uid="uid://cju4ghmvgcj40"]
 
-[ext_resource type="Material" uid="uid://b2lwqi8m5rgff" path="res://assets/materials/iron_ore.tres" id="1_umopv"]
 [ext_resource type="Texture2D" uid="uid://b71gi3gdksgtu" path="res://imports/Textures/Dungeons_2_Texture_01_A.png" id="2_yq6nv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3vrkl"]
@@ -164,81 +163,72 @@ radius = 8.50244
 [node name="Model" type="Node3D" parent="."]
 
 [node name="SM_Env_Hell_Rock_06" type="MeshInstance3D" parent="Model"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26.7384, 0)
-material_overlay = ExtResource("1_umopv")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.058651, 12.6363, 0.010499)
 mesh = SubResource("ArrayMesh_pu6d0")
 skeleton = NodePath("")
 
 [node name="SM_Env_Hell_Spikes_02" type="MeshInstance3D" parent="Model"]
-transform = Transform3D(1, 0, 0, 0, 0.670582, 0.741835, 0, -0.741835, 0.670582, 0.0427871, 24.6396, -6.23419)
-material_override = ExtResource("1_umopv")
+transform = Transform3D(1, 0, 0, 0, 0.670582, 0.741835, 0, -0.741835, 0.670582, -0.0158639, 10.5375, -6.22369)
 mesh = SubResource("ArrayMesh_fla2a")
 skeleton = NodePath("")
 
 [node name="SM_Env_Hell_Spikes_03" type="MeshInstance3D" parent="Model"]
 transform = Transform3D(0.122943, 0.736208, -0.665495, 0, 0.670582, 0.741835, 0.992414, -0.0912037, 0.0824436, 5.18356, 10.1321, -6.30937)
-material_override = ExtResource("1_umopv")
 mesh = SubResource("ArrayMesh_fla2a")
 skeleton = NodePath("")
 
 [node name="SM_Env_Hell_Spikes_04" type="MeshInstance3D" parent="Model"]
-transform = Transform3D(-0.785274, 0.459307, -0.41519, 0, 0.670582, 0.741835, 0.619149, 0.582544, -0.52659, -0.232906, 15.2189, 6.42659)
-material_override = ExtResource("1_umopv")
+transform = Transform3D(-0.785274, 0.459307, -0.41519, 0, 0.670582, 0.741835, 0.619149, 0.582544, -0.52659, -0.232908, 11.6733, 5.6038)
 mesh = SubResource("ArrayMesh_fla2a")
 skeleton = NodePath("")
 
 [node name="SM_Env_Hell_Spikes_05" type="MeshInstance3D" parent="Model"]
-transform = Transform3D(-0.775782, -0.468099, 0.423138, 0, 0.670582, 0.741835, -0.631001, 0.575503, -0.520226, -6.9976, 15.2189, 0.79049)
-material_override = ExtResource("1_umopv")
+transform = Transform3D(-0.775782, -0.468099, 0.423138, 0, 0.670582, 0.741835, -0.631001, 0.575503, -0.520226, -6.25143, 12.688, 0.79049)
 mesh = SubResource("ArrayMesh_fla2a")
 skeleton = NodePath("")
 
 [node name="SM_Env_Hell_Rock_07" type="MeshInstance3D" parent="Model"]
-transform = Transform3D(-0.546716, 0, -0.837318, 0, 1, 0, 0.837318, 0, -0.546716, 0, 9.64578, -16.253)
-material_override = ExtResource("1_umopv")
+transform = Transform3D(-0.546716, 0, -0.837318, 0, 1, 0, 0.837318, 0, -0.546716, 0, 13.9225, -3.62158)
 mesh = SubResource("ArrayMesh_pu6d0")
 skeleton = NodePath("")
 
 [node name="SM_Env_Hell_Rock_08" type="MeshInstance3D" parent="Model"]
 transform = Transform3D(-0.546716, 0, -0.837318, 0, 1, 0, 0.837318, 0, -0.546716, 6.98749, 9.64578, 4.23728)
-material_override = ExtResource("1_umopv")
 mesh = SubResource("ArrayMesh_pu6d0")
 skeleton = NodePath("")
 
 [node name="SM_Env_Hell_Rock_09" type="MeshInstance3D" parent="Model"]
-transform = Transform3D(-0.546716, 0, -0.837318, 0, 1, 0, 0.837318, 0, -0.546716, 4.14204, 15.4772, -11.4498)
-material_override = ExtResource("1_umopv")
+transform = Transform3D(-0.435164, 0.714358, -0.548019, 0.833898, 0.0902849, -0.544483, -0.339478, -0.693931, -0.634991, 2.51312, 5.72027, -10.143)
 mesh = SubResource("ArrayMesh_pu6d0")
 skeleton = NodePath("")
 
 [node name="SM_Env_Hell_Spikes_06" type="MeshInstance3D" parent="Model"]
-transform = Transform3D(0.346461, -0.695889, 0.629049, 0, 0.670582, 0.741835, -0.938064, -0.257017, 0.23233, -7.42055, 14.3913, -10.4132)
-material_override = ExtResource("1_umopv")
+transform = Transform3D(0.346461, -0.695889, 0.629049, 0, 0.670582, 0.741835, -0.938064, -0.257017, 0.23233, -6.3643, 11.3048, -9.36709)
 mesh = SubResource("ArrayMesh_fla2a")
 skeleton = NodePath("")
 
 [node name="SM_Env_Hell_Spikes_07" type="MeshInstance3D" parent="Model"]
 transform = Transform3D(0.0497737, -0.740916, 0.669751, 0, 0.670582, 0.741835, -0.99876, -0.0369239, 0.0333773, -9.43266, 11.3105, -1.75451)
-material_override = ExtResource("1_umopv")
 mesh = SubResource("ArrayMesh_fla2a")
 skeleton = NodePath("")
 
 [node name="SM_Env_Rock_Cliff_02" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(1, 0, 0, 0, 0.674647, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_p2ktx")
 skeleton = NodePath("")
 
 [node name="SM_Env_Rock_Cliff_03" type="MeshInstance3D" parent="Model"]
-transform = Transform3D(-0.0248015, -0.00597742, 0.999675, -0.391399, 0.920211, -0.00420816, -0.919887, -0.391376, -0.0251622, 0, 0, -4.40779)
+transform = Transform3D(0.740335, 0.163781, 0.725992, -0.457824, 0.553041, -0.00421584, -0.781362, -0.168862, 0.690342, -4.2769, 0, 0.15809)
 mesh = SubResource("ArrayMesh_osyvp")
 skeleton = NodePath("")
 
 [node name="SM_Env_Rock_Cliff_04" type="MeshInstance3D" parent="Model"]
-transform = Transform3D(-0.973978, -0.208333, 0.0892486, -0.20667, 0.978022, 0.0275969, -0.0930363, 0.00843379, -0.995627, 0, 0, -4.40779)
+transform = Transform3D(-0.687291, -0.0783203, 0.756537, -0.228027, 0.499741, 0.0272161, -0.832461, -0.0722258, -0.632062, 0, 0, -4.40779)
 mesh = SubResource("ArrayMesh_osyvp")
 skeleton = NodePath("")
 
 [node name="SM_Env_Rock_Cliff_05" type="MeshInstance3D" parent="Model"]
-transform = Transform3D(-0.330503, 0.000513756, -0.943805, -0.0308573, 0.99946, 0.0113497, 0.943301, 0.0328744, -0.330308, 0, 3.62569, -4.40779)
+transform = Transform3D(-0.840379, -0.0134222, 0.559623, -0.031409, 0.420701, 0.0112751, -0.573458, -0.00337259, -0.820723, 0, 3.62569, -4.40779)
 mesh = SubResource("ArrayMesh_osyvp")
 skeleton = NodePath("")
 
