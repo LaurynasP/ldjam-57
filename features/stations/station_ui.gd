@@ -4,15 +4,22 @@ class_name StationUI
 @onready var icon_container := %IconContainer
 @onready var timer_bar := %Timer
 
+var prev_items: Array[Item]
+
 func _ready() -> void:
 	timer_bar.visible = false
 
 func update_ui(items: Array[Item]):
-	cleanup_ui()
-		
 	if items.size() == 0:
 		visible = false
 		return
+	
+	if visible && items == prev_items:
+		return
+	
+	prev_items = items
+	
+	cleanup_ui()
 		
 	visible = true
 	

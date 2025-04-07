@@ -17,7 +17,7 @@ var dash_sound_effect: AudioStream = preload("res://assets/sound/sound_effects/d
 @onready var anim_tree := $W/AnimationTree
 @onready var anim_player := $W/AnimationPlayer
 @onready var billboard = $StationUiBillboard
-@onready var ui = %StationUI
+@onready var ui: StationUI = %StationUI
 var item:Item
 var stations_in_hit_area: Station
 var focused_station: Station
@@ -37,6 +37,7 @@ func _process(_delta: float):
 			ui.update_ui(input)
 			billboard.visible = true
 	else:
+		ui.visible = false
 		billboard.visible = false
 	
 	_handle_input()
