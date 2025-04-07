@@ -43,8 +43,11 @@ func setup(level: Level):
 func reset():
 	_completed_orders = 0
 	_failed_orders = 0
-	for order in order_list:
-		_erase_order(order)
+	print("Cleaning up orders")
+	
+		
+	for order in get_children():
+		_erase_order(order as Order)
 
 	order_list = []
 	
@@ -56,6 +59,7 @@ func get_current_order_interval() -> int:
 
 
 func _create_order() -> Order:
+	print("Creating order", _available_order_items[0].display_name)
 	_time_since_last_order = 0
 	rng.randomize()
 	var number_of_items: int = rng.randi_range(1, _max_items_per_order)
@@ -67,6 +71,7 @@ func _create_order() -> Order:
 	order_list.append(order)
 	add_child(order)
 	on_new_order.emit(order)
+	
 	return order
 	
 
