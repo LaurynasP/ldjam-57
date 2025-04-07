@@ -30,7 +30,6 @@ func _process(delta: float) -> void:
 	var current_order_interval = get_current_order_interval()
 	
 	if _time_since_last_order >= current_order_interval:
-		print(_time_since_last_order, current_order_interval)
 		_create_order()
 	
 func setup(level: Level):

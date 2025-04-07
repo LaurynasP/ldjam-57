@@ -1,12 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://bvxs30fl25ah"]
+[gd_scene load_steps=20 format=3 uid="uid://bvxs30fl25ah"]
 
 [ext_resource type="Script" uid="uid://jcyuj2h3gtq6" path="res://features/level/level.gd" id="1_t1qsc"]
 [ext_resource type="Resource" uid="uid://dji142yfgye3g" path="res://configurations/levels/advanced_forge.tres" id="2_g01l4"]
 [ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="3_g01l4"]
 [ext_resource type="PackedScene" uid="uid://dfjp2tythyjfd" path="res://features/player/player_spawner/PlayerSpawner.tscn" id="3_jwm2l"]
-[ext_resource type="Resource" uid="uid://btu28liqn3sai" path="res://configurations/items/iron_bar.tres" id="4_mlay7"]
+[ext_resource type="Resource" uid="uid://bxl57bdc8lmu1" path="res://configurations/items/iron_sword.tres" id="4_c35ik"]
+[ext_resource type="Resource" uid="uid://bwof5s42tnq43" path="res://configurations/items/cowl.tres" id="5_h5nvm"]
+[ext_resource type="Resource" uid="uid://c2gbxlo5mqel5" path="res://configurations/items/iron_helmet.tres" id="6_cty7o"]
 [ext_resource type="PackedScene" uid="uid://cv23mhfhoyttm" path="res://features/level/environments/AmateurForgeEnvironment.tscn" id="6_s2jqq"]
 [ext_resource type="PackedScene" uid="uid://ba5cnj4j2pco6" path="res://features/stations/resource_stations/CoalDeposit.tscn" id="7_014fr"]
+[ext_resource type="Resource" uid="uid://dehwd1cc640kf" path="res://configurations/items/iron_pickaxe.tres" id="7_q35qs"]
+[ext_resource type="Resource" uid="uid://bbdbvj3mfxl4s" path="res://configurations/items/iron_chainbody.tres" id="8_4ah3l"]
 [ext_resource type="PackedScene" uid="uid://cvkfp72qyp7gw" path="res://features/stations/resource_stations/IronDeposit.tscn" id="8_vebj1"]
 [ext_resource type="PackedScene" uid="uid://bvcjo04uthud7" path="res://features/stations/processing_stations/crafting_bench/CraftingBench.tscn" id="10_g01l4"]
 [ext_resource type="PackedScene" uid="uid://b88kbpsdnbm2j" path="res://features/stations/handoff_station/HandoffStation.tscn" id="10_h5nvm"]
@@ -19,7 +23,7 @@
 [node name="AmateurForge" type="Node3D"]
 script = ExtResource("1_t1qsc")
 next_level = ExtResource("2_g01l4")
-ordered_items = Array[ExtResource("3_g01l4")]([ExtResource("4_mlay7")])
+ordered_items = Array[ExtResource("3_g01l4")]([ExtResource("4_c35ik"), ExtResource("5_h5nvm"), ExtResource("6_cty7o"), ExtResource("7_q35qs"), ExtResource("8_4ah3l")])
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("3_jwm2l")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -1.81004, 0.143509, 0)
