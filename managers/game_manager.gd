@@ -1,6 +1,7 @@
 extends Node
 
 var current_gameplay: Gameplay
+var current_gameplay_ui: GamePlayUI
 var current_level: Level
 var selected_player_devices: Array[int] = [-1]
 
