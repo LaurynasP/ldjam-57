@@ -58,3 +58,6 @@ func get_completable_recipe(available_recipes: Array[Recipe], items: Array[Item]
 			break
 			
 	return result
+
+func get_recipe_by_product(product: Item):
+	return recipes[product.name]

@@ -8,19 +8,19 @@ const PLACEHOLDER_ICON = preload("res://assets/images/icons/placeholder.png")
 @onready var ingredients_container := %IngredientsContainer
 @onready var product := %Product
 
-var recipe: Recipe
+var ui_recipe: Recipe
 var is_placeholder: bool
 
 func _ready() -> void:
-	product.texture = PLACEHOLDER_ICON if is_placeholder else recipe.product.icon
+	product.texture = PLACEHOLDER_ICON if is_placeholder else ui_recipe.product.icon
 	
-	for ingredient in recipe.ingredients:
+	for ingredient in ui_recipe.ingredients:
 		var ingredient_ui = ITEM_UI.instantiate() as TextureRect
 		ingredient_ui.texture = PLACEHOLDER_ICON if is_placeholder else ingredient.icon
 		ingredients_container.add_child(ingredient_ui)
 	pass
 
 func init(recipe: Recipe, placeholder: bool = false):
-	self.recipe = recipe
+	ui_recipe = recipe
 	is_placeholder = placeholder
 	

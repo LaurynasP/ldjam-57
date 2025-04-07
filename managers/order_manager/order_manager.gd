@@ -2,6 +2,7 @@ extends Node
 
 var rng = RandomNumberGenerator.new()
 var _available_order_items: Array[Item] = []
+var _order_item_recipes: Dictionary[Item, Recipe] = {}
 var _max_items_per_order: int = 2
 var _completed_orders = 0
 var _failed_orders = 0
@@ -15,9 +16,7 @@ var seconds_per_item:float = 30
 
 var order_list: Array[Order] = []
 
-
 signal on_new_order(order: Order)
-
 
 func _process(delta: float) -> void:
 	if GameManager.current_gameplay == null:
@@ -31,11 +30,17 @@ func _process(delta: float) -> void:
 	var current_order_interval = get_current_order_interval()
 	
 	if _time_since_last_order >= current_order_interval:
+		print(_time_since_last_order, current_order_interval)
 		_create_order()
 	
 func setup(level: Level):
 	reset()
 	_available_order_items = level.ordered_items
+	
+	_order_item_recipes = {}
+	for order_item in _available_order_items:
+		_order_item_recipes[order_item] = RecipeManager.get_recipe_by_product(order_item)
+	
 	_score_to_constant_orders = level.score_to_constant_orders
 	_time_since_last_order = 0 - level.delay_to_first_order
 	_starting_order_interval = level.starting_order_interval
@@ -43,8 +48,6 @@ func setup(level: Level):
 func reset():
 	_completed_orders = 0
 	_failed_orders = 0
-	print("Cleaning up orders")
-	
 		
 	for order in get_children():
 		_erase_order(order as Order)
@@ -57,23 +60,30 @@ func get_current_order_interval() -> int:
 	var interval = _starting_order_interval - ratio
 	return max(interval, _minimum_order_interval)
 
-
 func _create_order() -> Order:
-	print("Creating order", _available_order_items[0].display_name)
-	_time_since_last_order = 0
-	rng.randomize()
 	var number_of_items: int = rng.randi_range(1, _max_items_per_order)
-	var order_duration: float = number_of_items * seconds_per_item
 	var items = get_random_items(number_of_items)
+
+	var total_tier = 0.0
+	for item in items:
+		var recipe = _order_item_recipes.get(item)
+		if recipe != null:
+			total_tier += recipe.tier
+	
+	var avg_tier = total_tier / items.size()
+	var tier_delay_multiplier = avg_tier  # e.g. 0.5–2.0
+	
+	var order_duration = number_of_items * seconds_per_item
+	var next_order_interval = get_current_order_interval() * tier_delay_multiplier
+	_time_since_last_order = -next_order_interval  # start delay now
+
 	var order = Order.new(order_duration, items)
 	order.order_completed.connect(_handle_completed_order)
 	order.order_failed.connect(_handle_failed_order)
 	order_list.append(order)
 	add_child(order)
 	on_new_order.emit(order)
-	
 	return order
-	
 
 func _handle_completed_order(order: Order):
 	_completed_orders += 1
@@ -108,11 +118,26 @@ func get_random_items(count: int) -> Array[Item]:
 	return random_items
 
 func get_random_item() -> Item:
-	if _available_order_items.is_empty():
-		return null
-	rng.randomize()
-	var item_index = rng.randi_range(0, _available_order_items.size() - 1)
-	return _available_order_items[item_index]
+	var items = _available_order_items
+	var weights = items.map(func(item):
+		var tier = _order_item_recipes.get(item).tier
+		return 1.0 / tier
+	)
+	
+	var index = weighted_random_index(weights)
+	return items[index]
+	
+func weighted_random_index(weights: Array) -> int:
+	var total = 0.0
+	for w in weights: total += w
+	
+	var roll = rng.randf() * total
+	var acc = 0.0
+	for i in weights.size():
+		acc += weights[i]
+		if roll <= acc:
+			return i
+	return weights.size() - 1
 	
 func stop_generating_orders():
 	_generate_orders = false

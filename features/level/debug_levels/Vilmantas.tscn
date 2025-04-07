@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://crwoxhfx787al"]
+[gd_scene load_steps=18 format=3 uid="uid://crwoxhfx787al"]
 
 [ext_resource type="Script" uid="uid://d3fg3nwvm5kku" path="res://features/level/debug_levels/vilmantas.gd" id="1_g1d7o"]
 [ext_resource type="Material" uid="uid://brxnu2s88e5pl" path="res://assets/materials/placeholder_env_mat.tres" id="2_mv3ks"]
@@ -16,11 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://b3nt8qe4cw5po" path="res://features/stations/resource_stations/LogsBarrel.tscn" id="13_3hwcb"]
 [ext_resource type="PackedScene" uid="uid://b4xllno8qbro" path="res://features/stations/processing_stations/anvil/anvil.tscn" id="13_n3gf4"]
 [ext_resource type="PackedScene" uid="uid://bmsjpkvyd5q5n" path="res://features/stations/resource_stations/LeatherStash.tscn" id="14_3hwcb"]
-[ext_resource type="Script" uid="uid://bkkb1mtbo8xh5" path="res://managers/recipe_manager/recipe.gd" id="15_4xa5m"]
-[ext_resource type="Resource" uid="uid://qyeagt8atlas" path="res://configurations/recipes/shaft.tres" id="16_x1vrl"]
-[ext_resource type="Resource" uid="uid://yv68wg0b4gkl" path="res://configurations/recipes/iron_helmet.tres" id="17_nyctp"]
 [ext_resource type="PackedScene" uid="uid://b88kbpsdnbm2j" path="res://features/stations/handoff_station/HandoffStation.tscn" id="18_2x1v2"]
-[ext_resource type="Resource" uid="uid://bo21waoc4eti7" path="res://configurations/recipes/cowl.tres" id="18_vc5cq"]
 
 [node name="Vilmantas" type="Node3D"]
 script = ExtResource("1_g1d7o")
@@ -104,7 +100,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, -2.75)
 
 [node name="CraftingBench" parent="." instance=ExtResource("12_i6aqx")]
 transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, -5.98175, 0, 4.19217)
-recipes = Array[ExtResource("15_4xa5m")]([ExtResource("16_x1vrl"), ExtResource("17_nyctp"), ExtResource("18_vc5cq")])
 interact_sound_effect = null
 crafted_sound_effect = null
 
@@ -116,6 +111,8 @@ transform = Transform3D(1.67965, 0, 0, 0, 1.67965, 0, 0, 0, 1.67965, 2.36857, -0
 
 [node name="HandoffStation" parent="." instance=ExtResource("18_2x1v2")]
 transform = Transform3D(0.734363, 0, 1.07271, 0, 1.3, 0, -1.07271, 0, 0.734363, -11.1308, 2.88075e-17, 12.6812)
+
+[node name="anvil2" parent="." instance=ExtResource("13_n3gf4")]
 
 [editable path="PlayerSpawner"]
 [editable path="environment"]

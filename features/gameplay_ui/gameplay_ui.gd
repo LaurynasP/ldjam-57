@@ -48,9 +48,9 @@ func _handle_new_order(order: Order):
 	orders_container.add_child(order_ui)
 	order_ui.init(order)
 
-func toggle_recipe_screen(show: bool):
-	recipe_overlay.visible = show
+func toggle_recipe_screen(display: bool):
+	recipe_overlay.visible = display
 	
-	orders_ui.visible = !show
-	stats_ui.visible = !show
+	orders_ui.visible = !display
+	stats_ui.visible = !display
 	

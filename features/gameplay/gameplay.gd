@@ -15,7 +15,7 @@ func _ready() -> void:
 	_spawn_players()
 	OrderManager.start_generating_orders()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if _is_level_completed() and GameManager.current_level.next_level != null:
 		OrderManager.stop_generating_orders()
 		LoadingManager._load_level(GameManager.current_level.next_level)

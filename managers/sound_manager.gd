@@ -27,7 +27,7 @@ func _load_tracks():
 		file = dir.get_next()
 	dir.list_dir_end()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if play_random_songs and _music_players.size() == 0:
 		_play_random_track()
 	
