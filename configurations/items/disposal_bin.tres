@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://s1omxenhrho7"]
+
+[ext_resource type="Texture2D" uid="uid://bnrdslljav0vj" path="res://assets/images/icons/disposal_bin.png" id="1_e8wdq"]
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="2_s7ey7"]
+
+[resource]
+script = ExtResource("2_s7ey7")
+name = "disposal_bin"
+display_name = "Disposal Bin"
+icon = ExtResource("1_e8wdq")
+metadata/_custom_type_script = "uid://ce12c8rt3nki4"

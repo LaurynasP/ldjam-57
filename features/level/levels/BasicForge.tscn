@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b1bcxicj4m1qr"]
+[gd_scene load_steps=19 format=3 uid="uid://b1bcxicj4m1qr"]
 
 [ext_resource type="Script" uid="uid://jcyuj2h3gtq6" path="res://features/level/level.gd" id="1_w1r02"]
 [ext_resource type="Resource" uid="uid://bk5gfvqqns5ot" path="res://configurations/levels/amateaur_forge.tres" id="2_a5ygj"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://b3nt8qe4cw5po" path="res://features/stations/resource_stations/LogsBarrel.tscn" id="11_a5ygj"]
 [ext_resource type="PackedScene" uid="uid://dluludjqopthn" path="res://features/stations/counter.tscn" id="11_no3u5"]
 [ext_resource type="PackedScene" uid="uid://bmsjpkvyd5q5n" path="res://features/stations/resource_stations/LeatherStash.tscn" id="13_anaqb"]
+[ext_resource type="PackedScene" uid="uid://b5gytswbvf3ox" path="res://features/stations/resource_stations/DisposalBin.tscn" id="18_crbgj"]
 
 [node name="BasicForge" type="Node3D"]
 script = ExtResource("1_w1r02")
@@ -65,7 +66,7 @@ interact_sound_effect = null
 crafted_sound_effect = null
 
 [node name="LogsBarrel" parent="Map/Stations" instance=ExtResource("11_a5ygj")]
-transform = Transform3D(0.995776, 0, -0.995776, 0, 1.40824, 0, 0.995776, 0, 0.995776, 17.4538, 0.0487986, 0.0543003)
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 17.4538, 0.0487986, 0.0543003)
 
 [node name="anvil" parent="Map/Stations" instance=ExtResource("9_crbgj")]
 transform = Transform3D(-0.620703, 0.000722116, -0.784045, 0.000615488, 1, 0.000433742, 0.784046, -0.00021332, -0.620704, 26.0981, 0, -3.44495)
@@ -76,4 +77,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1968, 0, -8.20435)
 [node name="BasicForgeEnvironment" parent="Map" instance=ExtResource("5_a5ygj")]
 
 [node name="LeatherBox" parent="." instance=ExtResource("13_anaqb")]
-transform = Transform3D(-1.12734, 0, 1.24512, 0, 1.67965, 0, -1.24512, 0, -1.12734, 9.35024, 0.374513, -9.48229)
+transform = Transform3D(-0.671176, 0, 0.741298, 0, 1, 0, -0.741298, 0, -0.671176, 9.35024, 0.374513, -9.48229)
+
+[node name="DisposalBin" parent="." instance=ExtResource("18_crbgj")]
+transform = Transform3D(0.99852, 0, 0.0543925, 0, 1, 0, -0.0543925, 0, 0.998519, -0.539116, 4.71484e-08, -17.2656)

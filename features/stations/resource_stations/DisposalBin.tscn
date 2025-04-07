@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5gytswbvf3ox"]
+
+[ext_resource type="Script" uid="uid://bwv8hp5qxnqay" path="res://features/stations/resource_stations/disposal_bin.gd" id="1_k5dou"]
+[ext_resource type="Resource" uid="uid://s1omxenhrho7" path="res://configurations/items/disposal_bin.tres" id="2_61agv"]
+[ext_resource type="PackedScene" uid="uid://cybm0qgkg3e22" path="res://assets/prefabs/props/EmptyCrate.tscn" id="3_61agv"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_i03xq"]
+height = 2.27832
+radius = 0.658691
+
+[node name="DisposalBin" type="Node3D"]
+script = ExtResource("1_k5dou")
+resource = ExtResource("2_61agv")
+
+[node name="Crate" parent="." instance=ExtResource("3_61agv")]
+transform = Transform3D(1.58204, 0, 0, 0, 1.58204, 0, 0, 0, 1.58204, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1.68, 0, 0, 0, 1.68, 0, 0, 0, 1.68, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13916, 0)
+shape = SubResource("CylinderShape3D_i03xq")
