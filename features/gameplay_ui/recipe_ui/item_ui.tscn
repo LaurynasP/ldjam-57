@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyihsu6c863v6"]
+
+[ext_resource type="Texture2D" uid="uid://b4lyg1g73c4on" path="res://assets/images/icons/placeholder.png" id="1_517bl"]
+
+[node name="Product" type="TextureRect"]
+custom_minimum_size = Vector2(128, 128)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("1_517bl")
+expand_mode = 1
+stretch_mode = 5

@@ -40,6 +40,12 @@ func _process(_delta: float):
 		billboard.visible = false
 	
 	_handle_input()
+	
+	if InputManager.is_context_menu_just_pressed(device_id):
+		GameManager.current_gameplay.toggle_recipe_screen(true)
+	
+	if InputManager.is_context_menu_just_released(device_id):
+		GameManager.current_gameplay.toggle_recipe_screen(false)
 
 func _handle_input():
 	if InputManager.is_interact_just_pressed(device_id):

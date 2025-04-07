@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxyerta667aeh"]
+
+[ext_resource type="Script" uid="uid://1iaowhty5nd4" path="res://features/gameplay_ui/recipe_ui/recipe_ui.gd" id="1_11e63"]
+[ext_resource type="PackedScene" uid="uid://cyihsu6c863v6" path="res://features/gameplay_ui/recipe_ui/item_ui.tscn" id="2_3dj3b"]
+
+[node name="RecipeUi" type="Control"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_11e63")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProductContainer" type="VBoxContainer" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Product" parent="Panel/ProductContainer" instance=ExtResource("2_3dj3b")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="IngredientsContainer" type="HBoxContainer" parent="Panel/ProductContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1

@@ -1,11 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://fmb0vcjtbe0j"]
+[gd_scene load_steps=4 format=3 uid="uid://fmb0vcjtbe0j"]
 
 [ext_resource type="Script" uid="uid://ckkqmx2cut0fv" path="res://features/gameplay_ui/gameplay_ui.gd" id="1_ljovr"]
 [ext_resource type="PackedScene" uid="uid://dynf5itxy42ka" path="res://features/gameplay_ui/order_ui/OrderUI.tscn" id="2_m1eul"]
 [ext_resource type="PackedScene" uid="uid://cc4vac8ctgxxh" path="res://features/gameplay_ui/stats/Stats.tscn" id="3_2gr57"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_2gr57"]
-font_size = 50
 
 [node name="GameplayUi" type="Control"]
 layout_mode = 3
@@ -18,7 +15,6 @@ script = ExtResource("1_ljovr")
 order_ui_scene = ExtResource("2_m1eul")
 
 [node name="OrdersPositioner" type="Control" parent="."]
-unique_name_in_owner = true
 layout_mode = 1
 anchor_left = 0.821
 anchor_top = 0.023
@@ -39,7 +35,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Stats" parent="." instance=ExtResource("3_2gr57")]
-unique_name_in_owner = true
 layout_mode = 1
 offset_left = 24.0
 offset_top = 23.0
@@ -55,32 +50,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="RecipeOverlay"]
+[node name="RecipeContainer" type="HBoxContainer" parent="RecipeOverlay"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
-
-[node name="VBoxContainer" type="VBoxContainer" parent="RecipeOverlay/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="RecipeOverlay/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Recipes"
-label_settings = SubResource("LabelSettings_2gr57")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="RecipeContainer" type="FlowContainer" parent="RecipeOverlay/MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_constants/h_separation = 20
-theme_override_constants/v_separation = 20
-last_wrap_alignment = 1
