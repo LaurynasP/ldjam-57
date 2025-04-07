@@ -13,10 +13,8 @@ var dash_cooldown_timer := 0.0
 
 var dash_sound_effect: AudioStream = preload("res://assets/sound/sound_effects/dash.mp3")
 @onready var interact_area: Area3D = $InteractArea
-@onready var label: Label3D = $Label3D
 
 @onready var anim_tree := $dwarf_mixamo_mesh/AnimationTree
-@onready var icon_container := %IconContainer
 @onready var billboard = $StationUiBillboard
 @onready var ui = %StationUI
 var item:Item
