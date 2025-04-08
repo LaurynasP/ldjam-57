@@ -26,13 +26,14 @@ func _load_tracks():
 	music_tracks.append(song6)
 	
 func _process(_delta: float) -> void:
-	if play_random_songs and _music_players.size() == 0:
-		_play_random_track()
+	_play_random_track()
 	
 
 func _play_random_track():
-	if music_tracks.is_empty():
+	print(_music_players.size())
+	if _music_players.size() > 0:
 		return
+		
 	var track:AudioStream = music_tracks[randi() % music_tracks.size()]
 	play_music(track)
 	
@@ -45,6 +46,10 @@ func play_music(stream: AudioStream):
 	add_child(player)
 	player.play()
 	_music_players.append(player)
+	player.finished.connect(func(): 
+		_music_players.erase(player)
+		player.queue_free()
+	)
 
 func stop_all_music():
 	for player in _music_players:
