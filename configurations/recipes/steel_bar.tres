@@ -9,6 +9,7 @@
 [resource]
 script = ExtResource("5_maxui")
 name = "steel_bar"
+tier = 0.0
 product = ExtResource("4_u2u8e")
 ingredients = Array[ExtResource("1_mbh6a")]([ExtResource("3_htyv4"), ExtResource("3_mbh6a")])
 metadata/_custom_type_script = "uid://bkkb1mtbo8xh5"

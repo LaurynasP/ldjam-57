@@ -4,16 +4,18 @@ extends Node
 @onready var level_host: Node = Node.new()
 var _current_level_config: LevelConfiguration
 
-func _ready() -> void:
+func _ready():
 	add_child(level_host)
 	level_host.name = 'LevelHost'
 
 func _load(scenes: Array[PackedScene]):
-	var loading_screen_instance = _show_loading_screen()
+	var loading_screen_instance: LoadingScreen = _show_loading_screen()
+
+	loading_screen_instance.init(scenes)
 	
-	_add_scenes_to_root(scenes)
+	# _add_scenes_to_root(scenes)
 	
-	loading_screen_instance.queue_free()
+	# loading_screen_instance.queue_free()
 
 func _load_level(config: LevelConfiguration):
 	_current_level_config = config
@@ -28,7 +30,7 @@ func _add_scenes_to_root(scenes: Array[PackedScene]):
 		
 		level_host.add_child(instance)
 	
-func _show_loading_screen() -> Node:
+func _show_loading_screen():
 	var loading_screen_instance = loading_screen.instantiate()
 	
 	get_tree().root.add_child(loading_screen_instance)

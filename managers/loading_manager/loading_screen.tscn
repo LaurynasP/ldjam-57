@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://6c03ddv724ea"]
+[gd_scene load_steps=2 format=3 uid="uid://6c03ddv724ea"]
+
+[ext_resource type="Script" uid="uid://bwlptnlvsw5ik" path="res://managers/loading_manager/loading_screen.gd" id="1_eke5x"]
 
 [node name="LoadingScreen" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_eke5x")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

@@ -10,7 +10,6 @@ var score: int = 0;
 signal on_recipe_screen_toggled(show: bool)
 
 
-
 func _ready() -> void:
 	GameManager.current_gameplay = self
 	OrderManager.setup(GameManager.current_level)
