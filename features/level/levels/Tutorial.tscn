@@ -1,0 +1,122 @@
+[gd_scene load_steps=16 format=3 uid="uid://ctlnnoo3m1etl"]
+
+[ext_resource type="PackedScene" uid="uid://cuppgd373whly" path="res://features/level/environments/TutorialEnvironment.tscn" id="1_4jmoc"]
+[ext_resource type="Script" uid="uid://jcyuj2h3gtq6" path="res://features/level/level.gd" id="1_6147r"]
+[ext_resource type="PackedScene" uid="uid://b88kbpsdnbm2j" path="res://features/stations/handoff_station/HandoffStation.tscn" id="2_6147r"]
+[ext_resource type="Script" uid="uid://ce12c8rt3nki4" path="res://managers/item_manager/item.gd" id="2_auf26"]
+[ext_resource type="Resource" uid="uid://cb8q6siec6idd" path="res://configurations/levels/basic_forge.tres" id="2_b0pfr"]
+[ext_resource type="Resource" uid="uid://bwof5s42tnq43" path="res://configurations/items/cowl.tres" id="3_b0pfr"]
+[ext_resource type="PackedScene" uid="uid://b4xllno8qbro" path="res://features/stations/processing_stations/anvil/anvil.tscn" id="3_xbmym"]
+[ext_resource type="PackedScene" uid="uid://bvcjo04uthud7" path="res://features/stations/processing_stations/crafting_bench/CraftingBench.tscn" id="4_22dtl"]
+[ext_resource type="Resource" uid="uid://bxl57bdc8lmu1" path="res://configurations/items/iron_sword.tres" id="4_ckjpa"]
+[ext_resource type="PackedScene" uid="uid://7ynlwr02wm3n" path="res://features/stations/processing_stations/furnace/furnace.tscn" id="5_auf26"]
+[ext_resource type="PackedScene" uid="uid://ba5cnj4j2pco6" path="res://features/stations/resource_stations/CoalDeposit.tscn" id="6_b0pfr"]
+[ext_resource type="PackedScene" uid="uid://cvkfp72qyp7gw" path="res://features/stations/resource_stations/IronDeposit.tscn" id="7_ckjpa"]
+[ext_resource type="PackedScene" uid="uid://bmsjpkvyd5q5n" path="res://features/stations/resource_stations/LeatherStash.tscn" id="8_snvhv"]
+[ext_resource type="PackedScene" uid="uid://b3nt8qe4cw5po" path="res://features/stations/resource_stations/LogsBarrel.tscn" id="9_fdg1d"]
+[ext_resource type="PackedScene" uid="uid://dfjp2tythyjfd" path="res://features/player/player_spawner/PlayerSpawner.tscn" id="10_e6yks"]
+
+[node name="Tutorial" type="Node3D"]
+script = ExtResource("1_6147r")
+next_level = ExtResource("2_b0pfr")
+ordered_items = Array[ExtResource("2_auf26")]([ExtResource("3_b0pfr"), ExtResource("4_ckjpa")])
+completed_orders_to_next_level = 1
+max_failed_orders = 999
+score_to_constant_orders = 9999
+delay_to_first_order = 0
+
+[node name="PlayerSpawner" parent="." instance=ExtResource("10_e6yks")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.234934, 0, -0.129208)
+
+[node name="Map" type="Node3D" parent="."]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="TutorialEnvironment" parent="Map" instance=ExtResource("1_4jmoc")]
+
+[node name="Stations" type="Node3D" parent="Map"]
+
+[node name="HandoffStation" parent="Map/Stations" instance=ExtResource("2_6147r")]
+transform = Transform3D(1.06738, 0, -0.742095, 0, 1.3, 0, 0.742095, 0, 1.06738, -10.8919, 0.048275, -9.81898)
+
+[node name="Label3D" type="Label3D" parent="Map/Stations/HandoffStation"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 7.105, 0)
+billboard = 1
+text = "Handoff station
+
+Bring crafted items
+to complete orders"
+font_size = 100
+
+[node name="anvil" parent="Map/Stations" instance=ExtResource("3_xbmym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10939, 0.0482731, -11.7704)
+
+[node name="Label3D" type="Label3D" parent="Map/Stations/anvil"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.62337, 0)
+billboard = 1
+text = "Anvil
+
+Bring one Iron Bar
+and mash interact
+to craft sword"
+font_size = 100
+
+[node name="CraftingBench" parent="Map/Stations" instance=ExtResource("4_22dtl")]
+transform = Transform3D(0.995542, 0, 0.0943168, 0, 1, 0, -0.0943168, 0, 0.995542, 1.30854, 0.048275, -11.7408)
+
+[node name="Label3D" type="Label3D" parent="Map/Stations/CraftingBench"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 8.189, 0)
+billboard = 1
+text = "Crafting Table
+
+Bring one leather
+and mash interact
+to craft leather helmet"
+font_size = 100
+
+[node name="furnace" parent="Map/Stations" instance=ExtResource("5_auf26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.22, 0.0482712, -2.2776)
+
+[node name="Label3D" type="Label3D" parent="Map/Stations/furnace"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.7728, 0)
+billboard = 1
+text = "Furnace
+
+Add one coal and one iron
+to create iron bar"
+font_size = 100
+
+[node name="coal_deposit" parent="Map/Stations" instance=ExtResource("6_b0pfr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9151, 0.60473, 11.4569)
+
+[node name="Label3D" type="Label3D" parent="Map/Stations/coal_deposit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.6374, 0)
+billboard = 1
+text = "Coal Deposit"
+font_size = 100
+
+[node name="iron_deposit" parent="Map/Stations" instance=ExtResource("7_ckjpa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4136, 0.654879, 4.02319)
+
+[node name="Label3D" type="Label3D" parent="Map/Stations/iron_deposit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.84657, 0)
+billboard = 1
+text = "Iron Deposit"
+font_size = 100
+
+[node name="LeatherBox" parent="Map/Stations" instance=ExtResource("8_snvhv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3632, 0.374057, -12.1932)
+
+[node name="Label3D" type="Label3D" parent="Map/Stations/LeatherBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.55124, 0)
+billboard = 1
+text = "Leather"
+font_size = 100
+
+[node name="LogsBarrel" parent="Map/Stations" instance=ExtResource("9_fdg1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.35588, 0.0482788, -12.7639)
+
+[node name="Label3D" type="Label3D" parent="Map/Stations/LogsBarrel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.31504, 0)
+billboard = 1
+text = "Planks"
+font_size = 100

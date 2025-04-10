@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="LevelConfiguration" load_steps=6 format=3 uid="uid://cmlcbun3dir22"]
+
+[ext_resource type="Script" uid="uid://3i846dludlok" path="res://managers/loading_manager/level_configuration.gd" id="1_3h03w"]
+[ext_resource type="PackedScene" uid="uid://bcp5sfegv63mq" path="res://features/gameplay/tutorial_gameplay.tscn" id="1_il1ja"]
+[ext_resource type="PackedScene" uid="uid://ctlnnoo3m1etl" path="res://features/level/levels/Tutorial.tscn" id="2_pttuv"]
+[ext_resource type="PackedScene" uid="uid://bjxatu6y03tvm" path="res://features/level/environments/default_light.tscn" id="3_kypr0"]
+[ext_resource type="PackedScene" uid="uid://fmb0vcjtbe0j" path="res://features/gameplay_ui/gameplay_ui.tscn" id="5_lseoh"]
+
+[resource]
+script = ExtResource("1_3h03w")
+name = "Tutorial"
+level = ExtResource("2_pttuv")
+lighting = ExtResource("3_kypr0")
+gameplay = ExtResource("1_il1ja")
+ui = ExtResource("5_lseoh")
+metadata/_custom_type_script = "uid://3i846dludlok"

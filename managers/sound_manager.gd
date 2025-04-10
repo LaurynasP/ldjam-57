@@ -30,7 +30,6 @@ func _process(_delta: float) -> void:
 	
 
 func _play_random_track():
-	print(_music_players.size())
 	if _music_players.size() > 0:
 		return
 		

@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://bcp5sfegv63mq"]
+
+[ext_resource type="Script" uid="uid://hmv2qttw5yhx" path="res://features/gameplay/gameplay.gd" id="1_k8ojg"]
+[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_ehwe5"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_7tnhf"]
+[ext_resource type="PackedScene" uid="uid://tp32esmsp3xq" path="res://features/camera/Camera.tscn" id="4_iud47"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_yaw8o"]
+
+[sub_resource type="Resource" id="Resource_lyd10"]
+script = ExtResource("3_7tnhf")
+duration = 1.0
+transition = 0
+ease = 2
+
+[node name="Gameplay" type="Node"]
+script = ExtResource("1_k8ojg")
+tutorial = true
+
+[node name="PhantomCamera3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.57763, 0.816299, 0, -0.816299, 0.57763, -7.18457, 0.816299, -2.38166)
+top_level = true
+script = ExtResource("2_ehwe5")
+follow_mode = 3
+tween_resource = SubResource("Resource_lyd10")
+follow_offset = Vector3(0, 20, 10)
+
+[node name="Camera" parent="." instance=ExtResource("4_iud47")]
+transform = Transform3D(1, 0, 0, 0, 0.57763, 0.816299, 0, -0.816299, 0.57763, -7.18457, 0.816299, -2.38166)
+
+[node name="PhantomCameraHost" type="Node" parent="Camera"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("5_yaw8o")

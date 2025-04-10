@@ -4,7 +4,7 @@ extends Node
 var players: Dictionary[int, Player] = {}
 
 @onready var camera: PhantomCamera3D  = $PhantomCamera3D
-
+@export var tutorial: bool = false
 var score: int = 0;
 
 signal on_recipe_screen_toggled(show: bool)
@@ -15,7 +15,20 @@ func _ready() -> void:
 	GameManager.current_gameplay = self
 	OrderManager.setup(GameManager.current_level)
 	_spawn_players()
+	if tutorial == true:
+		var timer = get_tree().create_timer(1.0)
+		timer.timeout.connect(handle_tutorial_ready)
+		return
 	OrderManager.start_generating_orders()
+	
+func handle_tutorial_ready():
+	OrderManager.stop_generating_orders()
+	var order = Order.new(10000, GameManager.current_level.ordered_items)
+	order.order_completed.connect(OrderManager._handle_completed_order)
+	order.order_failed.connect(OrderManager._handle_failed_order)
+	OrderManager.order_list.append(order)
+	OrderManager.add_child(order)
+	OrderManager.on_new_order.emit(order)
 	
 func _process(_delta: float) -> void:
 	if _is_level_completed() and GameManager.current_level.next_level != null:
